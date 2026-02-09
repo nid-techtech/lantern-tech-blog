@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Imgur from "../../components/Imgur.astro";
+
+export function getStaticPaths() {
+    return [
+        { params: { lang: "jp" } },
+        { params: { lang: "en" } },
+        { params: { lang: "zh" } },
+    ];
+}
+
+const { lang } = Astro.params;
+
+const translations = {
+    jp: {
+        greeting: "ようこそ Lantern-TECH Blog へ",
+        description: "技術と創造性の融合を探求するブログです。",
+    },
+    en: {
+        greeting: "Welcome to Lantern-TECH Blog",
+        description: "Exploring the fusion of technology and creativity.",
+    },
+    zh: {
+        greeting: "欢迎来到 Lantern-TECH Blog",
+        description: "探索技术与创造力的融合。",
+    },
+};
+
+const t = translations[lang as keyof typeof translations] || translations.jp;
+---
+
+<BaseLayout title={`Lantern-TECH Blog - ${lang.toUpperCase()}`} lang={lang}>
+    <section class="hero">
+        <h1>{t.greeting}</h1>
+        <p>{t.description}</p>
+
+        <!-- Placeholder generic image -->
+        <Imgur
+            id="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Tech Blog Hero"
+        />
+    </section>
+
+    <section class="recent-updates">
+        <h2>Recent Updates / 最新情報</h2>
+        <ul>
+            <li>
+                <a href={`/${lang}/blog/integrate`}
+                    >Integrated Status / 全体の状況</a>
+            </li>
+            <li>
+                <a href={`/${lang}/newsrelease/matching`}
+                    >Matching Presentation / マッチングプレゼン</a>
+            </li>
+            <li>
+                <a href={`/${lang}/notes/pickup`}>Pickup / 気になった記事</a>
+            </li>
+        </ul>
+    </section>
+</BaseLayout>
+
+<style>
+    .hero {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    .recent-updates {
+        margin-top: 3rem;
+    }
+</style>

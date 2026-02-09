@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+    const pages = [
+        {
+            slug: "integrate",
+            title: {
+                jp: "全体の状況",
+                en: "Overall Integration",
+                zh: "整体情况",
+            },
+        },
+        {
+            slug: "character",
+            title: { jp: "文字", en: "Character", zh: "文字" },
+        },
+        {
+            slug: "vendor",
+            title: { jp: "ベンダー", en: "Vendor", zh: "供应商" },
+        },
+        {
+            slug: "conveyor",
+            title: { jp: "コンベア", en: "Conveyor", zh: "传送带" },
+        },
+        {
+            slug: "software",
+            title: { jp: "ソフトウェア", en: "Software", zh: "软件" },
+        },
+    ];
+
+    const paths = [];
+    ["jp", "en", "zh"].forEach((lang) => {
+        pages.forEach((page) => {
+            paths.push({
+                params: { lang, slug: page.slug },
+                props: { page },
+            });
+        });
+    });
+
+    return paths;
+}
+
+const { lang, slug } = Astro.params;
+const { page } = Astro.props;
+
+const translations = {
+    jp: { section: "ブログ" },
+    en: { section: "Blog" },
+    zh: { section: "博客" },
+};
+
+const t = translations[lang as keyof typeof translations] || translations.jp;
+const pageTitle = page.title[lang as keyof typeof page.title] || page.title.jp;
+---
+
+<BaseLayout title={`${pageTitle} | Lantern-TECH Blog`} lang={lang}>
+    <header class="page-header">
+        <span class="category">{t.section}</span>
+        <h1>{pageTitle}</h1>
+    </header>
+
+    <article class="content">
+        <p>Displays content for: {slug} ({lang})</p>
+        <!-- Placeholder content -->
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </article>
+</BaseLayout>
+
+<style>
+    .page-header {
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1rem;
+    }
+
+    .category {
+        font-size: 0.9rem;
+        color: var(--color-accent);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    h1 {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .content {
+        line-height: 1.8;
+    }
+</style>

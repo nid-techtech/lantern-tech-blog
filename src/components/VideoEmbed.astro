@@ -1,0 +1,49 @@
+---
+interface Props {
+    platform: "youtube" | "vimeo" | "bilibili";
+    id: string;
+    title?: string;
+}
+
+const { platform, id, title = "Video player" } = Astro.props;
+
+let src = "";
+if (platform === "youtube") {
+    src = `https://www.youtube.com/embed/${id}`;
+} else if (platform === "vimeo") {
+    src = `https://player.vimeo.com/video/${id}`;
+} else if (platform === "bilibili") {
+    // Bilibili often needs high_quality=1 and danmaku=0
+    src = `https://player.bilibili.com/player.html?bvid=${id}&page=1&high_quality=1&danmaku=0`;
+}
+---
+
+<div class="video-container">
+    <iframe
+        src={src}
+        title={title}
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</div>
+
+<style>
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #000;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>

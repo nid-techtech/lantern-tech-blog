@@ -1,0 +1,72 @@
+/* Global Styles */
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #01406d;
+  --color-accent: #ee542b;
+  --color-text: #000000;
+
+  --font-base: "LINE Seed JP", system-ui, -apple-system, sans-serif;
+  --font-code: "HackGen", monospace;
+  --font-zh: "Noto Sans SC", "LINE Seed JP", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("https://seed.line.me/font/LINESeedJP_OTF_Rg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("https://seed.line.me/font/LINESeedJP_OTF_Bd.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Noto Sans SC via Google Fonts import in Layout */
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+:lang(zh) {
+  font-family: var(--font-zh);
+}
+
+code, pre {
+  font-family: var(--font-code);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Base Layout Structure */
+main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}

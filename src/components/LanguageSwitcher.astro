@@ -1,0 +1,52 @@
+---
+const { lang } = Astro.params;
+const currentPath = Astro.url.pathname;
+
+const languages = {
+  jp: '日本語',
+  en: 'English',
+  zh: '中文'
+};
+
+function getLocalizedPath(targetLang: string) {
+  const segments = currentPath.split('/').filter(Boolean);
+  if (segments[0] in languages) {
+    segments[0] = targetLang;
+  } else {
+    segments.unshift(targetLang);
+  }
+  return '/' + segments.join('/');
+}
+---
+
+<div class="language-switcher">
+  {Object.entries(languages).map(([code, label]) => (
+    <a href={getLocalizedPath(code)} class={code === lang ? 'active' : ''}>
+      {label}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .language-switcher a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .language-switcher a:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  .language-switcher a.active {
+    font-weight: bold;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+</style>

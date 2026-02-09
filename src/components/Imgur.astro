@@ -1,0 +1,40 @@
+---
+interface Props {
+    id: string;
+    alt?: string;
+    size?: "s" | "b" | "t" | "m" | "l" | "h" | ""; // Imgur thumbnail sizes
+    width?: number | string;
+    height?: number | string;
+}
+
+const { id, alt = "Imgur Image", size = "", width, height } = Astro.props;
+
+// Determine if id is a full URL or just an ID
+const isUrl = id.startsWith("http");
+const imageSrc = isUrl ? id : `https://i.imgur.com/${id}${size}.jpg`;
+---
+
+<div class="imgur-container">
+    <img
+        src={imageSrc}
+        alt={alt}
+        width={width}
+        height={height}
+        loading="lazy"
+    />
+</div>
+
+<style>
+    .imgur-container {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>

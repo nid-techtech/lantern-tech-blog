@@ -1,0 +1,26 @@
+# Lantern-TECH Blog Setup Tasks
+
+- [x] Initialize Astro Project <!-- id: 0 -->
+    - [x] Create project structure <!-- id: 1 -->
+    - [x] Install dependencies <!-- id: 2 -->
+- [x] Configure Design System <!-- id: 3 -->
+    - [x] Set up CSS variables for colors <!-- id: 4 -->
+    - [x] Configure fonts (LINE Seed JP, HackGen, Noto Sans CJK SC) <!-- id: 5 -->
+    - [x] Create global styles <!-- id: 6 -->
+- [ ] Create Components <!-- id: 7 -->
+    - [x] Header (Responsive, Ribbon/Hamburger) <!-- id: 8 -->
+    - [x] Footer (Sitemap, Links, Copyright) <!-- id: 9 -->
+    - [x] Language Switcher <!-- id: 10 -->
+    - [x] Imgur Image Component <!-- id: 11 -->
+    - [x] Video Embed Component (YouTube/Vimeo/Bilibili) <!-- id: 12 -->
+- [ ] Implement Pages & Routing <!-- id: 13 -->
+    - [x] Setup i18n routing structure (`/[lang]/...`) <!-- id: 14 -->
+    - [x] Create Layouts <!-- id: 15 -->
+    - [x] Create Index pages <!-- id: 16 -->
+    - [ ] Create Blog pages (integrate, character, vendor, conveyor, software) <!-- id: 17 -->
+    - [x] Create Blog pages (integrate, character, vendor, conveyor, software) <!-- id: 17 -->
+    - [x] Create Newsrelease pages (matching, middle, movie, caption, promotion) <!-- id: 18 -->
+    - [x] Create Notes pages (precedent, pickup) <!-- id: 19 -->
+- [x] Verification <!-- id: 20 -->
+    - [x] Verify responsiveness <!-- id: 21 -->
+    - [x] Verify language switching <!-- id: 22 -->
