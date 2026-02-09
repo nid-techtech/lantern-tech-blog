@@ -15,15 +15,17 @@ const { lang } = Astro.params;
 const translations = {
     jp: {
         greeting: "ようこそ Lantern-TECH Blog へ",
-        description: "技術と創造性の融合を探求するブログです。",
+        description:
+            "技ほおずきは真実を覆い隠す。我々は見えない真実を表現する。",
     },
     en: {
         greeting: "Welcome to Lantern-TECH Blog",
-        description: "Exploring the fusion of technology and creativity.",
+        description:
+            "The lantern plants vail the truth. We express the unseen truth.",
     },
     zh: {
         greeting: "欢迎来到 Lantern-TECH Blog",
-        description: "探索技术与创造力的融合。",
+        description: "酸浆果掩盖真相，我们表现看不见的真相。",
     },
 };
 
@@ -40,23 +42,6 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
             id="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="Tech Blog Hero"
         />
-    </section>
-
-    <section class="recent-updates">
-        <h2>Recent Updates / 最新情報</h2>
-        <ul>
-            <li>
-                <a href={`/${lang}/blog/integrate`}
-                    >Integrated Status / 全体の状況</a>
-            </li>
-            <li>
-                <a href={`/${lang}/newsrelease/matching`}
-                    >Matching Presentation / マッチングプレゼン</a>
-            </li>
-            <li>
-                <a href={`/${lang}/notes/pickup`}>Pickup / 気になった記事</a>
-            </li>
-        </ul>
     </section>
 </BaseLayout>
 
@@ -75,9 +60,5 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         font-size: 1.2rem;
         color: #666;
         margin-bottom: 2rem;
-    }
-
-    .recent-updates {
-        margin-top: 3rem;
     }
 </style>

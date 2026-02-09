@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import type { PageDefinition } from "../../../data/navigation";
 import { notesPages } from "../../../data/navigation";
+import { getEntry } from "astro:content";
 
 export function getStaticPaths() {
     const paths: any[] = [];
@@ -28,17 +29,31 @@ const translations = {
 
 const t = translations[lang as keyof typeof translations] || translations.jp;
 const pageTitle = page.title[lang as keyof typeof page.title] || page.title.jp;
+
+// Fetch content from collection
+const entry = await getEntry("notes", `${lang}/${slug}`);
+const { Content } = entry ? await entry.render() : { Content: null };
 ---
 
-<BaseLayout title={`${pageTitle} | Lantern-TECH Blog`} lang={lang}>
+<BaseLayout
+    title={`${entry?.data.title || pageTitle} | Lantern-TECH Blog`}
+    lang={lang}
+>
     <header class="page-header">
         <span class="category">{t.section}</span>
-        <h1>{pageTitle}</h1>
+        <h1>{entry?.data.title || pageTitle}</h1>
     </header>
 
     <article class="content">
-        <p>Notes on: {slug} ({lang})</p>
-        <!-- Placeholder content -->
+        {
+            Content ? (
+                <Content />
+            ) : (
+                <p>
+                    Generating content for {slug} ({lang})...
+                </p>
+            )
+        }
     </article>
 </BaseLayout>
 
