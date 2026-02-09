@@ -1,37 +1,12 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import type { PageDefinition } from "../../../data/navigation";
+import { blogPages } from "../../../data/navigation";
 
 export function getStaticPaths() {
-    const pages = [
-        {
-            slug: "integrate",
-            title: {
-                jp: "全体の状況",
-                en: "Overall Integration",
-                zh: "整体情况",
-            },
-        },
-        {
-            slug: "character",
-            title: { jp: "文字", en: "Character", zh: "文字" },
-        },
-        {
-            slug: "vendor",
-            title: { jp: "ベンダー", en: "Vendor", zh: "供应商" },
-        },
-        {
-            slug: "conveyor",
-            title: { jp: "コンベア", en: "Conveyor", zh: "传送带" },
-        },
-        {
-            slug: "software",
-            title: { jp: "ソフトウェア", en: "Software", zh: "软件" },
-        },
-    ];
-
-    const paths = [];
+    const paths: any[] = [];
     ["jp", "en", "zh"].forEach((lang) => {
-        pages.forEach((page) => {
+        blogPages.forEach((page) => {
             paths.push({
                 params: { lang, slug: page.slug },
                 props: { page },
@@ -43,7 +18,7 @@ export function getStaticPaths() {
 }
 
 const { lang, slug } = Astro.params;
-const { page } = Astro.props;
+const { page } = Astro.props as { page: PageDefinition };
 
 const translations = {
     jp: { section: "ブログ" },

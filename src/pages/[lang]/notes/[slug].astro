@@ -1,29 +1,12 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import type { PageDefinition } from "../../../data/navigation";
+import { notesPages } from "../../../data/navigation";
 
 export function getStaticPaths() {
-    const pages = [
-        {
-            slug: "precedent",
-            title: {
-                jp: "参考作品リサーチ",
-                en: "Precedent Research",
-                zh: "参考作品研究",
-            },
-        },
-        {
-            slug: "pickup",
-            title: {
-                jp: "気になった記事や作品",
-                en: "Picked Up Articles",
-                zh: "关注的文章或作品",
-            },
-        },
-    ];
-
-    const paths = [];
+    const paths: any[] = [];
     ["jp", "en", "zh"].forEach((lang) => {
-        pages.forEach((page) => {
+        notesPages.forEach((page) => {
             paths.push({
                 params: { lang, slug: page.slug },
                 props: { page },
@@ -35,7 +18,7 @@ export function getStaticPaths() {
 }
 
 const { lang, slug } = Astro.params;
-const { page } = Astro.props;
+const { page } = Astro.props as { page: PageDefinition };
 
 const translations = {
     jp: { section: "参考文献" },

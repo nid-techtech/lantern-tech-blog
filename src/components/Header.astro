@@ -1,39 +1,39 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { blogPages, newsreleasePages, notesPages } from "../data/navigation";
+import type { PageDefinition } from "../data/navigation";
 
-const { lang } = Astro.params;
+const { lang = "jp" } = Astro.params;
+
+const getTitle = (page: PageDefinition) => {
+    return page.title[lang as keyof typeof page.title] || page.title.jp;
+};
 
 const navItems = [
     { href: `/${lang}/`, label: "Top" },
     {
         href: `/${lang}/blog`,
         label: "Blog",
-        children: [
-            { href: `/${lang}/blog/integrate`, label: "Integrate" },
-            { href: `/${lang}/blog/character`, label: "Character" },
-            { href: `/${lang}/blog/vendor`, label: "Vendor" },
-            { href: `/${lang}/blog/conveyor`, label: "Conveyor" },
-            { href: `/${lang}/blog/software`, label: "Software" },
-        ],
+        children: blogPages.map((page) => ({
+            href: `/${lang}/blog/${page.slug}`,
+            label: getTitle(page),
+        })),
     },
     {
         href: `/${lang}/newsrelease`,
         label: "News Release",
-        children: [
-            { href: `/${lang}/newsrelease/matching`, label: "Matching" },
-            { href: `/${lang}/newsrelease/middle`, label: "Middle" },
-            { href: `/${lang}/newsrelease/movie`, label: "Movie" },
-            { href: `/${lang}/newsrelease/caption`, label: "Caption" },
-            { href: `/${lang}/newsrelease/promotion`, label: "Promotion" },
-        ],
+        children: newsreleasePages.map((page) => ({
+            href: `/${lang}/newsrelease/${page.slug}`,
+            label: getTitle(page),
+        })),
     },
     {
         href: `/${lang}/notes`,
         label: "Notes",
-        children: [
-            { href: `/${lang}/notes/precedent`, label: "Precedent" },
-            { href: `/${lang}/notes/pickup`, label: "Pickup" },
-        ],
+        children: notesPages.map((page) => ({
+            href: `/${lang}/notes/${page.slug}`,
+            label: getTitle(page),
+        })),
     },
 ];
 ---
@@ -41,7 +41,13 @@ const navItems = [
 <header>
     <div class="header-container">
         <div class="logo">
-            <a href={`/${lang}/`}>Lantern-TECH Blog</a>
+            <a href={`/${lang}/`}>
+                <img
+                    src="/lantech_icon_alphawhite.webp"
+                    alt="Lantern-TECH Blog"
+                />
+                <span>Lantern-TECH Blog</span>
+            </a>
         </div>
 
         <nav class="desktop-nav">
@@ -115,14 +121,26 @@ const navItems = [
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 80px; /* Ensure sufficient height for the logo */
     }
 
     .logo a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--color-primary);
+    }
+
+    .logo img {
+        height: 50px; /* Adjust as needed */
+        width: auto;
+    }
+
+    .logo span {
         font-family: var(--font-base);
         font-weight: 700;
         font-size: 1.5rem;
-        color: var(--color-primary);
-        text-decoration: none;
+        margin-left: 10px;
     }
 
     .desktop-nav ul {
@@ -155,23 +173,38 @@ const navItems = [
         left: 0;
         background-color: var(--color-bg);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        min-width: 150px;
+        min-width: 200px; /* Widened to accommodate longer titles */
         display: none;
         flex-direction: column !important;
         gap: 0 !important;
         border: 1px solid #ddd;
         border-top: 3px solid var(--color-accent);
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+        z-index: 1001;
     }
 
+    /* Show dropdown on hover */
     .nav-item:hover .dropdown {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .dropdown li a {
         display: block;
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1rem;
         color: var(--color-text);
         font-weight: normal;
+        white-space: nowrap; /* Prevent wrapping */
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown li:last-child a {
+        border-bottom: none;
     }
 
     .dropdown li a:hover {

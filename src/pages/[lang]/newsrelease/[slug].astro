@@ -1,45 +1,12 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import type { PageDefinition } from "../../../data/navigation";
+import { newsreleasePages } from "../../../data/navigation";
 
 export function getStaticPaths() {
-    const pages = [
-        {
-            slug: "matching",
-            title: {
-                jp: "マッチングプレゼン",
-                en: "Matching Presentation",
-                zh: "匹配演示",
-            },
-        },
-        {
-            slug: "middle",
-            title: { jp: "中間報告", en: "Interim Report", zh: "中期报告" },
-        },
-        {
-            slug: "movie",
-            title: {
-                jp: "動画プレゼン",
-                en: "Video Presentation",
-                zh: "视频演示",
-            },
-        },
-        {
-            slug: "caption",
-            title: {
-                jp: "キャプションボード",
-                en: "Caption Board",
-                zh: "说明牌",
-            },
-        },
-        {
-            slug: "promotion",
-            title: { jp: "PR動画", en: "Promotion Video", zh: "宣传视频" },
-        },
-    ];
-
-    const paths = [];
+    const paths: any[] = [];
     ["jp", "en", "zh"].forEach((lang) => {
-        pages.forEach((page) => {
+        newsreleasePages.forEach((page) => {
             paths.push({
                 params: { lang, slug: page.slug },
                 props: { page },
@@ -51,7 +18,7 @@ export function getStaticPaths() {
 }
 
 const { lang, slug } = Astro.params;
-const { page } = Astro.props;
+const { page } = Astro.props as { page: PageDefinition };
 
 const translations = {
     jp: { section: "発表資料" },
