@@ -5,10 +5,17 @@ import "../styles/global.css";
 
 interface Props {
     title?: string;
+    description?: string;
     lang?: string;
+    ogImage?: string;
 }
 
-const { title = "Lantern-TECH Blog", lang = "jp" } = Astro.props;
+const {
+    title = "Lantern-TECH Blog",
+    description = "Tech Blog",
+    lang = "jp",
+    ogImage,
+} = Astro.props;
 
 // Map simple lang codes to full logic if needed, or just pass through
 ---
@@ -21,6 +28,13 @@ const { title = "Lantern-TECH Blog", lang = "jp" } = Astro.props;
         <link rel="icon" type="image/webp" href="/lantech_fav_2.webp" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <!-- OGP -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="article" />
+        {ogImage && <meta property="og:image" content={ogImage} />}
 
         <!-- Google Fonts: LINE Seed JP, Noto Sans SC, JetBrains Mono -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />

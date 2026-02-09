@@ -37,6 +37,8 @@ const { Content } = entry ? await entry.render() : { Content: null };
 
 <BaseLayout
     title={`${entry?.data.title || pageTitle} | Lantern-TECH Blog`}
+    description={entry?.data.description}
+    ogImage={entry?.data.ogImage}
     lang={lang}
 >
     <header class="page-header">

@@ -31,6 +31,7 @@ Astro Content Collections を導入し、各言語ごとに独立したコンテ
 title: 記事のタイトル
 description: 記事の概要
 coverImage: /path/to/image.jpg
+ogImage: https://i.imgur.com/example.png # OGP画像 (Imgur等のURL)
 draft: false
 ---
 
@@ -42,4 +43,5 @@ draft: false
 
 - **ファイル名とスラッグの一致**: Markdownのファイル名は `navigation.ts` の `slug` と完全に一致させてください。
 - **言語ごとの独立性**: 言語ごとにファイルが分かれているため、言語版によって全く異なる画像を使ったり、段落構成を変えることが可能です。
+- **OGP設定**: `ogImage` プロパティに画像URL（Imgurなど）を指定すると、SNSシェア時などのOGP画像として使用されます。この画像は記事本文には表示されません。
 - **ファイルがない場合**: 特定の言語のファイルを作成しなかった場合、そのページは「Generating content...」というプレースホルダーが表示されます（または空になります）。

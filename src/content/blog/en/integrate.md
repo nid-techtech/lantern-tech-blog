@@ -1,6 +1,7 @@
 ---
 title: Overall Integration (EN Content)
 description: This is an English sample article.
+ogImage: https://i.imgur.com/example.png
 ---
 
 ## English Content
