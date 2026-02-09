@@ -6,23 +6,11 @@
   --color-text: #000000;
 
   --font-base: "LINE Seed JP", system-ui, -apple-system, sans-serif;
-  --font-code: "HackGen", monospace;
+  --font-code: "JetBrains Mono", monospace;
   --font-zh: "Noto Sans SC", "LINE Seed JP", system-ui, sans-serif;
 }
 
-@font-face {
-  font-family: "LINE Seed JP";
-  src: url("https://seed.line.me/font/LINESeedJP_OTF_Rg.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "LINE Seed JP";
-  src: url("https://seed.line.me/font/LINESeedJP_OTF_Bd.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
+/* Fonts are loaded via Google Fonts in BaseLayout.astro */
 
 /* Noto Sans SC via Google Fonts import in Layout */
 
@@ -44,11 +32,17 @@ body {
   font-family: var(--font-zh);
 }
 
-code, pre {
+code,
+pre {
   font-family: var(--font-code);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-primary);
 }
 
