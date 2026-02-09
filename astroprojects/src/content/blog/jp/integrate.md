@@ -1,6 +1,7 @@
 ---
 title: 全体の状況 (JP Content)
 description: コンセプトと、プロジェクト全体の進捗を記述します
+
 ogImage: https://imgur.com/g0dtlDo.jpeg
 ---
 
@@ -8,11 +9,11 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 結成からコンセプト・モックアップまで
 
+---
+
 ## チーム結成・テーマ決定
 
 `2025/06/03`
-
-![鵜飼のマッチングプレゼンスライド](https://imgur.com/xi1SRFB.png)
 
 マッチングプレゼンで鵜飼が提案した「USBの接続ってどうなってるのか」というテーマに菅原と大渕が合流し、Lantern-TECHを結成。
 
@@ -26,15 +27,17 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 [キーボードを入力に取り押出機構に渡すソフトウェア/鵜飼](/jp/blog/software)
 
+![鵜飼のマッチングプレゼンスライド](https://imgur.com/xi1SRFB.png)
+
 ### 関連項目
 
 [メンバーのマッチングプレゼン用スライド](/jp/newsrelease/matching)
 
+---
+
 ## 中間発表
 
 `2025/06/17`
-
-![菅原の中間発表スライド](https://imgur.com/ps1Y7wZ.png)
 
 一定速度で回るコンベア、Aのみ押し出せるカートリッジ、送信したら1ストローク動くのみのUIをあわせて、中間発表の場でモックアップを動作。
 
@@ -47,9 +50,13 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 - 日本科学未来館に以前あった[インターネット物理モデル](/jp/notes/pickup)を彷彿とさせる
 
+![菅原の中間発表スライド](https://imgur.com/ps1Y7wZ.png)
+
 ### 関連項目
 
 [中間報告の時のスライド](/jp/newsrelease/middle)
+
+---
 
 # 第2期
 
@@ -58,10 +65,6 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 ## コンセプトの再検討
 
 `2025/06/18`
-
-![板書1](https://imgur.com/ksQcQbb.jpeg)
-
-![板書2](https://imgur.com/e5INVEo.jpeg)
 
 コンセプトと作るべきもの、方針に関して不明瞭な部分が出てきて、それに関して見解の相違があったので、改めてメンバーなどで話し合う。
 
@@ -95,19 +98,15 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 - 「情報の流れ」から「コンピュータの入出力のはたらき」へとコンセプトを変更することは「見えないもの」に対して忠実か。
 
+![板書1](https://imgur.com/ksQcQbb.jpeg)
+
+![板書2](https://imgur.com/e5INVEo.jpeg)
+
+---
+
 ## プレ展示
 
 `2025/07/01`
-
-![プレ展示](https://imgur.com/Df7ExMF.jpeg)
-
-![準備中1](https://imgur.com/I6pgqvS.jpeg)
-
-![準備中2](https://imgur.com/vo0wXvU.jpeg)
-
-![発表1](https://imgur.com/MoB3hvQ.jpeg)
-
-![発表2](https://imgur.com/0GWXjTR.jpeg)
 
 集約機構が無いのでとりあえずコンベアに直接文字を押し出すことにしようとしたが、長さが足りなかったので、結局バルサ材にテープを貼って手動で滑らせることで簡易集約機構とした。
 
@@ -121,11 +120,21 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 ところで、山本先生から指摘というか提案された、「電子データを物理媒体に還元する」というテーマは結構我々の心に引っかかった。
 
+![プレ展示](https://imgur.com/Df7ExMF.jpeg)
+
+![準備中1](https://imgur.com/I6pgqvS.jpeg)
+
+![準備中2](https://imgur.com/vo0wXvU.jpeg)
+
+![発表1](https://imgur.com/MoB3hvQ.jpeg)
+
+![発表2](https://imgur.com/0GWXjTR.jpeg)
+
+---
+
 ## 動画撮影
 
 `2025/07/04`
-
-![ブリーフィング](https://imgur.com/z9RGTHO.jpeg)
 
 動画プレゼン用の動画を収録する必要があった。本来はプレ展示のときに収録するべきだったのだが、シンプルに未完成だったので後日にずれ込んでしまった。
 
@@ -133,15 +142,17 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 コンベアの正転と逆転を直接制御できるようにタクトスイッチを2つ付けたのだが、自動制御できないので一旦このボタンを使って人力でコンベアを制御することに。しかしケーブルの関係でブレッドボードを机の下に隠すことができなかったので、菅原が机の下に隠れて、手を伸ばして操作することにした。なのでできた動画をよく見ると袖口が映り込んでいる。
 
+![ブリーフィング](https://imgur.com/z9RGTHO.jpeg)
+
 ### 関連項目
 
 [動画プレゼンの動画](/jp/newsrelease/movie)
 
+---
+
 ## 動画プレゼン、制作相談
 
 `2025/07/08`
-
-![メモ](https://i.imgur.com/1KuIuvT.jpg)
 
 動画プレゼンに対する教員の講評
 
@@ -169,17 +180,19 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 鑑賞者が（最終的に出力したい）文字をキーボードで入力し、その後鑑賞者が自分でコンベアを操作して文字列を完成させる、というフローを想定すると、それはもうただの道具。鑑賞者にさせる操作は（キーボード入力/コンベア操作のうち）どちらかでよくて、そうなると今回の展示としてよりしっくり来るのは前者かと思う。
 
+![メモ](https://i.imgur.com/1KuIuvT.jpg)
+
+---
+
 # 第3期
 
 本展示とオープンキャンパス
 
+---
+
 ## 本展示直前
 
 `2025/07/22`
-
-![キャプション印刷中](https://i.imgur.com/PzDE7zx.jpg)
-
-![準備中](https://i.imgur.com/xSNn6PE.jpg)
 
 相変わらずギリギリまでの作業で、いやになっちゃうよ～🐟
 
@@ -197,19 +210,19 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 キャプションボードも作成し、いよいよ本番を迎える。
 
+![キャプション印刷中](https://i.imgur.com/PzDE7zx.jpg)
+
+![準備中](https://i.imgur.com/xSNn6PE.jpg)
+
 ### 関連項目
 
 [キャプションボード](/jp/newsrelease/caption)
 
+---
+
 ## 本展示
 
 `2025/07/22`
-
-![展示状態](https://i.imgur.com/xMykOxt.jpg)
-
-![講評1](https://i.imgur.com/MKtBzqi.jpg)
-
-![講評2](https://i.imgur.com/Vw3iZmX.jpg)
 
 学生からの評判は上々。
 
@@ -237,6 +250,14 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 - シンプルに設営が面倒すぎる。特に配線。
 
+![展示状態](https://i.imgur.com/xMykOxt.jpg)
+
+![講評1](https://i.imgur.com/MKtBzqi.jpg)
+
+![講評2](https://i.imgur.com/Vw3iZmX.jpg)
+
+---
+
 ## 必死に撮影
 
 `2025/07/22`
@@ -249,6 +270,8 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 皆はちゃんと睡眠を取ろう！！
 
+---
+
 ## オープンキャンパス展示決定
 
 `2025/07/23`
@@ -259,6 +282,8 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 本展示で洗い出すことができた改善点を直したVer.を公開することができるチャンス！というわけで気を引き締めていく。
 
+---
+
 ## オープンキャンパス前日
 
 `2025/07/25`
@@ -268,6 +293,8 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 ### 関連項目
 
 [PR動画](/jp/newsrelease/promotion)
+
+---
 
 ## オープンキャンパス
 
@@ -283,3 +310,4 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 展示場所は第4棟2階の渡り廊下。プロトルームから吹き抜けとなっているこの場所は非常に冷房が効きづらく、1階との気温差が大きい。交代で伊達研究室前のキッチンで休むなどしていた。
 
+---
