@@ -3,28 +3,30 @@ const { lang } = Astro.params;
 const currentPath = Astro.url.pathname;
 
 const languages = {
-  jp: '日本語',
-  en: 'English',
-  zh: '中文'
+  jp: "JP",
+  en: "EN",
+  zh: "ZH",
 };
 
 function getLocalizedPath(targetLang: string) {
-  const segments = currentPath.split('/').filter(Boolean);
+  const segments = currentPath.split("/").filter(Boolean);
   if (segments[0] in languages) {
     segments[0] = targetLang;
   } else {
     segments.unshift(targetLang);
   }
-  return '/' + segments.join('/');
+  return "/" + segments.join("/");
 }
 ---
 
 <div class="language-switcher">
-  {Object.entries(languages).map(([code, label]) => (
-    <a href={getLocalizedPath(code)} class={code === lang ? 'active' : ''}>
-      {label}
-    </a>
-  ))}
+  {
+    Object.entries(languages).map(([code, label]) => (
+      <a href={getLocalizedPath(code)} class={code === lang ? "active" : ""}>
+        {label}
+      </a>
+    ))
+  }
 </div>
 
 <style>

@@ -74,7 +74,9 @@ const navItems = [
         </nav>
 
         <div class="controls">
-            <LanguageSwitcher />
+            <div class="desktop-lang-switcher">
+                <LanguageSwitcher />
+            </div>
             <button id="menu-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -86,14 +88,43 @@ const navItems = [
     <nav id="mobile-nav" class="mobile-nav">
         <ul>
             {
-                navItems.map((item) => (
-                    <li>
-                        <a href={item.href}>{item.label}</a>
+                navItems.map((item, index) => (
+                    <li
+                        class={`mobile-nav-item ${item.children ? "has-children" : ""}`}
+                    >
+                        <div class="nav-link-row">
+                            <a href={item.href}>{item.label}</a>
+                            {item.children && (
+                                <button
+                                    class="submenu-toggle"
+                                    aria-expanded="false"
+                                    aria-controls={`submenu-${index}`}
+                                    aria-label={`Toggle ${item.label} submenu`}
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        height="24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <polyline points="6 9 12 15 18 9" />
+                                    </svg>
+                                </button>
+                            )}
+                        </div>
                         {item.children && (
-                            <ul>
+                            <ul
+                                id={`submenu-${index}`}
+                                class="mobile-submenu"
+                                hidden
+                            >
                                 {item.children.map((child) => (
                                     <li>
-                                        <a href={child.href}>- {child.label}</a>
+                                        <a href={child.href}>{child.label}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -102,6 +133,9 @@ const navItems = [
                 ))
             }
         </ul>
+        <div class="mobile-lang-switcher">
+            <LanguageSwitcher />
+        </div>
     </nav>
 </header>
 
@@ -250,21 +284,86 @@ const navItems = [
     }
 
     .mobile-nav li {
-        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #f0f0f0;
     }
 
-    .mobile-nav > ul > li > a {
+    .nav-link-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-link-row > a {
+        flex-grow: 1;
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        padding: 1rem 0; /* Larger touch target */
+        color: var(--color-text);
+        text-decoration: none;
+        display: block;
     }
 
-    .mobile-nav ul ul {
-        padding-left: 1rem;
-        margin-top: 0.5rem;
+    .submenu-toggle {
+        background: none;
+        border: none;
+        padding: 1rem; /* Large touch target */
+        cursor: pointer;
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    .submenu-toggle.expanded {
+        transform: rotate(180deg);
+    }
+
+    .mobile-submenu {
+        display: none;
+        background-color: #f9f9f9;
+        padding-left: 0;
+    }
+
+    .mobile-submenu.open {
+        display: block;
+    }
+
+    .mobile-submenu li {
+        border-bottom: 1px solid #eee;
+    }
+
+    .mobile-submenu li:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-submenu a {
+        display: block;
+        padding: 1rem 1.5rem; /* Indented and large */
+        font-size: 1.1rem;
+        color: var(--color-text);
+        text-decoration: none;
+    }
+
+    .mobile-submenu a:hover {
+        color: var(--color-primary);
+        background-color: #f0f0f0;
+    }
+
+    .mobile-lang-switcher {
+        margin-top: 1rem;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
     }
 
     @media (max-width: 768px) {
         .desktop-nav {
+            display: none;
+        }
+
+        .desktop-lang-switcher {
             display: none;
         }
 
@@ -289,4 +388,23 @@ const navItems = [
             // Simple animation toggling could go here
         });
     }
+
+    const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+    submenuToggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", String(!isExpanded));
+            toggle.classList.toggle("expanded");
+
+            const submenuId = toggle.getAttribute("aria-controls");
+            if (submenuId) {
+                const submenu = document.getElementById(submenuId);
+                if (submenu) {
+                    submenu.hidden = !submenu.hidden;
+                    submenu.classList.toggle("open");
+                }
+            }
+        });
+    });
 </script>
