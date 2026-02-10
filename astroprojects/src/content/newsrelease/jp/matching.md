@@ -1,7 +1,7 @@
 ---
 title: マッチングプレゼン
 description: チーム編成と作品計画の決定を目的とする自己PRプレゼン
-twoColumn: true
+twoColumn: false
 
 ogImage: https://i.imgur.com/xi1SRFB.png
 ---
@@ -10,7 +10,7 @@ ogImage: https://i.imgur.com/xi1SRFB.png
 
 ---
 
-# 鵜飼康平
+<!-- # 鵜飼康平
 
 ## できること
 
@@ -26,13 +26,13 @@ ogImage: https://i.imgur.com/xi1SRFB.png
 ## 企画案
 
 - 接続
-- USB
+- USB -->
 
 ![鵜飼のマッチングプレゼンスライド](https://i.imgur.com/xi1SRFB.png)
 
 ---
 
-# 菅原紡宜
+<!-- # 菅原紡宜
 
 ## できること
 
@@ -49,13 +49,13 @@ ogImage: https://i.imgur.com/xi1SRFB.png
 ## 企画案
 
 - 不可視なものを直接可視化するのではなく、鑑賞者の想像を掻き立てることで表現する
-- 思考実験の要素を盛り込む（シュレーディンガーの猫など）
+- 思考実験の要素を盛り込む（シュレーディンガーの猫など） -->
 
 ![菅原のマッチングプレゼンスライド](https://i.imgur.com/Tz2VbUe.png)
 
 ---
 
-# 大渕凜
+<!-- # 大渕凜
 
 ## できること
 
@@ -74,7 +74,7 @@ ogImage: https://i.imgur.com/xi1SRFB.png
 - 心拍数の同期
 - 一つの要素が世の中をどう流れているか
 - 天候、気温を表現
-- 視界には入っているが意識していないもの
+- 視界には入っているが意識していないもの -->
 
 ![大渕のマッチングプレゼンスライド](https://i.imgur.com/5PuEgVo.png)
 
