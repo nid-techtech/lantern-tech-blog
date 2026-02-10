@@ -1,6 +1,11 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
-import { blogPages, newsreleasePages, notesPages } from "../data/navigation";
+import {
+    blogPages,
+    newsreleasePages,
+    notesPages,
+    categoryNames,
+} from "../data/navigation";
 import type { PageDefinition } from "../data/navigation";
 
 const { lang = "jp" } = Astro.params;
@@ -9,11 +14,18 @@ const getTitle = (page: PageDefinition) => {
     return page.title[lang as keyof typeof page.title] || page.title.jp;
 };
 
+const getCategoryName = (key: keyof typeof categoryNames) => {
+    return (
+        categoryNames[key][lang as keyof (typeof categoryNames)[typeof key]] ||
+        categoryNames[key].jp
+    );
+};
+
 const navItems = [
-    { href: `/${lang}/`, label: "Top" },
+    { href: `/${lang}/`, label: getCategoryName("top") },
     {
         href: `/${lang}/blog`,
-        label: "Blog",
+        label: getCategoryName("blog"),
         children: blogPages.map((page) => ({
             href: `/${lang}/blog/${page.slug}`,
             label: getTitle(page),
@@ -21,7 +33,7 @@ const navItems = [
     },
     {
         href: `/${lang}/newsrelease`,
-        label: "News Release",
+        label: getCategoryName("newsrelease"),
         children: newsreleasePages.map((page) => ({
             href: `/${lang}/newsrelease/${page.slug}`,
             label: getTitle(page),
@@ -29,7 +41,7 @@ const navItems = [
     },
     {
         href: `/${lang}/notes`,
-        label: "Notes",
+        label: getCategoryName("notes"),
         children: notesPages.map((page) => ({
             href: `/${lang}/notes/${page.slug}`,
             label: getTitle(page),

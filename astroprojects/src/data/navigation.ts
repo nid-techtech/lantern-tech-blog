@@ -89,3 +89,10 @@ export const notesPages: PageDefinition[] = [
         },
     },
 ];
+
+export const categoryNames = {
+    top: { jp: "トップ", en: "Top", zh: "首页" },
+    blog: { jp: "ブログ", en: "Blog", zh: "博客" },
+    newsrelease: { jp: "発表資料", en: "News Release", zh: "发布资料" },
+    notes: { jp: "参考文献", en: "Notes", zh: "参考文献" },
+};
