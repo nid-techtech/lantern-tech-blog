@@ -72,7 +72,7 @@ Point 4 コンベア
 
 ![ピタゴラ装置No.58_1](https://i.imgur.com/RnHDr23.png)
 ![ピタゴラ装置No.58_2]()
-![ピタゴラ装置No.58_3]()
+![ピタゴラ装置No.58_3](https://youtu.be/o154pXKKji4?si=lP5F1jJilzudzV3o)
 
 ## コメント
 
@@ -132,6 +132,14 @@ Twitterなどのネットから文字を持ってくる。
 
 [Illuminate Productions(イギリスで活動する現代アート組織)におけるBit.Fallの記事](https://www.illuminateproductions.co.uk/bitfall)
 
+![Bit.Fall1]()
+
+![Bit.Fall2]()
+
+![Bit.Fall3]()
+
+![Bit.Fall4]()
+
 ## コメント
 
 **興味を持った要素**
@@ -188,6 +196,10 @@ touchdesignerなどを応用すれば作れると考える。
 
 他関連サイト
 
+![Text Rain1]()
+
+![Text Rain2](https://youtu.be/f_u3sSffS78?si=FmzHV19dDDkngHVg)
+
 ## コメント
 
 **興味を持った要素**
@@ -239,6 +251,10 @@ ksawery komputery
 **引用元**
 
 [作者の公式サイト](https://ksawerykomputery.com/works/digital-analog-mirror)
+
+![Digital/Analog Mirror1]()
+
+![Digital/Analog Mirror2](https://vimeo.com/812436463?fl=pl&fe=sh)
 
 ## コメント
 
