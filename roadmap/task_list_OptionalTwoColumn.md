@@ -6,3 +6,5 @@
 - [x] Update `integrate.md` to use the new flag <!-- id: 3 -->
 - [x] Verify conditional layout rendering <!-- id: 4 -->
 - [x] Debug disappearing content issue with v3 plugin <!-- id: 5 -->
+- [x] Fix missing CSS for 2-column layout in `newsrelease` pages <!-- id: 6 -->
+- [x] Apply 2-column layout CSS to `notes` pages <!-- id: 7 -->
