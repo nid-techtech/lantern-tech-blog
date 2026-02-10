@@ -1,6 +1,7 @@
 ---
 title: 文字ベンダー
 description: 担当:菅原
+twoColumn: true
 
 ogImage: https://i.imgur.com/sXFhoCJ.png
 ---

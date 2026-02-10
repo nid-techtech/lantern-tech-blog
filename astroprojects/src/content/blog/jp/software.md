@@ -1,6 +1,7 @@
 ---
 title: ソフトウェア
 description: 担当:鵜飼
+twoColumn: true
 
 ogImage: https://i.imgur.com/SFdXcWU.jpg
 ---

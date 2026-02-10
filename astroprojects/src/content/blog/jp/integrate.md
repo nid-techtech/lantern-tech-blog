@@ -1,6 +1,7 @@
 ---
 title: 全体の状況
 description: コンセプトと、プロジェクト全体の進捗を記述します
+twoColumn: true
 
 ogImage: https://imgur.com/g0dtlDo.jpeg
 ---

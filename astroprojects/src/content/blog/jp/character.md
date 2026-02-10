@@ -1,6 +1,7 @@
 ---
 title: 文字
 description: 担当:鵜飼、大渕
+twoColumn: true
 
 ogImage: https://i.imgur.com/ehQL7H2.jpg
 ---

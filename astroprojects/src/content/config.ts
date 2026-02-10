@@ -6,6 +6,7 @@ const commonSchema = z.object({
     coverImage: z.string().optional(),
     ogImage: z.string().optional(), // Imgur URL for OGP
     draft: z.boolean().default(false),
+    twoColumn: z.boolean().default(false), // Optional 2-column layout flag
 });
 
 const blogCollection = defineCollection({

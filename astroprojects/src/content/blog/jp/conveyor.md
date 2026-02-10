@@ -1,6 +1,7 @@
 ---
 title: コンベア
 description: 担当:大渕
+twoColumn: true
 
 ogImage: https://i.imgur.com/GaRDmoo.jpg
 ---

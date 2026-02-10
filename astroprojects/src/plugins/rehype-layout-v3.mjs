@@ -1,12 +1,18 @@
 
 export function rehypeContentGrouping() {
-    return (tree) => {
+    return (tree, file) => {
+        // Check for 'twoColumn' flag in frontmatter
+        const frontmatter = file.data.astro?.frontmatter;
+        const isTwoColumn = frontmatter?.twoColumn === true;
+
+        if (!isTwoColumn) {
+            return;
+        }
+
         const newChildren = [];
 
         // Initial section
         let currentSection = createSection();
-
-        console.log('RehypeContentGrouping: processing with children count:', tree.children.length);
 
         // Iterate over original children
         for (const node of tree.children) {
@@ -16,7 +22,6 @@ export function rehypeContentGrouping() {
                 currentSection = createSection();
 
                 // Add the heading/hr to the text column of the new section
-                // This ensures the section "starts" with this header
                 currentSection.children[0].children.push(node);
             } else {
                 // Processing other nodes
@@ -37,9 +42,6 @@ export function rehypeContentGrouping() {
 
                     // If we found images, move them to image column
                     if (images.length > 0) {
-                        // Add images to image column
-                        // Wrap in a div or figure if needed, but for now direct append
-                        // We might want to wrap each image in a div for styling spacing
                         images.forEach(img => {
                             currentSection.children[1].children.push({
                                 type: 'element',
@@ -55,7 +57,6 @@ export function rehypeContentGrouping() {
                         );
 
                         if (hasContent) {
-                            // Create a shallow copy of the node with new children
                             const textNode = { ...node, children: otherNodes };
                             currentSection.children[0].children.push(textNode);
                         }
@@ -64,8 +65,7 @@ export function rehypeContentGrouping() {
                         currentSection.children[0].children.push(node);
                     }
                 } else {
-                    // Non-paragraph node (ul, blockquote, etc.), goes to text column
-                    // We keep whitespace/text nodes too
+                    // Non-paragraph node
                     currentSection.children[0].children.push(node);
                 }
             }
