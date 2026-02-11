@@ -12,19 +12,148 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 
+// Notification Data
+const notifications = [
+    {
+        id: "maintenance",
+        type: "info", // info, warning, alert
+        show: true, // Toggle this to show/hide
+        message: {
+            jp: "メイカーズながおかまつりに出展します : 2026/03/01",
+            en: "We will exhibit at Makers Nagaoka Festival : 2026/03/01",
+            zh: "我计划在 Makers长冈祭（Makers Nagaoka Matsuri）出展：2026/03/01",
+        },
+        link: "https://www.instagram.com/nid_techtech", // Optional link
+    },
+];
+
 const translations = {
     jp: {
         greeting: "ようこそ Lantern-TECH Blog へ",
         description: "ほおずきは真実を覆い隠す。我々は見えない真実を表現する。",
+        team: {
+            title: "Lantern-TECHとは",
+            description:
+                "長岡造形大学デザイン学科テクノロジーxデザイン領域(以下TxD) 令和7年度デザイン基礎演習II 第2課題「見えないものを表現する」における制作チームの一つ。\n公認サークルTECH☆TECH先端メディア表現サークルの派生組織。\nチーム名は、メンバー3人の頭文字から連想される「ほおずき」に由来する。\n鵜飼 : U , 菅原 : S , 大渕 : O → USO → 嘘 → ほおずき(花言葉:嘘つき、欺瞞) → Lantern Plants",
+        },
+        members: {
+            title: "Members",
+            ukai: {
+                role: "Unity / Electronics / Illustration",
+                details:
+                    "インタラクティブなインスタレーションとセンサーベースのアートに焦点を当てています。",
+            },
+            sugawara: {
+                role: "Electronics / 3D Printing / Ideation",
+                details:
+                    "タンジブルなインターフェースと示唆に富むコンセプトを専門としています。",
+            },
+            ofuchi: {
+                role: "Woodwork / Arduino / Audio & Visuals",
+                details:
+                    "デジタルとアナログ、音と動きの交差点を探求しています。",
+            },
+        },
+        works: {
+            title: "Works",
+            description:
+                "インタラクティブなインスタレーションから実験的なソフトウェアまで、多岐にわたるプロジェクトを展開しています。テクノロジーの可能性を広げることに挑戦し続けています。",
+            linkText: "ブログを見る",
+        },
+        site: {
+            title: "About This Site",
+            description:
+                "このサイトはLantern-TECHのポートフォリオ兼技術ブログです。制作プロセス、発見、そして作品の背後にある哲学を記録しています。",
+        },
+        slideshow: {
+            image1: "ネットワーク",
+            image2: "テクノロジー",
+            image3: "マトリックス",
+        },
     },
     en: {
         greeting: "Welcome to Lantern-TECH Blog",
         description:
             "The lantern plants vail the truth. We express the unseen truth.",
+        team: {
+            title: "Team",
+            description:
+                "Lantern-TECH is a creative technology team dedicated to exploring the unseen truths through digital expression. We combine hardware, software, and artistic vision to create unique experiences.",
+        },
+        members: {
+            title: "Members",
+            ukai: {
+                role: "Unity / Electronics / Illustration",
+                details:
+                    "Focuses on interactive installations and sensor-based art.",
+            },
+            sugawara: {
+                role: "Electronics / 3D Printing / Ideation",
+                details:
+                    "Specializes in tangible interfaces and thought-provoking concepts.",
+            },
+            ofuchi: {
+                role: "Woodwork / Arduino / Audio & Visuals",
+                details:
+                    "Explores the intersection of digital and analog, sound and motion.",
+            },
+        },
+        works: {
+            title: "Works",
+            description:
+                "Our projects range from interactive installations to experimental software. We strive to push the boundaries of what is possible with technology.",
+            linkText: "View Blog",
+        },
+        site: {
+            title: "About This Site",
+            description:
+                "This site serves as a portfolio and a technical blog for Lantern-TECH. Here we document our process, findings, and the philosophy behind our work.",
+        },
+        slideshow: {
+            image1: "Network",
+            image2: "Technology",
+            image3: "Matrix",
+        },
     },
     zh: {
         greeting: "欢迎来到 Lantern-TECH Blog",
         description: "酸浆果掩盖真相，我们表现看不见的真相。",
+        team: {
+            title: "Team",
+            description:
+                "Lantern-TECH 是一个致力于通过数字表达探索不可见真理的创意技术团队。我们结合硬件、软件和艺术视野，创造独特的体验。",
+        },
+        members: {
+            title: "Members",
+            ukai: {
+                role: "Unity / Electronics / Illustration",
+                details: "专注于互动装置和基于传感器的艺术。",
+            },
+            sugawara: {
+                role: "Electronics / 3D Printing / Ideation",
+                details: "专长于实体界面和发人深省的概念。",
+            },
+            ofuchi: {
+                role: "Woodwork / Arduino / Audio & Visuals",
+                details: "探索数字与模拟、声音与运动的交汇点。",
+            },
+        },
+        works: {
+            title: "Works",
+            description:
+                "我们的项目涵盖从互动装置到实验性软件的广泛领域。我们致力于拓展技术的可能性。",
+            linkText: "查看博客",
+        },
+        site: {
+            title: "关于本站",
+            description:
+                "这个网站是 Lantern-TECH 的作品集和技术博客。我们在这里记录我们的制作过程、发现以及作品背后的哲学。",
+        },
+        slideshow: {
+            image1: "网络",
+            image2: "技术",
+            image3: "黑客帝国",
+        },
     },
 };
 
@@ -32,32 +161,629 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
 ---
 
 <BaseLayout title={`Lantern-TECH Blog - ${lang.toUpperCase()}`} lang={lang}>
-    <section class="hero">
+    <!-- 1. Banner Slideshow -->
+    <section class="slideshow" id="hero-slideshow">
+        <div class="slideshow-container">
+            <!-- Placeholder images - Replace with 1920x1080 assets -->
+            <div class="slide fade">
+                <Imgur
+                    id="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt={t.slideshow.image1}
+                />
+            </div>
+            <div class="slide fade">
+                <Imgur
+                    id="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt={t.slideshow.image2}
+                />
+            </div>
+            <div class="slide fade">
+                <Imgur
+                    id="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt={t.slideshow.image3}
+                />
+            </div>
+
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+            <div class="alt-caption" id="alt-caption"></div>
+        </div>
+    </section>
+
+    <!-- 2. Site Title -->
+    <section class="site-title-section">
         <h1>{t.greeting}</h1>
         <p>{t.description}</p>
+    </section>
 
-        <!-- Placeholder generic image -->
-        <Imgur
-            id="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="Tech Blog Hero"
-        />
+    <!-- 3. Notify -->
+    <!-- Server-side Rendered Notifications -->
+    {
+        notifications.map(
+            (note) =>
+                note.show && (
+                    <section
+                        class={`notify-section ${note.type}`}
+                        id={`notify-${note.id}`}
+                    >
+                        <div class="notify-content">
+                            <span class="notify-icon">
+                                {note.type === "warning"
+                                    ? "⚠️"
+                                    : note.type === "alert"
+                                      ? "🚨"
+                                      : "ℹ️"}
+                            </span>
+                            <span>
+                                {note.message[
+                                    lang as keyof typeof note.message
+                                ] || note.message.jp}
+                                {note.link && (
+                                    <a
+                                        href={note.link}
+                                        style="text-decoration: underline; margin-left: 5px; color: inherit;"
+                                    >
+                                        &rarr;
+                                    </a>
+                                )}
+                            </span>
+                            <button
+                                class="notify-close"
+                                onclick={`document.getElementById('notify-${note.id}').style.display='none'`}
+                            >
+                                ×
+                            </button>
+                        </div>
+                    </section>
+                ),
+        )
+    }
+
+    <!-- Client-side Language Switch Notification -->
+    <section class="notify-section" id="notify-section" style="display: none;">
+        <div class="notify-content">
+            <span class="notify-icon">🌐</span>
+            <span id="notify-message"></span>
+            <button id="notify-close" onclick="closeNotify()">×</button>
+        </div>
+    </section>
+
+    <!-- 4. Team Intro -->
+    <hr />
+    <section class="content-section">
+        <div class="text-column">
+            <h2>{t.team.title}</h2>
+            <div class="description-content">
+                {
+                    t.team.description
+                        .split("\n")
+                        .map((line) => <span class="text-line">{line}</span>)
+                }
+            </div>
+        </div>
+        <div class="image-column">
+            <div class="image-wrapper">
+                <Imgur
+                    id="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Team collaboration"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Member Intro -->
+    <hr />
+    <section class="members-section">
+        <h2>{t.members.title}</h2>
+        <div class="members-grid">
+            <!-- Member 1 -->
+            <div class="member-card member-1">
+                <div class="member-header">
+                    <div class="member-avatar">
+                        <Imgur
+                            id="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                            alt="Kohei Ukai"
+                        />
+                    </div>
+                    <div class="member-info">
+                        <h3>
+                            鵜飼 康平 <span class="member-en">Kohei Ukai</span>
+                        </h3>
+                        <p class="member-role">{t.members.ukai.role}</p>
+                    </div>
+                </div>
+                <div class="member-details">
+                    {
+                        t.members.ukai.details
+                            .split("\n")
+                            .map((line) => (
+                                <span class="text-line">{line}</span>
+                            ))
+                    }
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="member-card member-2">
+                <div class="member-header">
+                    <div class="member-avatar">
+                        <Imgur
+                            id="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                            alt="Tsumugi Sugawara"
+                        />
+                    </div>
+                    <div class="member-info">
+                        <h3>
+                            菅原 紡宜 <span class="member-en"
+                                >Tsumugi Sugawara</span
+                            >
+                        </h3>
+                        <p class="member-role">{t.members.sugawara.role}</p>
+                    </div>
+                </div>
+                <div class="member-details">
+                    {
+                        t.members.sugawara.details
+                            .split("\n")
+                            .map((line) => (
+                                <span class="text-line">{line}</span>
+                            ))
+                    }
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="member-card member-3">
+                <div class="member-header">
+                    <div class="member-avatar">
+                        <Imgur
+                            id="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                            alt="Rin Ofuchi"
+                        />
+                    </div>
+                    <div class="member-info">
+                        <h3>
+                            大渕 凜 <span class="member-en">Rin Ofuchi</span>
+                        </h3>
+                        <p class="member-role">{t.members.ofuchi.role}</p>
+                    </div>
+                </div>
+                <div class="member-details">
+                    {
+                        t.members.ofuchi.details
+                            .split("\n")
+                            .map((line) => (
+                                <span class="text-line">{line}</span>
+                            ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Works Overview -->
+    <hr />
+    <section class="content-section">
+        <div class="text-column">
+            <h2>{t.works.title}</h2>
+            <div class="description-content">
+                {
+                    t.works.description
+                        .split("\n")
+                        .map((line) => <span class="text-line">{line}</span>)
+                }
+            </div>
+            <p style="margin-top: 1.5rem;">
+                <a href={`/${lang}/blog`}>{t.works.linkText} &rarr;</a>
+            </p>
+        </div>
+        <div class="image-column">
+            <div class="image-wrapper">
+                <Imgur
+                    id="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Project showcase"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Site Introduction -->
+    <hr />
+    <section class="content-section">
+        <div class="text-column">
+            <h2>{t.site.title}</h2>
+            <div class="description-content">
+                {
+                    t.site.description
+                        .split("\n")
+                        .map((line) => <span class="text-line">{line}</span>)
+                }
+            </div>
+        </div>
+        <div class="image-column">
+            <div class="image-wrapper">
+                <Imgur
+                    id="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Coding"
+                />
+            </div>
+        </div>
     </section>
 </BaseLayout>
 
-<style>
-    .hero {
-        text-align: center;
-        padding: 3rem 0;
+<script is:inline define:vars={{ currentLang: lang }}>
+    // Slideshow Logic
+    let slideIndex = 1;
+    let isAltMode = false;
+
+    // Add click listener to slideshow container
+    const container = document.querySelector(".slideshow-container");
+    const caption = document.getElementById("alt-caption");
+
+    if (container) {
+        container.addEventListener("click", (e) => {
+            // Ignore clicks on nav buttons
+            if (e.target.closest(".prev") || e.target.closest(".next")) return;
+
+            isAltMode = !isAltMode;
+            if (isAltMode) {
+                if (caption) caption.style.display = "block";
+                updateCaption();
+            } else {
+                if (caption) caption.style.display = "none";
+            }
+        });
     }
 
-    .hero h1 {
+    showSlides(slideIndex);
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+        moveSlide(1);
+    }, 5000);
+
+    // Expose moveSlide to global scope for onclick handlers
+    window.moveSlide = function (n) {
+        showSlides((slideIndex += n));
+    };
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (slides.length === 0) return;
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+
+        if (isAltMode) {
+            updateCaption();
+        }
+    }
+
+    function updateCaption() {
+        if (!caption) return;
+        let slides = document.getElementsByClassName("slide");
+        if (slides.length === 0) return;
+
+        const currentSlide = slides[slideIndex - 1];
+        const img = currentSlide.querySelector("img");
+        if (img) {
+            caption.textContent = img.alt || "No description";
+        }
+    }
+
+    // Notify Logic
+    // Simple check: if browser lang doesn't match page lang, suggest switch
+    const browserLang = navigator.language || navigator.userLanguage;
+    const notifySection = document.getElementById("notify-section");
+    const notifyMessage = document.getElementById("notify-message");
+
+    // Config for suggestion
+    const langMap = {
+        ja: "jp",
+        en: "en",
+        zh: "zh",
+    };
+
+    // Get primary lang part (e.g. 'en-US' -> 'en')
+    const primaryLang = browserLang.split("-")[0];
+    const targetLang = langMap[primaryLang];
+
+    if (targetLang && targetLang !== currentLang) {
+        // Show notification
+        // Simple message map
+        const messages = {
+            jp: "日本語版を表示しますか？",
+            en: "Switch to English version?",
+            zh: "切换到中文版？",
+        };
+
+        const msg =
+            messages[targetLang] || `Switch to ${targetLang.toUpperCase()}?`;
+        // Create link
+        const link = `<a href="/${targetLang}" style="text-decoration: underline; font-weight: bold; color: inherit; margin-left: 5px;">→</a>`;
+
+        if (notifyMessage) {
+            notifyMessage.innerHTML = msg + link;
+            if (notifySection) notifySection.style.display = "block";
+        }
+    }
+
+    window.closeNotify = function () {
+        if (notifySection) notifySection.style.display = "none";
+    };
+</script>
+
+<style>
+    hr {
+        border: 0;
+        height: 1px;
+        background: #eee;
+        margin: 3rem 0;
+    }
+
+    /* Slideshow Styles */
+    .slideshow {
+        margin-bottom: 2rem;
+        /* Negate padding of main container to go full width if desired, 
+           but here we fit within the main column per requirement 
+           "Images width is same as content area" */
+        width: 100%;
+        position: relative;
+    }
+
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: #f0f0f0;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Modify Imgur component created structure if needed, usually it's just img */
+    .slide :global(img) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .alt-caption {
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        z-index: 10;
+        animation: fade 0.5s;
+    }
+
+    /* Animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Site Title */
+    .site-title-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .site-title-section h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
 
-    .hero p {
+    .site-title-section p {
         font-size: 1.2rem;
         color: #666;
+    }
+
+    .text-column p,
+    .member-details p {
+        /* Reset default margins if needed */
+        margin: 0;
+    }
+
+    .text-line {
+        display: block;
+        line-height: 1.5; /* Adjusted to ~1.25x visual feel */
+        min-height: 1.5em;
+    }
+
+    .text-line + .text-line {
+        margin-top: 1.5em; /* Adjusted to ~1.5x spacer */
+    }
+
+    /* Notify Section */
+    .notify-section {
+        background-color: #e3f2fd;
+        color: #0d47a1;
+        padding: 1rem;
+        border-radius: 4px;
         margin-bottom: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .notify-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #notify-close,
+    .notify-close {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: inherit;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+    }
+
+    /* Notification Types */
+    .notify-section.warning {
+        background-color: #fff3e0;
+        color: #e65100;
+    }
+    .notify-section.alert {
+        background-color: #ffebee;
+        color: #c62828;
+    }
+
+    /* Members Grid */
+    .members-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .members-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .member-card {
+        background: #f9f9f9;
+        border-radius: 12px;
+        padding: 1.5rem;
+        /* Pastel colors for "islands" */
+    }
+
+    .member-1 {
+        background-color: #e3f2fd;
+    } /* Light Blue */
+    .member-2 {
+        background-color: #f3e5f5;
+    } /* Light Purple */
+    .member-3 {
+        background-color: #e8f5e9;
+    } /* Light Green */
+
+    .member-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .member-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        border: 3px solid white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .member-avatar :global(.imgur-container) {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .member-avatar :global(img) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .member-info h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: var(--color-primary);
+    }
+
+    .member-en {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: normal;
+        color: #666;
+        margin-top: 0.2rem;
+    }
+
+    .member-role {
+        font-size: 0.8rem;
+        color: #555;
+        margin-top: 0.5rem;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .member-details p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #444;
+        text-align: center;
     }
 </style>
