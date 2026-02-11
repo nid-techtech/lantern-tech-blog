@@ -12,7 +12,7 @@ ogImage: https://i.imgur.com/aO1go7y.png
 
 ![中間報告1](https://i.imgur.com/aO1go7y.png)
 
-![中間報告2]()
+![中間報告2](https://i.imgur.com/Klxrqhe.png)
 
 ![中間報告3](https://i.imgur.com/ps1Y7wZ.png)
 

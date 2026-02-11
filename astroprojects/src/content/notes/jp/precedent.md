@@ -8,15 +8,7 @@ ogImage: https://i.imgur.com/RnHDr23.png
 
 # ピタゴラ装置No.58 コンベア
 
-`2005`
-
-執筆：大渕
-
-## 概要
-
-**作者**
-
-慶應義塾大学 佐藤雅彦研究室
+`慶應義塾大学 佐藤雅彦研究室 | 2005`
 
 **展示サイズ**
 
@@ -63,18 +55,19 @@ Point 4 コンベア
 
 (1)慶應義塾大学 佐藤雅彦研究室・ユーフラテス(2006)「ピタゴラ装置DVDブック①」小学館 p.69
 
-> [!NOTE]
-> 添付した画像・映像は、上記書籍に付属のDVDビデオをキャプチャ・リッピングしたものです。映像を大渕のYouTubeチャンネルで共有しているのは、この資料の外部参照性を考慮したものであり、その著作権・所有権が大渕にあると主張するものではありません。
-> 
-> 上記DVDビデオは、2002年よりNHK教育(現:NHK Eテレ)で放送されている番組「ピタゴラスイッチ」より、ピタゴラ装置の映像部分を収録したものです。
-> 
-> ピタゴラ装置作品の制作・著作は佐藤研究室またはユーフラテス有限会社ですが、それを撮影した映像の制作はNHKエデュケーショナル、著作はNHKです。
+添付した画像・映像は、上記書籍に付属のDVDビデオをキャプチャ・リッピングしたものです。映像を大渕のYouTubeチャンネルで共有しているのは、この資料の外部参照性を考慮したものであり、その著作権・所有権が大渕にあると主張するものではありません。
+
+上記DVDビデオは、2002年よりNHK教育(現:NHK Eテレ)で放送されている番組「ピタゴラスイッチ」より、ピタゴラ装置の映像部分を収録したものです。
+
+ピタゴラ装置作品の制作・著作は佐藤研究室またはユーフラテス有限会社ですが、それを撮影した映像の制作はNHKエデュケーショナル、著作はNHKです。
 
 ![ピタゴラ装置No.58_1](https://i.imgur.com/RnHDr23.png)
-![ピタゴラ装置No.58_2]()
-![ピタゴラ装置No.58_3](https://youtu.be/o154pXKKji4?si=lP5F1jJilzudzV3o)
+![ピタゴラ装置No.58_2](https://i.imgur.com/AM1gd9u.gif)
+![ピタゴラ装置No.58_3](https://www.youtube.com/watch?v=o154pXKKji4?rel=0)
 
 ## コメント
+
+執筆：大渕
 
 **興味を持った要素**
 
@@ -88,15 +81,7 @@ Point 4 コンベア
 
 # Bit.Fall
 
-`2006`
-
-執筆：鵜飼
-
-## 概要
-
-**作者**
-
-Julius Popp
+`Julius Popp | 2006`
 
 **展示サイズ**
 
@@ -132,15 +117,15 @@ Twitterなどのネットから文字を持ってくる。
 
 [Illuminate Productions(イギリスで活動する現代アート組織)におけるBit.Fallの記事](https://www.illuminateproductions.co.uk/bitfall)
 
-![Bit.Fall1]()
+![Bit.Fall1](https://i.imgur.com/zrhbBnp.png)
 
-![Bit.Fall2]()
+![Bit.Fall2](https://i.imgur.com/BjkpD3A.gif)
 
-![Bit.Fall3]()
-
-![Bit.Fall4]()
+![Bit.Fall3](https://vimeo.com/239852811?fl=pl&fe=sh)
 
 ## コメント
+
+執筆：鵜飼
 
 **興味を持った要素**
 
@@ -154,15 +139,7 @@ Twitterなどのネットから文字を持ってくる。
 
 # Text Rain
 
-`1999`
-
-執筆：菅原
-
-## 概要
-
-**作者**
-
-Romy Achituv & Camille Utterback
+`Romy Achituv & Camille Utterback | 1999`
 
 **展示サイズ**
 
@@ -196,11 +173,15 @@ touchdesignerなどを応用すれば作れると考える。
 
 他関連サイト
 
-![Text Rain1]()
+![Text Rain1](https://i.imgur.com/2YoP8Dq.jpeg)
 
-![Text Rain2](https://youtu.be/f_u3sSffS78?si=FmzHV19dDDkngHVg)
+![Text Rain2](https://i.imgur.com/cPkoUma.gif)
+
+![Text Rain3](https://www.youtube.com/watch?v=f_u3sSffS78?rel=0)
 
 ## コメント
+
+執筆：菅原
 
 **興味を持った要素**
 
@@ -214,15 +195,7 @@ touchdesignerなどを応用すれば作れると考える。
 
 # Digital/Analog Mirror
 
-`2023`
-
-執筆：鵜飼
-
-## 概要
-
-**作者**
-
-ksawery komputery
+`ksawery komputery | 2023`
 
 **展示サイズ**
 
@@ -252,11 +225,13 @@ ksawery komputery
 
 [作者の公式サイト](https://ksawerykomputery.com/works/digital-analog-mirror)
 
-![Digital/Analog Mirror1]()
+![Digital/Analog Mirror1](https://i.imgur.com/y4M9ZxH.png)
 
-![Digital/Analog Mirror2](https://vimeo.com/812436463?fl=pl&fe=sh)
+![Digital/Analog Mirror2](https://i.imgur.com/ZAhV5rU.gif)
 
 ## コメント
+
+執筆：鵜飼
 
 **興味を持った要素**
 

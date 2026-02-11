@@ -14,7 +14,7 @@ ogImage: https://i.imgur.com/ehQL7H2.jpg
 
 当初はIllustratorで設計したベクターをFusionに持ち込む予定だったが、それだと寸法に狂いが生じてしまうことがわかったので、Fusionで設計したベクターをIllustratorにエクスポートする（逆）ことにした。
 
-![Fusionで設計した文字]()
+![Fusionで設計した文字](https://i.imgur.com/8nmicn8.png)
 
 ---
 
@@ -22,7 +22,9 @@ ogImage: https://i.imgur.com/ehQL7H2.jpg
 
 `2025/07/18`
 
-文字を造形。26種類あるので何台もの3Dプリンターを並走させる。
+文字を造形。
+
+26種類あるので何台もの3Dプリンターを並走させる。
 
 ![3DプリンターでBを造形中](https://i.imgur.com/yP4L4L7.jpg)
 
@@ -36,7 +38,7 @@ ogImage: https://i.imgur.com/ehQL7H2.jpg
 
 Yがうまく押し出せなかったために、新しく作り直した。
 
-![Yを再設計]()
+![Yを再設計](https://i.imgur.com/FEkyqda.png)
 
 ---
 

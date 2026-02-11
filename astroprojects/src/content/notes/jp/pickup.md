@@ -3,14 +3,14 @@ title: 気になった記事や作品
 description: レポートに盛り込まなかった参考になりそうな作品や技術に関する記事を雑多に貯める
 twoColumn: true
 
-ogImage: https://i.imgur.com/RnHDr23.png
+ogImage: https://i.imgur.com/R12xLUZ.png
 ---
 
 # Comtype
 
 `平原真 | 2002`
 
-平原先生（本授業の担当教員の一人）が造形大産業デザ科に在籍していたときの卒業制作。デザイン概論2025のTxDトークセッションで、参考作品として真壁先生が取り上げていた（平原先生は真壁研の出身）。
+平原先生（本授業の担当教員の一人）が造形大産業デザイン学科（当時）に在籍していたときの卒業制作。デザイン概論2025のTxDトークセッションで、参考作品として真壁先生が取り上げていた（平原先生は真壁研究室の出身）。
 
 タイプライターの入力をマイクロスイッチと圧電素子でキャプチャーし、押下の強さや長さに応じて文字に感情を設定、色分けして相手に向かって文字を送っていく。向かい側にもタイプライターがあり、双方向通信（というか会話）をするインスタレーション。
 
@@ -18,7 +18,11 @@ ogImage: https://i.imgur.com/RnHDr23.png
 
 [Comtype | Makoto Hirahara](https://makotohirahara.com/portfolio/comtype/)
 
-![Comtype]()
+![Comtype1](https://i.imgur.com/R12xLUZ.png)
+
+![Comtype2](https://i.imgur.com/dfYKysm.gif)
+
+![Comtype3](https://www.youtube.com/watch?v=e5fIFitjEcw?rel=0)
 
 ---
 
@@ -34,7 +38,11 @@ ogImage: https://i.imgur.com/RnHDr23.png
 
 [インターネット物理モデル | 日本科学未来館 (Miraikan)](https://www.miraikan.jst.go.jp/exhibitions/future/internet/)
 
-![インターネット物理モデル]()
+![インターネット物理モデル1](https://i.imgur.com/VMDGYKz.png)
+
+![インターネット物理モデル2](https://i.imgur.com/9hBr04W.gif)
+
+![インターネット物理モデル3](https://www.youtube.com/watch?v=XNLmjl98qQ8?rel=0)
 
 ---
 
@@ -54,7 +62,9 @@ ogImage: https://i.imgur.com/RnHDr23.png
 
 [新型コペンのガワは、もしかしたら帝人でCMをやってる樹脂素材なのだろうか | MOVE ABOUT](https://web.archive.org/web/20250719045656/https://used-move.com/2012/11/2628/)
 
-![クルマジャーントパンダ]()
+![クルマジャーントパンダCM1](https://i.imgur.com/Gv9lKuq.gif)
+
+![クルマジャーントパンダCM2](https://www.youtube.com/watch?v=cfKQdUMkSF4?rel=0)
 
 ---
 
@@ -64,9 +74,7 @@ ogImage: https://i.imgur.com/RnHDr23.png
 
 2021年に21_21 DESIGN SIGHTで行われた「ルール？展」に展示された作品。
 
-穴が空いたパーテーションがくるくると移動し、板の上を自由自在に動き回る直方体はそれをうまいこと避けて通るというもの。
-
-まるでCGであるかのような現実離れした動きと、その精密さが素晴らしい。
+穴が空いたパーテーションがくるくると移動し、板の上を自由自在に動き回る直方体はそれをうまいこと避けて通るというもの。まるでCGであるかのような現実離れした動きと、その精密さが素晴らしい。
 
 また、この作品はそれそのものが展示された場所から少し離れた場所にライブ中継のディスプレイが設置されている。鑑賞者は先にそれを見て、「CG映像作品かな？」と思ったところで実物を見て驚く、という2段構え。
 
@@ -78,6 +86,54 @@ ogImage: https://i.imgur.com/RnHDr23.png
 
 [四角が行く——「ルール？展」出品作品ができるまで | ヒルズライフ HILLS LIFE](https://hillslife.jp/series/seeing-creates-something/the-square-makes-it-through/)
 
-![四角が行く]()
+![四角が行く1](https://i.imgur.com/Woja2ug.gif)
+
+![四角が行く2](https://vimeo.com/596116131/089edf293f?fl=pl&fe=sh)
+
+![四角が行く3](https://i.imgur.com/64rqSje.jpeg)
+
+---
+
+# Billion Dollar Arcade
+
+`Andrew Zolty BREAKFAST | 2024`
+
+BREAKFASTはニューヨークを拠点に活動するカイネティックアーティスト。
+
+彼は自然現象や人の社会経済活動、その場にいる鑑賞者の動きなどをリアルタイムに反映する、緻密に電子制御されたカイネティックアート作品をたくさん制作している。
+
+この作品は、64 x 64pxのフリップドットマトリクスの画面で動くアーケードゲームを、鑑賞者の頭や手の動きをコントローラーとしてプレイできるというもの。企業の時価総額が高いほどゲームの難易度は上がる。
+
+アーケードゲームという存在の、世界の中での文化的・経済的な力の大きさを感じさせる作品。
+
+[Billion Dollar Arcade | BREAKFAST](https://theartistbreakfast.com/works/billion-dollar-arcade-series)
+
+![Billion Dollar Arcade1](https://i.imgur.com/4GbAxwK.jpeg)
+
+![Billion Dollar Arcade2](https://i.imgur.com/6SIKes7.gif)
+
+![Billion Dollar Arcade3](https://www.youtube.com/watch?v=LJu7F0SzJ6Q?rel=0)
+
+---
+
+# KAZAMI-map : JP
+
+`角藤瞳 | 2026`
+
+日本列島の形に配置された風見鶏が、あちこちの方向を向いて回っている。
+
+これらの風見鶏は、対応する日本全国の観測点におけるリアルタイムの風速・風向のデータを受信し、それに連動して動くようになっている。
+
+現在の風の様子を通して、日本列島の表情をこの場所に表すインスタレーション。
+
+長岡造形大学2026年度卒業・修了研究展で展示された。
+
+[KAZAMI-map : JP | 研究成果一覧 | 長岡造形大学](https://sotsuten.nagaoka-id.ac.jp/artwork/49934/)
+
+![KAZAMI-map : JP1](https://i.imgur.com/oZdbASj.jpg)
+
+![KAZAMI-map : JP2](https://i.imgur.com/RKHv8At.gif)
+
+![KAZAMI-map : JP3](https://www.youtube.com/watch?v=5COcGj1_N1o?rel=0)
 
 ---

@@ -6,7 +6,6 @@ twoColumn: false
 ogImage: https://i.imgur.com/WnHY6Zz.png
 ---
 
-![PR動画1]()
+![PR動画1](https://www.youtube.com/watch?v=oyE4cvUrh5o?rel=0)
 
 ---
-
