@@ -17,7 +17,7 @@ const notifications = [
     {
         id: "maintenance",
         type: "info", // info, warning, alert
-        show: true, // Toggle this to show/hide
+        show: false, // Toggle this to show/hide
         message: {
             jp: "メイカーズながおかまつりに出展します : 2026/03/01",
             en: "We will exhibit at Makers Nagaoka Festival : 2026/03/01",
@@ -37,33 +37,36 @@ const translations = {
                 "長岡造形大学デザイン学科テクノロジーxデザイン領域(以下TxD) 令和7年度デザイン基礎演習II 第2課題「見えないものを表現する」における制作チームの一つ。\n公認サークルTECH☆TECH先端メディア表現サークルの派生組織。\nチーム名は、メンバー3人の頭文字から連想される「ほおずき」に由来する。\n鵜飼 : U , 菅原 : S , 大渕 : O → USO → 嘘 → ほおずき(花言葉:嘘つき、欺瞞) → Lantern Plants",
         },
         members: {
-            title: "Members",
+            title: "メンバー",
             ukai: {
-                role: "Unity / Electronics / Illustration",
-                details:
-                    "インタラクティブなインスタレーションとセンサーベースのアートに焦点を当てています。",
+                name: "鵜飼 康平",
+                identifier: "@yukiseibei",
+                role: "#チームリーダー #Unity #タイポグラフィ #雑務",
+                details: "249024 デザイン学科TxD領域\nASUSのスマホが好き",
             },
             sugawara: {
-                role: "Electronics / 3D Printing / Ideation",
-                details:
-                    "タンジブルなインターフェースと示唆に富むコンセプトを専門としています。",
+                name: "菅原 紡宜",
+                identifier: "@sgwr_tmg",
+                role: "#制作統括 #文字ベンダーシステム #Arduino",
+                details: "249083 デザイン学科TxD領域\nMineCraftガチ勢",
             },
             ofuchi: {
-                role: "Woodwork / Arduino / Audio & Visuals",
-                details:
-                    "デジタルとアナログ、音と動きの交差点を探求しています。",
+                name: "大渕 凜",
+                identifier: "@rinfromniigata",
+                role: "#コンベア #広報 #Webデザイン",
+                details: "239031 デザイン学科TxD領域\nパソコンをいじってる",
             },
         },
         works: {
-            title: "Works",
+            title: "Shape Writer",
             description:
-                "インタラクティブなインスタレーションから実験的なソフトウェアまで、多岐にわたるプロジェクトを展開しています。テクノロジーの可能性を広げることに挑戦し続けています。",
+                "表音文字であるアルファベット1文字単体は記号にすぎず、それ自体には言語的意味を持たない。\nしかし規則に従って集まって並ぶことで意味が生まれる。\n同じ文字でも、並び方が変われば意味も変わる。\n\nこの作品は、記号 - アルファベットを組み合わせて言葉を作る過程を表現する。\n鑑賞者がキーボードで言葉を入力すると、対応する文字が呼び出される。\n文字はピストンによって押し出され、コンベアの上に配置される。\nコンベアによって文字が移動し、次の文字が配置される。\n\nキーボードから入力された文字データは、Unityを介してArduinoに送られる。\nArduinoはそれを受けて、サーボモーターとステッピングモーターを制御する。\n\n普段は意識することのない「意味」「言葉」「言語」が生まれる瞬間。\n記号と言語の構築の様子をこの目で捉え、「ことば」を見つめ直す。\n\n2025年度夏のオープンキャンパス出展作品",
             linkText: "ブログを見る",
         },
         site: {
-            title: "About This Site",
+            title: "Lantern-TECH Blogとは",
             description:
-                "このサイトはLantern-TECHのポートフォリオ兼技術ブログです。制作プロセス、発見、そして作品の背後にある哲学を記録しています。",
+                "このサイトはLantern-TECHの制作ノートとして、各種情報を記録するため運営されている。\n各担当の制作ノートはブログカテゴリで分野別に掲載。その他、発表資料、参考資料もまとめてある。\n提出用のレポートを作成する際の資料アーカイブとしての機能と、オープンキャンパスを始めとするイベントにて展示・紹介する際の誘導先としての機能を有する。\n課題制作時はGoogle Siteを利用していたが、2026年2月にリニューアルし、新ドメインへの移行、3言語対応、記事コンテンツの充実化を行った。",
         },
         slideshow: {
             image1: "ネットワーク",
@@ -76,38 +79,44 @@ const translations = {
         description:
             "The lantern plants vail the truth. We express the unseen truth.",
         team: {
-            title: "Team",
+            title: "What is Lantern-TECH?",
             description:
-                "Lantern-TECH is a creative technology team dedicated to exploring the unseen truths through digital expression. We combine hardware, software, and artistic vision to create unique experiences.",
+                'This is one of the production teams for the Assignment 2: "Expressing the Invisible," Design Fundamentals II: Technology x Design Field, Department of Design, Nagaoka Institute of Design.\nIt is a spin-off team of the institute officially recognized society, TECH☆TECH Advanced Media Design Society.\nThe team name, "Lantern" (ほおずき = Chinese lantern plant), is derived from the initials of its three members: Ukai (U), Sugawara (S), and Ofuchi (O), which spell "USO." USO (嘘) means "lie" in Japanese, and the lantern plant\'s flower meanings include "liar" and "deception."',
         },
         members: {
             title: "Members",
             ukai: {
-                role: "Unity / Electronics / Illustration",
+                name: "Ukai Kohei",
+                identifier: "@yukiseibei",
+                role: "#Team-Leader #Unity #Typography #General-Affairs",
                 details:
-                    "Focuses on interactive installations and sensor-based art.",
+                    "249024 Department of Design, Technology x Design Field\nI love ASUS Smartphones.",
             },
             sugawara: {
-                role: "Electronics / 3D Printing / Ideation",
+                name: "Sugawara Tsumugi",
+                identifier: "@sgwr_tmg",
+                role: "#Production-Management #Character-Vendor-System #Arduino",
                 details:
-                    "Specializes in tangible interfaces and thought-provoking concepts.",
+                    "249083 Department of Design, Technology x Design Field\nI'm an expert of Minecraft.",
             },
             ofuchi: {
-                role: "Woodwork / Arduino / Audio & Visuals",
+                name: "Ofuchi Rin",
+                identifier: "@rinfromniigata",
+                role: "#Conveyor #Public-Relations #Web-Design",
                 details:
-                    "Explores the intersection of digital and analog, sound and motion.",
+                    "239031 Department of Design, Technology x Design Field\nI always fiddling with my computers.",
             },
         },
         works: {
-            title: "Works",
+            title: "Shape Writer",
             description:
-                "Our projects range from interactive installations to experimental software. We strive to push the boundaries of what is possible with technology.",
+                'A single alphabet letter, a phonetic symbol, is merely a mark and holds no linguistic meaning on its own.\nHowever, when letters gather and align according to rules, meaning emerges.\nEven with the same letters, a different arrangement alters their meaning.\n\nThis work expresses the process of creating words by combining symbols - alphabets.\nWhen a viewer types words on a keyboard, the corresponding letters are summoned.\nThe letters are pushed out by pistons and placed onto a conveyor.\nThe conveyor moves the letters, and the next letter is placed.\n\nLetter data entered from the keyboard is sent to Arduino via Unity.\nArduino receives this data and controls servo motors and stepper motors accordingly.\n\nThis is the moment when "meaning," "words," and "language," which we usually take for granted, are born.\nWitness the construction of symbols into language with your own eyes and re-examine "words."\n\nThis is a work that exibited at Nagaoka Institute of Design Open Campus 2025 Summer.',
             linkText: "View Blog",
         },
         site: {
-            title: "About This Site",
+            title: "About Lantern-TECH Blog",
             description:
-                "This site serves as a portfolio and a technical blog for Lantern-TECH. Here we document our process, findings, and the philosophy behind our work.",
+                'This website is operated by Lantern-TECH as a production notebook to record various information.\nProduction notes from each team member are published by field in the "Blog" category. In addition, presentation materials and reference materials are also compiled.\nIt functions as a document archive for creating reports to be submitted to the institute, and as a destination for guiding visitors when exhibiting and introducing our work at events such as open campuses.\nWe used Google Sites during the project\'s production, but in February 2026, we renewed the site, migrating to a new domain, adding support for three languages, and enriching the article content.',
         },
         slideshow: {
             image1: "Network",
@@ -116,38 +125,46 @@ const translations = {
         },
     },
     zh: {
-        greeting: "欢迎来到 Lantern-TECH Blog",
+        greeting: "欢迎来到Lantern-TECH Blog",
         description: "酸浆果掩盖真相，我们表现看不见的真相。",
         team: {
-            title: "Team",
+            title: "Lantern-TECH是什么?",
             description:
-                "Lantern-TECH 是一个致力于通过数字表达探索不可见真理的创意技术团队。我们结合硬件、软件和艺术视野，创造独特的体验。",
+                "长冈造形大学设计系科技x设计领域（以下简称TxD）2025年度设计基础演习II第二课题“表现看不见的事物”的制作小组之一。\n该小组是大学官方社团“TECH☆TECH尖端媒体表现社团”的衍生组织。\n小组名称源于三名成员姓氏首字母联想到的“酸浆果（灯笼果）”。\n鹈饲 : U , 菅原 : S , 大渕 : O → USO → 嘘（谎言）→ 酸浆果（花语：谎言、欺瞒）→ Lantern Plants",
         },
         members: {
-            title: "Members",
+            title: "成员",
             ukai: {
-                role: "Unity / Electronics / Illustration",
-                details: "专注于互动装置和基于传感器的艺术。",
+                name: "鹈饲 康平",
+                identifier: "@yukiseibei",
+                role: "#团队负责人 #Unity #排版 #杂务",
+                details:
+                    "249024 長冈造形大学設計系科技x設計領域\n我爱ASUS智能手机",
             },
             sugawara: {
-                role: "Electronics / 3D Printing / Ideation",
-                details: "专长于实体界面和发人深省的概念。",
+                name: "菅原 纺宜",
+                identifier: "@sgwr_tmg",
+                role: "制作统筹 #文字提供系统 #Arduino",
+                details:
+                    '249083 長冈造形大学設計系科技x設計領域\n"我的世界"专家',
             },
             ofuchi: {
-                role: "Woodwork / Arduino / Audio & Visuals",
-                details: "探索数字与模拟、声音与运动的交汇点。",
+                name: "大渕 凛",
+                identifier: "@rinfromniigata",
+                role: "#传送带 #宣传 #Web设计",
+                details: "239031 長冈造形大学設計系科技x設計領域\n总是摆弄电脑",
             },
         },
         works: {
-            title: "Works",
+            title: "Shape Writer",
             description:
-                "我们的项目涵盖从互动装置到实验性软件的广泛领域。我们致力于拓展技术的可能性。",
+                '作为表音文字，字母表中的单个字母仅仅是一个符号，其本身并不具备语言学上的意义。\n然而，当它们按照一定的规则组合排列时，意义便随之产生。\n即使是同样的字母，如果排列顺序改变，其意义也会发生变化。\n\n本作品表现了将符号（字母）进行组合并创造出词汇的过程。\n当观众通过键盘输入词汇时，相应的字母就会被调用。\n字母由活塞推到传送带上，并按顺序排列。\n随着传送带的移动，下一个字母也会被放置在相应的位置。\n\n通过键盘输入的字母数据，经由Unity传输至Arduino。\nArduino接收到数据后，对舵机和步进电机进行控制。\n\n人们在日常生活中往往并不会意识到"意义"、"词汇"以及"语言"产生的瞬间。\n本作品旨在通过亲眼捕捉符号构建成语言的过程，来重新审视我们所使用的"言语"。\n\n2025年度长冈造型大学夏季开放校园展作品',
             linkText: "查看博客",
         },
         site: {
-            title: "关于本站",
+            title: "关于Lantern-TECH Blog",
             description:
-                "这个网站是 Lantern-TECH 的作品集和技术博客。我们在这里记录我们的制作过程、发现以及作品背后的哲学。",
+                "本网站作为Lantern-TECH的制作笔记，旨在记录各种信息。\n各负责人的制作笔记按领域分类刊登在博客栏目中。此外，还汇集了发布资料和参考文献。\n本网站既具备撰写提交报告时的资料存档功能，也具备在开放日等活动中进行展示和介绍时的引导功能。\n在进行课题制作期间曾使用谷歌Site，但于2026年2月进行了改版，包括迁移至新域名、支持三种语言以及丰富文章内容。",
         },
         slideshow: {
             image1: "网络",
@@ -264,8 +281,12 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         <div class="image-column">
             <div class="image-wrapper">
                 <Imgur
-                    id="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Team collaboration"
+                    id="https://i.imgur.com/nJknyEc.png"
+                    alt="Lantern-TECH CI"
+                />
+                <Imgur
+                    id="https://i.imgur.com/D4fiLMa.jpg"
+                    alt="Lantern-TECH Members"
                 />
             </div>
         </div>
@@ -281,13 +302,16 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
                 <div class="member-header">
                     <div class="member-avatar">
                         <Imgur
-                            id="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                            alt="Kohei Ukai"
+                            id="https://i.imgur.com/hQjxVd9.jpeg"
+                            alt="Ukai Kohei"
                         />
                     </div>
                     <div class="member-info">
                         <h3>
-                            鵜飼 康平 <span class="member-en">Kohei Ukai</span>
+                            {t.members.ukai.name}
+                            <span class="member-identifier"
+                                >{t.members.ukai.identifier}</span
+                            >
                         </h3>
                         <p class="member-role">{t.members.ukai.role}</p>
                     </div>
@@ -308,14 +332,15 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
                 <div class="member-header">
                     <div class="member-avatar">
                         <Imgur
-                            id="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                            alt="Tsumugi Sugawara"
+                            id="https://i.imgur.com/KaiOu3O.jpeg"
+                            alt="Sugawara Tsumugi"
                         />
                     </div>
                     <div class="member-info">
                         <h3>
-                            菅原 紡宜 <span class="member-en"
-                                >Tsumugi Sugawara</span
+                            {t.members.sugawara.name}
+                            <span class="member-identifier"
+                                >{t.members.sugawara.identifier}</span
                             >
                         </h3>
                         <p class="member-role">{t.members.sugawara.role}</p>
@@ -337,13 +362,16 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
                 <div class="member-header">
                     <div class="member-avatar">
                         <Imgur
-                            id="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                            alt="Rin Ofuchi"
+                            id="https://i.imgur.com/3o0KHbP.jpeg"
+                            alt="Ofuchi Rin"
                         />
                     </div>
                     <div class="member-info">
                         <h3>
-                            大渕 凜 <span class="member-en">Rin Ofuchi</span>
+                            {t.members.ofuchi.name}
+                            <span class="member-identifier"
+                                >{t.members.ofuchi.identifier}</span
+                            >
                         </h3>
                         <p class="member-role">{t.members.ofuchi.role}</p>
                     </div>
@@ -380,8 +408,16 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         <div class="image-column">
             <div class="image-wrapper">
                 <Imgur
-                    id="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Project showcase"
+                    id="https://i.imgur.com/bqOY6Xp.gif"
+                    alt="Shape Writer Overview"
+                />
+                <Imgur
+                    id="https://i.imgur.com/0Bf928U.jpg"
+                    alt="Shape Writer Main ShowCase"
+                />
+                <Imgur
+                    id="https://i.imgur.com/ww9SDpV.png"
+                    alt="Shape Writer Shown in OpenCampus"
                 />
             </div>
         </div>
@@ -403,8 +439,8 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         <div class="image-column">
             <div class="image-wrapper">
                 <Imgur
-                    id="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Coding"
+                    id="https://i.imgur.com/RRV8H1K.png"
+                    alt="Lantern-TECH Blog old version"
                 />
             </div>
         </div>
@@ -631,6 +667,7 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
     .site-title-section h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
+        font-weight: 800; /* ExtraBold */
     }
 
     .site-title-section p {
@@ -734,8 +771,8 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
     }
 
     .member-avatar {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border-radius: 12px;
         overflow: hidden;
         margin-bottom: 1rem;
@@ -761,7 +798,7 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         color: var(--color-primary);
     }
 
-    .member-en {
+    .member-info .member-identifier {
         display: block;
         font-size: 0.85rem;
         font-weight: normal;

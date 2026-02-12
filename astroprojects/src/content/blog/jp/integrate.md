@@ -264,9 +264,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 ![展示状態](https://i.imgur.com/xMykOxt.jpg)
 
-![講評1](https://i.imgur.com/MKtBzqi.jpg)
-
 ![講評2](https://i.imgur.com/Vw3iZmX.jpg)
+
+![講評1](https://i.imgur.com/htf9lqu.jpg)
 
 ---
 
