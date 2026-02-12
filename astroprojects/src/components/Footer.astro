@@ -1,6 +1,11 @@
 ---
 import { ui } from "../data/ui";
-import { categoryNames } from "../data/navigation";
+import {
+    categoryNames,
+    blogPages,
+    newsreleasePages,
+    notesPages,
+} from "../data/navigation";
 
 const { lang } = Astro.params;
 
@@ -21,45 +26,62 @@ const externalLinks = {
     jp: {
         astro: {
             href: "https://astro.build",
-            label: "Astro",
+            label: "Astro | 世界最速のWebフレームワーク",
         },
         cloudflare: {
             href: "https://pages.cloudflare.com",
-            label: "Cloudflare Pages",
+            label: "Cloudflare Pages | 記録的な速さのサイトを構築しよう。",
         },
         imgur: {
             href: "https://imgur.com",
-            label: "Imgur",
+            label: "Imgur | インターネットの魔法",
+        },
+        picui: {
+            href: "https://picui.cn",
+            label: "PICUI図床 | 豊かなデジタル世界を創造する",
         },
     },
     en: {
         astro: {
             href: "https://astro.build",
-            label: "Astro",
+            label: "Astro | World's Fastest Web Framework",
         },
         cloudflare: {
             href: "https://pages.cloudflare.com",
-            label: "Cloudflare Pages",
+            label: "Cloudflare Pages | Build fast sites. In record time.",
         },
         imgur: {
             href: "https://imgur.com",
-            label: "Imgur",
+            label: "Imgur | The magic of the Internet",
+        },
+        picui: {
+            href: "https://picui.cn",
+            label: "PICUI PicBed | Build a rich digital world to your heart's content",
         },
     },
     zh: {
         astro: {
             href: "https://astro.build",
-            label: "Astro",
+            label: "Astro | 世界最快的Web框架",
         },
         cloudflare: {
             href: "https://pages.cloudflare.com",
-            label: "Cloudflare Pages",
+            label: "Cloudflare Pages | 快速构建网站。创纪录的速度。",
         },
         imgur: {
             href: "https://imgur.com",
-            label: "Imgur",
+            label: "Imgur | 互联网的魔法",
+        },
+        picui: {
+            href: "https://picui.cn",
+            label: "PICUI图床 | 尽情打造丰富的数字世界",
         },
     },
+};
+
+const getFaviconUrl = (url: string) => {
+    const domain = new URL(url).hostname;
+    return `https://www.google.com/s2/favicons?domain=${domain}`;
 };
 ---
 
@@ -69,9 +91,50 @@ const externalLinks = {
             <h3>{t.sitemap}</h3>
             <ul>
                 <li><a href={`/${lang}/`}>{cats.top}</a></li>
-                <li><a href={`/${lang}/blog`}>{cats.blog}</a></li>
-                <li><a href={`/${lang}/newsrelease`}>{cats.newsrelease}</a></li>
-                <li><a href={`/${lang}/notes`}>{cats.notes}</a></li>
+                <li>
+                    <a href={`/${lang}/blog`}>{cats.blog}</a>
+                    <ul class="sub-links">
+                        {
+                            blogPages.map((page) => (
+                                <li>
+                                    <a href={`/${lang}/blog/${page.slug}`}>
+                                        {page.title[currentLang]}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </li>
+                <li>
+                    <a href={`/${lang}/newsrelease`}>{cats.newsrelease}</a>
+                    <ul class="sub-links">
+                        {
+                            newsreleasePages.map((page) => (
+                                <li>
+                                    <a
+                                        href={`/${lang}/newsrelease/${page.slug}`}
+                                    >
+                                        {page.title[currentLang]}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </li>
+                <li>
+                    <a href={`/${lang}/notes`}>{cats.notes}</a>
+                    <ul class="sub-links">
+                        {
+                            notesPages.map((page) => (
+                                <li>
+                                    <a href={`/${lang}/notes/${page.slug}`}>
+                                        {page.title[currentLang]}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -86,7 +149,15 @@ const externalLinks = {
                                     href={link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    class="external-link"
                                 >
+                                    <img
+                                        src={getFaviconUrl(link.href)}
+                                        alt=""
+                                        width="16"
+                                        height="16"
+                                        class="favicon"
+                                    />
                                     {link.label}
                                 </a>
                             </li>
@@ -95,11 +166,10 @@ const externalLinks = {
                 }
                 <!-- Add more external links here -->
             </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Lantern-TECH Blog</h3>
-            <p>{t.description}</p>
+            <div class="footer-description">
+                <h3>Lantern-TECH Blog</h3>
+                <p>{t.description}</p>
+            </div>
         </div>
     </div>
 
@@ -120,9 +190,15 @@ const externalLinks = {
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
         margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
     }
 
     .footer-section h3 {
@@ -137,6 +213,13 @@ const externalLinks = {
         margin: 0;
     }
 
+    .footer-section .sub-links {
+        padding-left: 20px;
+        margin-top: 0.25rem;
+        font-size: 0.9em;
+        opacity: 0.9;
+    }
+
     .footer-section li {
         margin-bottom: 0.5rem;
     }
@@ -149,6 +232,24 @@ const externalLinks = {
     .footer-section a:hover {
         opacity: 1;
         color: var(--color-accent);
+    }
+
+    .favicon {
+        width: 16px;
+        height: 16px;
+        margin-right: 0.5rem;
+        vertical-align: text-bottom;
+    }
+
+    .external-link {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-description {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
     }
 
     .copyright {

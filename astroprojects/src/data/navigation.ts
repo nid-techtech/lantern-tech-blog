@@ -20,19 +20,35 @@ export const blogPages: PageDefinition[] = [
     },
     {
         slug: "character",
-        title: { jp: "文字", en: "Character", zh: "文字" },
+        title: {
+            jp: "文字",
+            en: "Character",
+            zh: "文字"
+        },
     },
     {
         slug: "vendor",
-        title: { jp: "ベンダー", en: "Vendor", zh: "供应商" },
+        title: {
+            jp: "ベンダー",
+            en: "Vendor",
+            zh: "文字提供系统"
+        },
     },
     {
         slug: "conveyor",
-        title: { jp: "コンベア", en: "Conveyor", zh: "传送带" },
+        title: {
+            jp: "コンベア",
+            en: "Conveyor",
+            zh: "传送带"
+        },
     },
     {
         slug: "software",
-        title: { jp: "ソフトウェア", en: "Software", zh: "软件" },
+        title: {
+            jp: "ソフトウェア",
+            en: "Software",
+            zh: "软件"
+        },
     },
 ];
 
@@ -47,7 +63,11 @@ export const newsreleasePages: PageDefinition[] = [
     },
     {
         slug: "middle",
-        title: { jp: "中間報告", en: "Interim Report", zh: "中期报告" },
+        title: {
+            jp: "中間報告",
+            en: "Interim Report",
+            zh: "中期报告"
+        },
     },
     {
         slug: "movie",
@@ -67,7 +87,11 @@ export const newsreleasePages: PageDefinition[] = [
     },
     {
         slug: "promotion",
-        title: { jp: "PR動画", en: "Promotion Video", zh: "宣传视频" },
+        title: {
+            jp: "PR動画",
+            en: "Promotion Video",
+            zh: "宣传视频"
+        },
     },
 ];
 
@@ -91,8 +115,24 @@ export const notesPages: PageDefinition[] = [
 ];
 
 export const categoryNames = {
-    top: { jp: "トップ", en: "Top", zh: "首页" },
-    blog: { jp: "ブログ", en: "Blog", zh: "博客" },
-    newsrelease: { jp: "発表資料", en: "News Release", zh: "发布资料" },
-    notes: { jp: "参考文献", en: "Notes", zh: "参考文献" },
+    top: {
+        jp: "トップ",
+        en: "Top",
+        zh: "首页"
+    },
+    blog: {
+        jp: "ブログ",
+        en: "Blog",
+        zh: "博客"
+    },
+    newsrelease: {
+        jp: "発表資料",
+        en: "News Release",
+        zh: "发布资料"
+    },
+    notes: {
+        jp: "参考文献",
+        en: "Notes",
+        zh: "参考文献"
+    },
 };
