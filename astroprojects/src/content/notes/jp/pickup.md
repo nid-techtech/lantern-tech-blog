@@ -94,6 +94,28 @@ ogImage: https://i.imgur.com/R12xLUZ.png
 
 ---
 
+# イデアの工場
+
+`ユーフラテス | 2006`
+
+大日本印刷（DNP）のシアターや企業説明会、セミナーなどで上映されるイントロ映像。アルファベットがコンベアを流れる過程で様々なパーツが追加されていき、最終的に単語となって梱包されるという内容。
+
+活版印刷や輪転機など、ちょっと印刷会社を感じさせる工程がCGで表現されているのが面白い。またプリミティブなルックが可愛らしい。
+
+「四角が行く」の作者の石川氏も制作に関わっている。
+
+ちなみにユーフラテスと石川氏は、ともに慶應義塾大学の佐藤雅彦研究室出身。ピタゴラスイッチ制作チームの一員だった。
+
+[イデアの工場 | Factory of Idea - EUPHRATES | ユーフラテス](https://euphrates.jp/Factory-of-Idea)
+
+![イデアの工場1](https://i.imgur.com/GbHTMYY.jpeg)
+
+![イデアの工場2](https://i.imgur.com/PTLg2A8.gif)
+
+![イデアの工場3](https://www.youtube.com/watch?v=9aeeg5Eyxt4)
+
+---
+
 # Billion Dollar Arcade
 
 `Andrew Zolty BREAKFAST | 2024`
