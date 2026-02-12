@@ -3,7 +3,6 @@ import { ui } from "../data/ui";
 import { categoryNames } from "../data/navigation";
 
 const { lang } = Astro.params;
-const year = new Date().getFullYear();
 
 // langがundefinedまたはサポート外の場合のフォールバック
 const currentLang =
@@ -16,6 +15,51 @@ const cats = {
     blog: categoryNames.blog[currentLang],
     newsrelease: categoryNames.newsrelease[currentLang],
     notes: categoryNames.notes[currentLang],
+};
+
+const externalLinks = {
+    jp: {
+        astro: {
+            href: "https://astro.build",
+            label: "Astro",
+        },
+        cloudflare: {
+            href: "https://pages.cloudflare.com",
+            label: "Cloudflare Pages",
+        },
+        imgur: {
+            href: "https://imgur.com",
+            label: "Imgur",
+        },
+    },
+    en: {
+        astro: {
+            href: "https://astro.build",
+            label: "Astro",
+        },
+        cloudflare: {
+            href: "https://pages.cloudflare.com",
+            label: "Cloudflare Pages",
+        },
+        imgur: {
+            href: "https://imgur.com",
+            label: "Imgur",
+        },
+    },
+    zh: {
+        astro: {
+            href: "https://astro.build",
+            label: "Astro",
+        },
+        cloudflare: {
+            href: "https://pages.cloudflare.com",
+            label: "Cloudflare Pages",
+        },
+        imgur: {
+            href: "https://imgur.com",
+            label: "Imgur",
+        },
+    },
 };
 ---
 
@@ -34,13 +78,21 @@ const cats = {
         <div class="footer-section">
             <h3>{t.links}</h3>
             <ul>
-                <li>
-                    <a
-                        href="https://astro.build"
-                        target="_blank"
-                        rel="noopener noreferrer">Astro</a
-                    >
-                </li>
+                {
+                    Object.values(externalLinks[currentLang]).map(
+                        (link: any) => (
+                            <li>
+                                <a
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {link.label}
+                                </a>
+                            </li>
+                        ),
+                    )
+                }
                 <!-- Add more external links here -->
             </ul>
         </div>
@@ -52,7 +104,7 @@ const cats = {
     </div>
 
     <div class="copyright">
-        &copy; {year} Lantern-TECH Blog. {t.rights}
+        {t.poweredby} &copy; Lantern-TECH 2025 {t.rights}
     </div>
 </footer>
 
