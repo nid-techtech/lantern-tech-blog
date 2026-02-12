@@ -29,6 +29,8 @@ const notifications = [
 
 const translations = {
     jp: {
+        ogImage:
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         greeting: "ようこそ Lantern-TECH Blog へ",
         description: "ほおずきは真実を覆い隠す。我々は見えない真実を表現する。",
         team: {
@@ -76,9 +78,12 @@ const translations = {
             image5: "構成チェック中",
             image6: "本展示",
             image7: "鑑賞タイム",
+            image8: "鑑賞タイム2",
         },
     },
     en: {
+        ogImage:
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         greeting: "Welcome to Lantern-TECH Blog",
         description:
             "The lantern plants vail the truth. We express the unseen truth.",
@@ -130,10 +135,13 @@ const translations = {
             image5: "Configuration Check",
             image6: "Exhibition",
             image7: "Appreciation Time",
+            image8: "Appreciation Time 2",
         },
     },
     zh: {
-        greeting: "欢迎来到Lantern-TECH Blog",
+        ogImage:
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        greeting: "欢迎来到 Lantern-TECH Blog",
         description: "酸浆果掩盖真相，我们表现看不见的真相。",
         team: {
             title: "Lantern-TECH是什么?",
@@ -182,30 +190,35 @@ const translations = {
             image5: "构成检查中",
             image6: "本展示",
             image7: "鉴赏时间",
+            image8: "鉴赏时间2",
         },
     },
 };
 
 const t = translations[lang as keyof typeof translations] || translations.jp;
 
-// Slideshow Data
-const slides = [
-    {
-        id: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-        altKey: "image1",
-    },
-    {
-        id: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-        altKey: "image2",
-    },
-    {
-        id: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-        altKey: "image3",
-    },
-];
+// // Slideshow Data
+// const slides = [
+//     {
+//         id: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+//         altKey: "image1",
+//     },
+//     {
+//         id: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+//         altKey: "image2",
+//     },
+//     {
+//         id: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+//         altKey: "image3",
+//     },
+// ];
 ---
 
-<BaseLayout title={`Lantern-TECH Blog - ${lang.toUpperCase()}`} lang={lang}>
+<BaseLayout
+    title={`Lantern-TECH Blog - ${lang.toUpperCase()}`}
+    lang={lang}
+    ogImage={t.ogImage}
+>
     <!-- 1. Banner Slideshow -->
     <section class="slideshow" id="hero-slideshow">
         <div class="slideshow-container">
@@ -250,6 +263,12 @@ const slides = [
                 <Imgur
                     id="https://i.imgur.com/ADb1qyK.jpeg"
                     alt={t.slideshow.image7}
+                />
+            </div>
+            <div class="slide fade">
+                <Imgur
+                    id="https://i.imgur.com/HKodoeO.jpeg"
+                    alt={t.slideshow.image8}
                 />
             </div>
 
