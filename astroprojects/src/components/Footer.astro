@@ -1,28 +1,45 @@
 ---
+import { ui } from "../data/ui";
+import { categoryNames } from "../data/navigation";
+
 const { lang } = Astro.params;
 const year = new Date().getFullYear();
+
+// langがundefinedまたはサポート外の場合のフォールバック
+const currentLang =
+    lang && typeof lang === "string" && (lang === "jp" || lang === "zh")
+        ? lang
+        : "en";
+const t = ui[currentLang].footer;
+const cats = {
+    top: categoryNames.top[currentLang],
+    blog: categoryNames.blog[currentLang],
+    newsrelease: categoryNames.newsrelease[currentLang],
+    notes: categoryNames.notes[currentLang],
+};
 ---
 
 <footer>
     <div class="footer-content">
         <div class="footer-section">
-            <h3>Sitemap</h3>
+            <h3>{t.sitemap}</h3>
             <ul>
-                <li><a href={`/${lang}/`}>Top</a></li>
-                <li><a href={`/${lang}/blog`}>Blog</a></li>
-                <li><a href={`/${lang}/newsrelease`}>News Release</a></li>
-                <li><a href={`/${lang}/notes`}>Notes</a></li>
+                <li><a href={`/${lang}/`}>{cats.top}</a></li>
+                <li><a href={`/${lang}/blog`}>{cats.blog}</a></li>
+                <li><a href={`/${lang}/newsrelease`}>{cats.newsrelease}</a></li>
+                <li><a href={`/${lang}/notes`}>{cats.notes}</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
-            <h3>Links</h3>
+            <h3>{t.links}</h3>
             <ul>
                 <li>
                     <a
                         href="https://astro.build"
                         target="_blank"
-                        rel="noopener noreferrer">Astro</a>
+                        rel="noopener noreferrer">Astro</a
+                    >
                 </li>
                 <!-- Add more external links here -->
             </ul>
@@ -30,12 +47,12 @@ const year = new Date().getFullYear();
 
         <div class="footer-section">
             <h3>Lantern-TECH Blog</h3>
-            <p>Technology, Creativity, and Innovation.</p>
+            <p>{t.description}</p>
         </div>
     </div>
 
     <div class="copyright">
-        &copy; {year} Lantern-TECH Blog. All rights reserved.
+        &copy; {year} Lantern-TECH Blog. {t.rights}
     </div>
 </footer>
 
