@@ -174,7 +174,7 @@ const getFaviconUrl = (url: string) => {
     </div>
 
     <div class="copyright">
-        {t.poweredby} &copy; Lantern-TECH 2025 {t.rights}
+        <span set:html={t.poweredby} /> &copy; Lantern-TECH 2025 {t.rights}
     </div>
 </footer>
 
@@ -258,5 +258,15 @@ const getFaviconUrl = (url: string) => {
         padding-top: 1rem;
         font-size: 0.9rem;
         opacity: 0.7;
+    }
+
+    .copyright :global(a) {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .copyright :global(a:hover) {
+        color: var(--color-accent);
+        text-decoration: underline;
     }
 </style>
