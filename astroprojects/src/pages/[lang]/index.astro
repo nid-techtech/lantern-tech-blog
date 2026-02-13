@@ -197,21 +197,72 @@ const translations = {
 
 const t = translations[lang as keyof typeof translations] || translations.jp;
 
-// // Slideshow Data
-// const slides = [
-//     {
-//         id: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-//         altKey: "image1",
-//     },
-//     {
-//         id: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-//         altKey: "image2",
-//     },
-//     {
-//         id: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-//         altKey: "image3",
-//     },
-// ];
+// Image Assets Data used for conditional render (ZH/GFW support)
+const imageAssets = {
+    slideshow: [
+        {
+            key: "image1",
+            jp: "https://i.imgur.com/bmFaGJG.jpeg",
+            zh: "", // TODO: Replace with Non-Imgur URL
+        },
+        {
+            key: "image2",
+            jp: "https://i.imgur.com/sKgTu6X.jpeg",
+            zh: "",
+        },
+        {
+            key: "image3",
+            jp: "https://i.imgur.com/aJeimcZ.jpeg",
+            zh: "",
+        },
+        {
+            key: "image4",
+            jp: "https://i.imgur.com/9bx5LcO.jpeg",
+            zh: "",
+        },
+        {
+            key: "image5",
+            jp: "https://i.imgur.com/tPv8oB2.jpeg",
+            zh: "",
+        },
+        {
+            key: "image6",
+            jp: "https://i.imgur.com/BK8NnMz.jpeg",
+            zh: "",
+        },
+        {
+            key: "image7",
+            jp: "https://i.imgur.com/ADb1qyK.jpeg",
+            zh: "",
+        },
+        {
+            key: "image8",
+            jp: "https://i.imgur.com/HKodoeO.jpeg",
+            zh: "",
+        },
+    ],
+    team: {
+        ci: { jp: "https://i.imgur.com/nJknyEc.png", zh: "" },
+        members: { jp: "https://i.imgur.com/D4fiLMa.jpg", zh: "" },
+    },
+    members: {
+        ukai: { jp: "https://i.imgur.com/hQjxVd9.jpeg", zh: "" },
+        sugawara: { jp: "https://i.imgur.com/KaiOu3O.jpeg", zh: "" },
+        ofuchi: { jp: "https://i.imgur.com/3o0KHbP.jpeg", zh: "" },
+    },
+    works: {
+        gif: { jp: "https://i.imgur.com/bqOY6Xp.gif", zh: "" },
+        main: { jp: "https://i.imgur.com/0Bf928U.jpg", zh: "" },
+        opencampus: { jp: "https://i.imgur.com/ww9SDpV.png", zh: "" },
+    },
+    site: {
+        old: { jp: "https://i.imgur.com/RRV8H1K.png", zh: "" },
+    },
+};
+
+const getImage = (asset: { jp: string; zh: string }) => {
+    return lang === "zh" && asset.zh ? asset.zh : asset.jp;
+};
 ---
 
 <BaseLayout
@@ -223,54 +274,21 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
     <section class="slideshow" id="hero-slideshow">
         <div class="slideshow-container">
             <!-- Placeholder images - Replace with 1920x1080 assets -->
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/bmFaGJG.jpeg"
-                    alt={t.slideshow.image1}
-                />
-            </div>
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/sKgTu6X.jpeg"
-                    alt={t.slideshow.image2}
-                />
-            </div>
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/aJeimcZ.jpeg"
-                    alt={t.slideshow.image3}
-                />
-            </div>
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/9bx5LcO.jpeg"
-                    alt={t.slideshow.image4}
-                />
-            </div>
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/tPv8oB2.jpeg"
-                    alt={t.slideshow.image5}
-                />
-            </div>
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/BK8NnMz.jpeg"
-                    alt={t.slideshow.image6}
-                />
-            </div>
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/ADb1qyK.jpeg"
-                    alt={t.slideshow.image7}
-                />
-            </div>
-            <div class="slide fade">
-                <Imgur
-                    id="https://i.imgur.com/HKodoeO.jpeg"
-                    alt={t.slideshow.image8}
-                />
-            </div>
+            <!-- Placeholder images - Replace with 1920x1080 assets -->
+            {
+                imageAssets.slideshow.map((slide) => (
+                    <div class="slide fade">
+                        <Imgur
+                            id={getImage(slide)}
+                            alt={
+                                t.slideshow[
+                                    slide.key as keyof typeof t.slideshow
+                                ]
+                            }
+                        />
+                    </div>
+                ))
+            }
 
             <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
             <a class="next" onclick="moveSlide(1)">&#10095;</a>
@@ -352,11 +370,11 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         <div class="image-column">
             <div class="image-wrapper">
                 <Imgur
-                    id="https://i.imgur.com/nJknyEc.png"
+                    id={getImage(imageAssets.team.ci)}
                     alt="Lantern-TECH CI"
                 />
                 <Imgur
-                    id="https://i.imgur.com/D4fiLMa.jpg"
+                    id={getImage(imageAssets.team.members)}
                     alt="Lantern-TECH Members"
                 />
             </div>
@@ -373,7 +391,7 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
                 <div class="member-header">
                     <div class="member-avatar">
                         <Imgur
-                            id="https://i.imgur.com/hQjxVd9.jpeg"
+                            id={getImage(imageAssets.members.ukai)}
                             alt="Ukai Kohei"
                         />
                     </div>
@@ -403,7 +421,7 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
                 <div class="member-header">
                     <div class="member-avatar">
                         <Imgur
-                            id="https://i.imgur.com/KaiOu3O.jpeg"
+                            id={getImage(imageAssets.members.sugawara)}
                             alt="Sugawara Tsumugi"
                         />
                     </div>
@@ -433,7 +451,7 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
                 <div class="member-header">
                     <div class="member-avatar">
                         <Imgur
-                            id="https://i.imgur.com/3o0KHbP.jpeg"
+                            id={getImage(imageAssets.members.ofuchi)}
                             alt="Ofuchi Rin"
                         />
                     </div>
@@ -479,15 +497,15 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         <div class="image-column">
             <div class="image-wrapper">
                 <Imgur
-                    id="https://i.imgur.com/bqOY6Xp.gif"
+                    id={getImage(imageAssets.works.gif)}
                     alt="Shape Writer Overview"
                 />
                 <Imgur
-                    id="https://i.imgur.com/0Bf928U.jpg"
+                    id={getImage(imageAssets.works.main)}
                     alt="Shape Writer Main ShowCase"
                 />
                 <Imgur
-                    id="https://i.imgur.com/ww9SDpV.png"
+                    id={getImage(imageAssets.works.opencampus)}
                     alt="Shape Writer Shown in OpenCampus"
                 />
             </div>
@@ -510,7 +528,7 @@ const t = translations[lang as keyof typeof translations] || translations.jp;
         <div class="image-column">
             <div class="image-wrapper">
                 <Imgur
-                    id="https://i.imgur.com/RRV8H1K.png"
+                    id={getImage(imageAssets.site.old)}
                     alt="Lantern-TECH Blog old version"
                 />
             </div>
