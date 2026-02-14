@@ -20,7 +20,7 @@ ogImage: https://i.imgur.com/IfMqQvC.jpeg
 
 ![Comtype1](https://i.imgur.com/tpfJ9MG.png)
 
-![Comtype2]()
+![Comtype2](https://i.imgur.com/Qtsn4Ww.gif)
 
 ![Comtype3](https://www.youtube.com/watch?v=e5fIFitjEcw?rel=0)
 
@@ -40,7 +40,7 @@ ogImage: https://i.imgur.com/IfMqQvC.jpeg
 
 ![インターネット物理モデル1](https://i.imgur.com/XKn7fgN.png)
 
-![インターネット物理モデル2]()
+![インターネット物理モデル2](https://i.imgur.com/M4iSpMu.gif)
 
 ![インターネット物理モデル3](https://www.youtube.com/watch?v=XNLmjl98qQ8?rel=0)
 
@@ -62,7 +62,7 @@ ogImage: https://i.imgur.com/IfMqQvC.jpeg
 
 [新型コペンのガワは、もしかしたら帝人でCMをやってる樹脂素材なのだろうか | MOVE ABOUT](https://web.archive.org/web/20250719045656/https://used-move.com/2012/11/2628/)
 
-![クルマジャーントパンダCM1]()
+![クルマジャーントパンダCM1](https://i.imgur.com/cbcI0C7.gif)
 
 ![クルマジャーントパンダCM2](https://www.youtube.com/watch?v=cfKQdUMkSF4?rel=0)
 
@@ -86,11 +86,11 @@ ogImage: https://i.imgur.com/IfMqQvC.jpeg
 
 [四角が行く——「ルール？展」出品作品ができるまで | ヒルズライフ HILLS LIFE](https://hillslife.jp/series/seeing-creates-something/the-square-makes-it-through/)
 
-![四角が行く1](https://i.imgur.com/seFem1J.jpeg)
+![四角が行く1](https://i.imgur.com/Ioxc956.gif)
 
 ![四角が行く2](https://vimeo.com/596116131/089edf293f?fl=pl&fe=sh)
 
-![四角が行く3](https://i.imgur.com/64rqSje.jpeg)
+![四角が行く3](https://i.imgur.com/seFem1J.jpeg)
 
 ---
 
@@ -110,7 +110,7 @@ ogImage: https://i.imgur.com/IfMqQvC.jpeg
 
 ![イデアの工場1](https://i.imgur.com/IfMqQvC.jpeg)
 
-![イデアの工場2]()
+![イデアの工場2](https://i.imgur.com/b9Xr15X.gif)
 
 ![イデアの工場3](https://www.youtube.com/watch?v=9aeeg5Eyxt4)
 
@@ -132,7 +132,7 @@ BREAKFASTはニューヨークを拠点に活動するカイネティックア�
 
 ![Billion Dollar Arcade1](https://i.imgur.com/bhU2YtG.jpeg)
 
-![Billion Dollar Arcade2]()
+![Billion Dollar Arcade2](https://i.imgur.com/Mfcvco1.gif)
 
 ![Billion Dollar Arcade3](https://www.youtube.com/watch?v=LJu7F0SzJ6Q?rel=0)
 
@@ -154,7 +154,7 @@ BREAKFASTはニューヨークを拠点に活動するカイネティックア�
 
 ![KAZAMI-map : JP1](https://i.imgur.com/E1lwlNc.jpeg)
 
-![KAZAMI-map : JP2]()
+![KAZAMI-map : JP2](https://i.imgur.com/3YSMyqw.gif)
 
 ![KAZAMI-map : JP3](https://www.youtube.com/watch?v=5COcGj1_N1o?rel=0)
 

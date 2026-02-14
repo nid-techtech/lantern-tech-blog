@@ -90,7 +90,7 @@ ogImage: https://i.imgur.com/CtgtfPT.jpeg
 
 ![v1全体](https://i.imgur.com/L3nHrVi.jpeg)
 
-![動作状況]()
+![動作状況](https://i.imgur.com/TkPs45S.gif)
 
 ---
 
@@ -148,7 +148,7 @@ ogImage: https://i.imgur.com/CtgtfPT.jpeg
 
 ![パーツたくさん](https://i.imgur.com/mXNfM4r.jpeg)
 
-![印刷中]()
+![印刷中](https://i.imgur.com/PqaiFmk.gif)
 
 ---
 
@@ -168,7 +168,7 @@ ogImage: https://i.imgur.com/CtgtfPT.jpeg
 
 ![たくさんのシャフト](https://i.imgur.com/bX3xp21.jpeg)
 
-![軸を打ち込む]()
+![軸を打ち込む](https://i.imgur.com/y61a0lK.gif)
 
 ---
 
@@ -190,7 +190,7 @@ ogImage: https://i.imgur.com/CtgtfPT.jpeg
 
 基本設計は引き継ぎつつ、各所の設計を大幅に変更したver.2.1を作ることにする。
 
-![トルク不足のモーター]()
+![トルク不足のモーター](https://i.imgur.com/cDRDuFH.gif)
 
 ![新型パーツ印刷](https://i.imgur.com/6U5Lkw5.jpeg)
 
@@ -220,7 +220,7 @@ ver.2からの変更点としては：
 
 ![CADスクリーンショット](https://i.imgur.com/mDOomrH.png)
 
-![NEMA17モーター]()
+![NEMA17モーター](https://i.imgur.com/GH8pxAU.gif)
 
 ---
 
@@ -258,9 +258,9 @@ ver.2からの変更点としては：
 
 ![コンベアv2.2](https://i.imgur.com/HBsTL7Q.png)
 
-![動画プレゼン用動画収録]()
+![動画プレゼン用動画収録](https://i.imgur.com/rvULE7A.gif)
 
-![双方向運転]()
+![双方向運転](https://i.imgur.com/L4dZAeN.gif)
 
 ---
 
@@ -294,7 +294,7 @@ ver.2からの変更点としては：
 
 ![軸受け印刷中](https://i.imgur.com/FgnTBBl.jpeg)
 
-![印刷完了]()
+![印刷完了](https://i.imgur.com/BV0Evpy.gif)
 
 ---
 
