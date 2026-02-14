@@ -2,26 +2,29 @@
 <script>
     import p5 from "p5";
 
-    const sketch = (p) => {
+    const sketch = (p: p5) => {
         let textString = "044dFNnootu";
         const targetString = "404 Not Found";
-        let xPos;
-        let yPos; // Correct yPos calculation later
-        let conveyorY;
+        let xPos = 0;
+        let yPos = 0;
+        let conveyorY = 0;
         let state = "ENTER"; // ENTER, SHUFFLE, IDLE, EXIT
         let shuffleTimer = 0;
         let shuffleDuration = 60; // Frames for shuffle
 
-        let font;
+        /** @type {number} */
         let fontSize = 64; // Base size, will scale
 
         // Colors
-        let primaryColor;
-        let accentColor;
-        let bgColor;
+        let primaryColor = "#000000";
+        let accentColor = "#000000";
+        let bgColor = "#ffffff";
 
+        /** @type {() => void} */
         p.setup = () => {
             const container = document.getElementById("p5-container");
+            if (!container) return;
+
             const w = container.clientWidth;
             // Height based on font size + padding
             const h = 200;
@@ -48,6 +51,7 @@
             yPos = p.height / 2 - 10;
         }
 
+        /** @type {() => void} */
         p.windowResized = () => {
             const container = document.getElementById("p5-container");
             if (container) {
@@ -61,6 +65,7 @@
         const conveyorSpeed = 5; // Slightly faster
         let conveyorPosition = 0; // Track position manually to allow pausing
 
+        /** @type {() => void} */
         p.draw = () => {
             p.background(bgColor);
 
@@ -136,6 +141,7 @@
             }
         };
 
+        /** @type {() => void} */
         p.mousePressed = () => {
             // Check if mouse is over canvas
             if (
@@ -150,12 +156,18 @@
             }
         };
 
+        /** @returns {number} */
         function calculateFontSize() {
             // Responsive font size
             return Math.min(64, p.width / 10);
         }
 
-        function shuffleText(target, progress) {
+        /**
+         * @param {string} target
+         * @param {number} progress
+         * @returns {string}
+         */
+        function shuffleText(target: string, progress: number) {
             let result = "";
             // Use only characters from "044dFNnootu" + space
             const chars = "04dFNnotu ";
