@@ -155,6 +155,14 @@ export const externalLinks = {
             href: "https://img.z4a.net",
             label: "Z4A図床 | 中国で最も誠実な画像ホスティング",
         },
+        lineseedjp: {
+            href: "https://seed.line.me/index_jp.html",
+            label: "LINE Seed | ユーザーと共に成長するフォント",
+        },
+        antigravity: {
+            href: "https://antigravity.google/",
+            label: "Antigravity | 次世代IDEで無重力の開発へ離陸する",
+        },
     },
     en: {
         astro: {
@@ -173,6 +181,14 @@ export const externalLinks = {
             href: "https://img.z4a.net",
             label: "Z4A Picture Bed | The most honest image hosting in China",
         },
+        lineseedjp: {
+            href: "https://seed.line.me/index_jp.html",
+            label: "LINE Seed | A font that grows from seed with users",
+        },
+        antigravity: {
+            href: "https://antigravity.google/",
+            label: "Antigravity | Experience liftoff with the next-generation IDE",
+        },
     },
     zh: {
         astro: {
@@ -190,6 +206,14 @@ export const externalLinks = {
         z4a: {
             href: "https://img.z4a.net",
             label: "Z4A图床 | 做中国最良心的免费图床",
+        },
+        lineseedjp: {
+            href: "https://seed.line.me/index_jp.html",
+            label: "LINE Seed | 一款与用户共同成长的字体",
+        },
+        antigravity: {
+            href: "https://antigravity.google/",
+            label: "Antigravity | 体验新一代集成开发环境带来的飞跃式发展",
         },
     },
 };
