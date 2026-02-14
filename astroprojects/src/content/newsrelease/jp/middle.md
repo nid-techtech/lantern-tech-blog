@@ -1,6 +1,7 @@
 ---
 title: 中間報告
 description: プレ展示（最初の展示）まで残り半分時点での全体発表
+author: 菅原紡宜
 twoColumn: false
 
 ogImage: https://i.imgur.com/us8QlAj.png

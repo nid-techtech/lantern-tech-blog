@@ -1,6 +1,7 @@
 ---
 title: ソフトウェア
-description: 担当:鵜飼
+description: UnityとArduinoを用いたフロントエンドとバックエンドの連携
+author: 鵜飼康平 / 菅原紡宜
 twoColumn: true
 
 ogImage: https://i.imgur.com/rvXl2u3.png

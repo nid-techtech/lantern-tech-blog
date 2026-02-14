@@ -1,6 +1,7 @@
 ---
 title: 文字
-description: 担当:鵜飼、大渕
+description: タイポグラフィと文字パーツ
+author: 鵜飼康平 / 大渕凜
 twoColumn: true
 
 ogImage: https://i.imgur.com/Ws7ltg5.jpeg

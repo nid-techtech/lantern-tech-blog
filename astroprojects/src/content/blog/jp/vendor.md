@@ -1,6 +1,7 @@
 ---
 title: 文字ベンダー
-description: 担当:菅原
+description: 文字のパーツを保管・押し出す機構
+author: 菅原紡宜
 twoColumn: true
 
 ogImage: https://i.imgur.com/Swn0ONT.png

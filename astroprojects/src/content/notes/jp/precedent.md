@@ -1,6 +1,7 @@
 ---
 title: 参考作品リサーチ
 description: コンセプト決定直後に、関連する・取り入れたいと思う・参考になる過去作品を4つまとめたレポート
+author: 鵜飼康平 / 菅原紡宜 / 大渕凜
 twoColumn: true
 
 ogImage: https://i.imgur.com/AiKLNwk.png

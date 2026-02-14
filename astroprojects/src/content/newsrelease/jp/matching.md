@@ -1,6 +1,7 @@
 ---
 title: マッチングプレゼン
 description: チーム編成と作品計画の決定を目的とする自己PRプレゼン
+author: 鵜飼康平 / 菅原紡宜 / 大渕凜
 twoColumn: false
 
 ogImage: https://i.imgur.com/giUBqXL.png

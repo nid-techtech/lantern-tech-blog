@@ -1,6 +1,7 @@
 ---
 title: コンベア
-description: 担当:大渕
+description: 文字パーツを運搬するコンベアの設計・制作
+author: 大渕凜
 twoColumn: true
 
 ogImage: https://i.imgur.com/CtgtfPT.jpeg

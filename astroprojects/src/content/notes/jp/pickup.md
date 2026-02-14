@@ -1,6 +1,7 @@
 ---
 title: 気になった記事や作品
 description: レポートに盛り込まなかった参考になりそうな作品や技術に関する記事を雑多に貯める
+author: 大渕凜
 twoColumn: true
 
 ogImage: https://i.imgur.com/IfMqQvC.jpeg
