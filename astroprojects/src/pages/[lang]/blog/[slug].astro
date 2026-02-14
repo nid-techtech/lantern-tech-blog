@@ -44,6 +44,12 @@ const { Content } = entry ? await entry.render() : { Content: null };
     <header class="page-header">
         <span class="category">{t.section}</span>
         <h1>{entry?.data.title || pageTitle}</h1>
+        {
+            entry?.data.description && (
+                <p class="description">{entry.data.description}</p>
+            )
+        }
+        {entry?.data.author && <p class="author">By {entry.data.author}</p>}
     </header>
 
     <article class="content">
@@ -76,6 +82,19 @@ const { Content } = entry ? await entry.render() : { Content: null };
     h1 {
         margin-top: 0.5rem;
         font-size: 2rem;
+    }
+
+    .description {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .author {
+        margin-top: 0.25rem;
+        font-size: 0.9rem;
+        color: #777;
+        font-style: italic;
     }
 
     .content {

@@ -1,6 +1,7 @@
 ---
 title: 全体の状況
 description: コンセプトと、プロジェクト全体の進捗を記述します
+author: Lantern-TECH Team
 twoColumn: true
 
 ogImage: https://i.imgur.com/OxuLcUy.jpeg

@@ -3,6 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const commonSchema = z.object({
     title: z.string().optional(),
     description: z.string().optional(),
+    author: z.string().optional(),
     coverImage: z.string().optional(),
     ogImage: z.string().optional(), // Imgur URL for OGP
     draft: z.boolean().default(false),
