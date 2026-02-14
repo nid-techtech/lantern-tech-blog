@@ -37,7 +37,7 @@ ogImage: https://i.imgur.com/IfMqQvC.jpeg
 
 残念ながら2025年1月に展示が終了してしまった。
 
-[インターネット物理モデル | 日本科学未来館 (Miraikan)](https://www.miraikan.jst.go.jp/exhibitions/future/internet/)
+[日本科学未来館「インターネット物理モデル」常設展終了ー惜しむ声、署名活動も | Forbes JAPAN](https://forbesjapan.com/articles/detail/76633)
 
 ![インターネット物理モデル1](https://i.imgur.com/XKn7fgN.png)
 
@@ -119,7 +119,7 @@ ogImage: https://i.imgur.com/IfMqQvC.jpeg
 
 # Billion Dollar Arcade
 
-`Andrew Zolty BREAKFAST | 2024`
+`BREAKFAST | 2024`
 
 BREAKFASTはニューヨークを拠点に活動するカイネティックアーティスト。
 

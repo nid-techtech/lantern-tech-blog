@@ -56,12 +56,6 @@ Point 4 コンベア
 
 (1)慶應義塾大学 佐藤雅彦研究室・ユーフラテス(2006)「ピタゴラ装置DVDブック①」小学館 p.69
 
-添付した画像・映像は、上記書籍に付属のDVDビデオをキャプチャ・リッピングしたものです。映像を大渕のYouTubeチャンネルで共有しているのは、この資料の外部参照性を考慮したものであり、その著作権・所有権が大渕にあると主張するものではありません。
-
-上記DVDビデオは、2002年よりNHK教育(現:NHK Eテレ)で放送されている番組「ピタゴラスイッチ」より、ピタゴラ装置の映像部分を収録したものです。
-
-ピタゴラ装置作品の制作・著作は佐藤研究室またはユーフラテス有限会社ですが、それを撮影した映像の制作はNHKエデュケーショナル、著作はNHKです。
-
 ![ピタゴラ装置No.58_1](https://i.imgur.com/sm9W8u2.png)
 ![ピタゴラ装置No.58_2](https://i.imgur.com/E5AaexJ.gif)
 ![ピタゴラ装置No.58_3](https://www.youtube.com/watch?v=o154pXKKji4?rel=0)
@@ -172,7 +166,7 @@ touchdesignerなどを応用すれば作れると考える。
 
 [作者の公式サイト](https://camilleutterback.com/projects/text-rain/)
 
-他関連サイト
+[ASPECT(アメリカのメディアアートの雑誌)による作品紹介記事](https://www.aspectmag.com/works/text-rain/)
 
 ![Text Rain1](https://i.imgur.com/WL1tM0t.jpeg)
 
