@@ -7,7 +7,7 @@
 
   --font-base: "LINE Seed JP", system-ui, -apple-system, sans-serif;
   --font-code: "JetBrains Mono", monospace;
-  --font-zh: "Noto Sans SC", "LINE Seed JP", system-ui, sans-serif;
+  --font-zh: "Noto Sans SC", system-ui, sans-serif;
 }
 
 /* Fonts are loaded via Google Fonts in BaseLayout.astro */
@@ -28,8 +28,41 @@ body {
   min-height: 100vh;
 }
 
+/* LINE Seed JP Latin Subset */
+@font-face {
+  font-family: 'LINE Seed JP Latin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lineseedjp/v1/MwQxbh7r89it6QsEXfZb-jMfjQ.ttf) format('truetype');
+  unicode-range: U+0000-00FF;
+}
+
+@font-face {
+  font-family: 'LINE Seed JP Latin';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lineseedjp/v1/MwQubh7r89it6QsEXfZb-jMnMbRurQ.ttf) format('truetype');
+  unicode-range: U+0000-00FF;
+}
+
+@font-face {
+  font-family: 'LINE Seed JP Latin';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lineseedjp/v1/MwQubh7r89it6QsEXfZb-jMnLbdurQ.ttf) format('truetype');
+  unicode-range: U+0000-00FF;
+}
+
 :lang(zh) {
-  font-family: var(--font-zh);
+  font-family: "LINE Seed JP Latin", var(--font-zh);
+}
+
+:lang(zh) code,
+:lang(zh) pre {
+  font-family: var(--font-code);
 }
 
 code,
