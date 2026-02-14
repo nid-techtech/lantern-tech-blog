@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ArticleCard from "../../../components/ArticleCard.astro";
+import { categoryNames } from "../../../data/navigation";
+
+export function getStaticPaths() {
+    return [
+        { params: { lang: "jp" } },
+        { params: { lang: "en" } },
+        { params: { lang: "zh" } },
+    ];
+}
+
+const { lang } = Astro.params;
+
+// Get all blog entries
+const allBlogPosts = await getCollection("blog");
+
+// Filter by language
+// The id structure is usually "lang/slug.md" or similar, so check if id starts with lang/
+const posts = allBlogPosts.filter((post) => {
+    const [postLang] = post.slug.split("/"); // Assuming slug might be like 'jp/...' or checking id
+    // Actually getCollection returns slug as 'jp/foo', id as 'jp/foo.md'
+    // Let's verify slug structure. The file is src/content/blog/lang/slug.md
+    // So collection slug is 'lang/filename-without-ext'
+    return post.slug.startsWith(`${lang}/`);
+});
+
+const pageTitle = categoryNames.blog[lang as keyof typeof categoryNames.blog];
+---
+
+<BaseLayout title={`Lantern-TECH Blog - ${pageTitle}`} lang={lang}>
+    <section class="page-header">
+        <h1>{pageTitle}</h1>
+    </section>
+
+    <section class="article-grid">
+        {
+            posts.map((post) => {
+                // Remove lang prefix from slug for the card link, or handle it in card
+                // The ArticleCard expects 'slug'. If we pass local slug, we need to strip lang.
+                // However, the card uses `/${lang}/${collection}/${slug}`.
+                // If post.slug is 'jp/foo', we want slug to be 'foo' so url becomes '/jp/blog/foo'.
+                const localSlug = post.slug.split("/").slice(1).join("/");
+
+                return (
+                    <ArticleCard
+                        title={post.data.title || "No Title"}
+                        description={post.data.description || ""}
+                        author={post.data.author || "Lantern-TECH"}
+                        slug={localSlug}
+                        ogImage={post.data.ogImage}
+                        lang={lang || "jp"}
+                        collection="blog"
+                    />
+                );
+            })
+        }
+    </section>
+</BaseLayout>
+
+<style>
+    .page-header {
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+
+    .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 1rem 4rem 1rem;
+    }
+</style>

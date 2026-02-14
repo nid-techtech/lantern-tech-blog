@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ArticleCard from "../../../components/ArticleCard.astro";
+import { categoryNames } from "../../../data/navigation";
+
+export function getStaticPaths() {
+    return [
+        { params: { lang: "jp" } },
+        { params: { lang: "en" } },
+        { params: { lang: "zh" } },
+    ];
+}
+
+const { lang } = Astro.params;
+
+// Get all newsrelease entries
+const allNews = await getCollection("newsrelease");
+
+// Filter by language
+const posts = allNews.filter((post) => {
+    return post.slug.startsWith(`${lang}/`);
+});
+
+const pageTitle =
+    categoryNames.newsrelease[lang as keyof typeof categoryNames.newsrelease];
+---
+
+<BaseLayout title={`Lantern-TECH Blog - ${pageTitle}`} lang={lang}>
+    <section class="page-header">
+        <h1>{pageTitle}</h1>
+    </section>
+
+    <section class="article-grid">
+        {
+            posts.map((post) => {
+                const localSlug = post.slug.split("/").slice(1).join("/");
+
+                return (
+                    <ArticleCard
+                        title={post.data.title || "No Title"}
+                        description={post.data.description || ""}
+                        author={post.data.author || "Lantern-TECH"}
+                        slug={localSlug}
+                        ogImage={post.data.ogImage}
+                        lang={lang || "jp"}
+                        collection="newsrelease"
+                    />
+                );
+            })
+        }
+    </section>
+</BaseLayout>
+
+<style>
+    .page-header {
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+
+    .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 1rem 4rem 1rem;
+    }
+</style>
