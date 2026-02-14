@@ -9,12 +9,16 @@
 - [x] `src/pages/[lang]/blog/index.astro` の作成
     - [x] 全ての `blog` コレクションエントリの取得
     - [x] ArticleCardsのグリッド/リスト描画
+    - [x] タイトルの左揃え対応
 - [x] `src/pages/[lang]/newsrelease/index.astro` の作成
     - [x] 全ての `newsrelease` コレクションエントリの取得
     - [x] ArticleCardsのグリッド/リスト描画
+    - [x] タイトルの左揃え対応
 - [x] `src/pages/[lang]/notes/index.astro` の作成
     - [x] 全ての `notes` コレクションエントリの取得
     - [x] ArticleCardsのグリッド/リスト描画
+    - [x] タイトルの左揃え対応
 - [x] ブラウザでのページ確認
     - [x] `/jp/blog`, `/jp/newsrelease`, `/jp/notes` の確認
     - [x] レスポンシブレイアウトの確認
+    - [x] タイトル左揃えの確認
