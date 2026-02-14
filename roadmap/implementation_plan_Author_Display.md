@@ -1,27 +1,27 @@
-# Implementation Plan - Display Author Below Description
+# 実装計画 - 説明文の下に著者を表示する
 
-This plan outlines the changes to display the blog post author below the description.
+この計画では、ブログ記事の説明文の下に著者を表示するための変更の概要を説明します。
 
-## Proposed Changes
+## 提案される変更
 
-### [Content Configuration]
-#### [MODIFY] [config.ts](file:///Users/ofuchirin/code/lantern-tech-blog/astroprojects/src/content/config.ts)
-- Add `author: z.string().optional()` to the `blog` collection schema.
+### [コンテンツ設定]
+#### [変更] [config.ts](file:///Users/ofuchirin/code/lantern-tech-blog/astroprojects/src/content/config.ts)
+- `blog` コレクションスキーマに `author: z.string().optional()` を追加します。
 
-### [Blog Content]
-#### [MODIFY] [integrate.md](file:///Users/ofuchirin/code/lantern-tech-blog/astroprojects/src/content/blog/jp/integrate.md)
-- Add `author: "Lantern-TECH Team"` to the frontmatter for verification.
+### [ブログコンテンツ]
+#### [変更] [integrate.md](file:///Users/ofuchirin/code/lantern-tech-blog/astroprojects/src/content/blog/jp/integrate.md)
+- 検証用にフロントマターに `author: "Lantern-TECH Team"` を追加します。
 
-### [Blog Post Template]
-#### [MODIFY] [slug.astro](file:///Users/ofuchirin/code/lantern-tech-blog/astroprojects/src/pages/[lang]/blog/[slug].astro)
-- Update the `<header>` section to render `entry.data.author` inside a `<p>` tag if it exists.
-- Position it below the description.
-- Add CSS styling for the new `.author` class.
+### [ブログ投稿テンプレート]
+#### [変更] [slug.astro](file:///Users/ofuchirin/code/lantern-tech-blog/astroprojects/src/pages/[lang]/blog/[slug].astro)
+- `<header>` セクションを更新し、`entry.data.author` が存在する場合に `<p>` タグ内にレンダリングするようにします。
+- 説明文の下に配置します。
+- 新しい `.author` クラスのCSSスタイルを追加します。
 
-## Verification Plan
+## 検証計画
 
-### Manual Verification
-1.  Run the development server (`npm run dev`).
-2.  Navigate to a blog post that has an `author` in its frontmatter (e.g., `/jp/blog/integrate`).
-3.  Verify that the author name appears below the description.
-4.  Check the styling of the author text.
+### 手動検証
+1.  開発サーバーを起動します (`npm run dev`)。
+2.  フロントマターに `author` があるブログ記事（例: `/jp/blog/integrate`）に移動します。
+3.  著者名が説明文の下に表示されていることを確認します。
+4.  著者テキストのスタイルを確認します。

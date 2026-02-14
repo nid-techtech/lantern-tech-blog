@@ -1,6 +1,6 @@
-# Task List
+# タスクリスト
 
-- [x] Identify the file responsible for rendering blog posts.
-- [x] Read `src/pages/[lang]/blog/[slug].astro` and modify it to display the `description`.
-- [x] Verify the change locally.
-- [x] Create `task_list_topics.md` in `roadmap` folder as requested.
+- [x] ブログ投稿のレンダリングを担当するファイルを特定する。
+- [x] `src/pages/[lang]/blog/[slug].astro` を読み込み、`description` を表示するように修正する。
+- [x] ローカルで変更を確認する。
+- [x] `roadmap` フォルダに `task_list_topics.md` を作成する（リクエスト通り）。
