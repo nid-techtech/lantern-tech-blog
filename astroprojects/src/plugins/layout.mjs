@@ -6,18 +6,35 @@ export function rehypeContentGrouping() {
         const frontmatter = file.data.astro?.frontmatter;
         const isTwoColumn = frontmatter?.twoColumn === true;
 
+        if (frontmatter) {
+            // console.log(`[DEBUG] Handling file: ${file.history[0]} | twoColumn: ${isTwoColumn}`);
+        }
+
         if (!isTwoColumn) return;
+
+        // console.log('[DEBUG] Starting two-column processing');
 
         const newChildren = [];
         let currentSection = createSection();
 
         for (const node of tree.children) {
+            // console.log(`[DEBUG] Node type: ${node.type}, tagName: ${node.tagName}`);
             // Section break on Headings or HR
             if (node.type === 'element' && ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr'].includes(node.tagName)) {
                 pushSection(newChildren, currentSection);
-                currentSection = createSection();
-                // Headings always go to text column
-                currentSection.children[0].children.push(node);
+
+                if (node.tagName === 'hr') {
+                    // console.log('DEBUG: Processed HR tag, pushing outside section');
+                    node.properties = node.properties || {};
+                    const classes = node.properties.className || [];
+                    node.properties.className = Array.isArray(classes) ? [...classes, 'full-width-hr'] : [classes, 'full-width-hr'];
+                    newChildren.push(node); // Push HR outside of section
+                    currentSection = createSection();
+                } else {
+                    currentSection = createSection();
+                    // Headings go to text column of new section
+                    currentSection.children[0].children.push(node);
+                }
             } else {
                 // Check top-level media
                 if (isMediaNode(node)) {
