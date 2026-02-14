@@ -1,14 +1,14 @@
-# Walkthrough - Remove Link Underline
+# ウォークスルー - リンクの下線を削除
 
-I have removed the default underline from links as requested.
+リクエスト通り、リンクのデフォルトの下線を削除しました。
 
-## Changes
+## 変更点
 
 ### `src/styles/global.css`
 
--   Reverted `text-decoration` to `none` for the `a` selector.
+-   `a` セレクタの `text-decoration` を `none` に戻しました。
 
-## Verification Results
+## 検証結果
 
-### Manual Verification
--   [x] **Link Style**: Verified that links no longer have an underline by default.
+### 手動検証
+-   [x] **リンクスタイル**: リンクにデフォルトで下線が表示されないことを確認しました。

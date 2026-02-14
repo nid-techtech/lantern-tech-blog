@@ -1,4 +1,4 @@
-# Task List: Remove Link Underline
+# タスクリスト: リンクの下線を削除
 
-- [x] Update `src/styles/global.css` to set `text-decoration: none` for `a` tags
-- [x] Verify changes locally
+- [x] `src/styles/global.css` を更新し、`a` タグの `text-decoration` を `none` に設定する
+- [x] ローカルで変更を検証する
