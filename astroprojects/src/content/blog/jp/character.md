@@ -13,7 +13,7 @@ ogImage: https://i.imgur.com/Ws7ltg5.jpeg
 
 文字をFusionで設計した。
 
-当初はIllustratorで設計したベクターをFusionに持ち込む予定だったが、それだと寸法に狂いが生じてしまうことがわかったので、Fusionで設計したベクターをIllustratorにエクスポートする（逆）ことにした。
+当初はIllustratorで設計したベクターをFusionに持ち込む予定だったが、それだと寸法に狂いが生じてしまうことがわかったので、その逆、つまりFusionで設計したベクターをIllustratorにエクスポートすることにした。
 
 ![Fusionで設計した文字](https://i.imgur.com/3zBzyVI.png)
 
@@ -37,7 +37,11 @@ ogImage: https://i.imgur.com/Ws7ltg5.jpeg
 
 `2025/07/24`
 
-Yがうまく押し出せなかったために、新しく作り直した。
+Yがうまく押し出せない問題が発生した。
+
+原因は、他の文字と違ってYだけは左右の枠に沿って縦に伸びる輪郭線が存在せず、ベンダーの内壁がガイドウェイとして働かずにジャムってしまうこと。
+
+そのため、新しく作り直した。
 
 ![Yを再設計](https://i.imgur.com/rOjWslG.png)
 
