@@ -136,3 +136,60 @@ export const categoryNames = {
         zh: "参考文献"
     },
 };
+
+export const externalLinks = {
+    jp: {
+        astro: {
+            href: "https://astro.build",
+            label: "Astro | 世界最速のWebフレームワーク",
+        },
+        cloudflare: {
+            href: "https://pages.cloudflare.com",
+            label: "Cloudflare Pages | 記録的な速さのサイトを構築しよう",
+        },
+        imgur: {
+            href: "https://imgur.com",
+            label: "Imgur | インターネットの魔法",
+        },
+        z4a: {
+            href: "https://img.z4a.net",
+            label: "Z4A図床 | 中国で最も誠実な画像ホスティング",
+        },
+    },
+    en: {
+        astro: {
+            href: "https://astro.build",
+            label: "Astro | World's Fastest Web Framework",
+        },
+        cloudflare: {
+            href: "https://pages.cloudflare.com",
+            label: "Cloudflare Pages | Build fast sites. In record time.",
+        },
+        imgur: {
+            href: "https://imgur.com",
+            label: "Imgur | The magic of the Internet",
+        },
+        z4a: {
+            href: "https://img.z4a.net",
+            label: "Z4A Picture Bed | The most honest image hosting in China",
+        },
+    },
+    zh: {
+        astro: {
+            href: "https://astro.build",
+            label: "Astro | 世界最快的Web框架",
+        },
+        cloudflare: {
+            href: "https://pages.cloudflare.com",
+            label: "Cloudflare Pages | 快速构建网站。创纪录的速度。",
+        },
+        imgur: {
+            href: "https://imgur.com",
+            label: "Imgur | 互联网的魔法",
+        },
+        z4a: {
+            href: "https://img.z4a.net",
+            label: "Z4A图床 | 做中国最良心的免费图床",
+        },
+    },
+};

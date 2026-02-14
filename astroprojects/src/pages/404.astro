@@ -1,0 +1,576 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NotFoundAnimation from "../components/NotFoundAnimation.astro";
+import { getCollection } from "astro:content";
+import { ui } from "../data/ui";
+import {
+    categoryNames,
+    blogPages,
+    newsreleasePages,
+    notesPages,
+    externalLinks,
+} from "../data/navigation";
+
+// 1. 全記事の取得
+const blogEntries = await getCollection("blog");
+const newsreleaseEntries = await getCollection("newsrelease");
+const notesEntries = await getCollection("notes");
+
+// 2. コレクション情報を付与して統合
+const allEntries = [
+    ...blogEntries.map((e) => ({ ...e, collection: "blog" })),
+    ...newsreleaseEntries.map((e) => ({ ...e, collection: "newsrelease" })),
+    ...notesEntries.map((e) => ({ ...e, collection: "notes" })),
+];
+
+type ImageLink = {
+    imageSrc: string;
+    imageAlt: string;
+    articleUrl: string;
+    articleTitle: string;
+    lang: string;
+};
+
+const images: ImageLink[] = [];
+
+// 3. 画像情報の抽出
+for (const entry of allEntries) {
+    // スラッグから言語コードと実スラッグを分離 (例: "jp/software" -> lang="jp", slug="software")
+    const [lang, ...slugParts] = entry.slug.split("/");
+    const slug = slugParts.join("/");
+
+    // 記事URLの構築 (例: /jp/blog/software)
+    const articleUrl = `/${lang}/${entry.collection}/${slug}`;
+
+    // タイトルの取得
+    const articleTitle = entry.data.title || slug;
+
+    // 言語コードの正規化 (jp -> ja)
+    const langKey = lang === "jp" ? "ja" : lang;
+
+    // (A) OGP画像の抽出
+    if (entry.data.ogImage) {
+        images.push({
+            imageSrc: entry.data.ogImage,
+            imageAlt: `${articleTitle} のOGP画像`,
+            articleUrl,
+            articleTitle,
+            lang: langKey,
+        });
+    }
+
+    // (B) 本文中のMarkdown画像の抽出
+    if (entry.body) {
+        const regex = /!\[(.*?)\]\((.*?)\)/g;
+        let match;
+        while ((match = regex.exec(entry.body)) !== null) {
+            const url = match[2];
+            // 動画リンクを除外
+            if (
+                url.includes("youtube") ||
+                url.includes("youtu.be") ||
+                url.includes("vimeo") ||
+                url.includes("bilibili")
+            ) {
+                continue;
+            }
+
+            // [FIX] プロトコル(http/https)で始まらない画像リンクを除外
+            // ローカル/相対パスのGIF等は404ページから正しく参照できないためスキップ
+            if (!url.startsWith("http")) {
+                continue;
+            }
+
+            images.push({
+                imageSrc: url,
+                imageAlt: match[1] || `${articleTitle} の画像`,
+                articleUrl,
+                articleTitle,
+                lang: langKey,
+            });
+        }
+    }
+}
+
+// 言語ごとに画像をグループ化
+const imagesByLang = {
+    ja: images.filter((img) => img.lang === "ja"),
+    zh: images.filter((img) => img.lang === "zh"),
+    en: images.filter((img) => img.lang === "en"),
+};
+
+// クライアントに渡すために各言語最大20件に絞る（ランダムシャッフル後）
+const limitImages = (imgs: ImageLink[]) => {
+    return imgs.sort(() => 0.5 - Math.random()).slice(0, 20);
+};
+
+const clientImages = {
+    ja: limitImages(imagesByLang.ja),
+    zh: limitImages(imagesByLang.zh),
+    en: limitImages(imagesByLang.en),
+    // フォールバック用に全言語混ぜたものも少し持っておく
+    fallback: limitImages(images).slice(0, 10),
+};
+
+const pageLang = "en";
+---
+
+<BaseLayout title="404 Not Found" lang={pageLang}>
+    <Fragment slot="head">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap"
+            rel="stylesheet"
+        />
+    </Fragment>
+
+    <div class="not-found-container">
+        <div class="message-section">
+            <NotFoundAnimation />
+            <p id="not-found-message">
+                The page you are looking for does not exist.
+            </p>
+            <a href="/" id="back-to-top-button" class="home-link button"
+                >Back to Top</a
+            >
+        </div>
+
+        <div id="image-section" class="image-section" style="display: none;">
+            <div class="divider">
+                <div class="divider-content">
+                    <span class="atelier-title">Atelier de 404</span>
+                    <span id="atelier-desc" class="atelier-desc"
+                        >Displaying a random image from articles.</span
+                    >
+                </div>
+            </div>
+            <a id="image-link" href="#" class="image-link">
+                <figure>
+                    <img id="random-image" src="" alt="" loading="lazy" />
+                    <figcaption>
+                        <div class="caption-content">
+                            <span id="article-title" class="article-title"
+                            ></span>
+                            <span id="click-hint-text" class="click-hint">
+                                Click to read this article
+                            </span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+</BaseLayout>
+
+<script
+    define:vars={{
+        clientImages,
+        ui,
+        categoryNames,
+        blogPages,
+        newsreleasePages,
+        notesPages,
+        externalLinks,
+    }}
+>
+    const translations = {
+        ja: {
+            message: "お探しのページは見つかりませんでした。",
+            button: "トップページへ戻る",
+            clickHint: "クリックして記事を読む",
+            atelierDesc: "記事から画像をランダムに表示します",
+        },
+        zh: {
+            message: "您查找的页面不存在。",
+            button: "返回首页",
+            clickHint: "点击阅读此文",
+            atelierDesc: "随机显示文章中的图片",
+        },
+        en: {
+            message: "The page you are looking for does not exist.",
+            button: "Back to Top",
+            clickHint: "Click to read this article",
+            atelierDesc: "Displaying a random image from articles",
+        },
+    };
+
+    const userLang = navigator.language || navigator.languages[0] || "en";
+    let lang = "en";
+    // データアクセスのためのキー (jp/zh/en)
+    let dataLang = "en";
+
+    if (userLang.startsWith("ja")) {
+        lang = "ja";
+        dataLang = "jp";
+    } else if (userLang.startsWith("zh")) {
+        lang = "zh";
+        dataLang = "zh";
+    }
+
+    const t = translations[lang] || translations.en;
+
+    // DOM Elements
+    const messageElement = document.getElementById("not-found-message");
+    const buttonElement = document.getElementById("back-to-top-button");
+    const clickHintElement = document.getElementById("click-hint-text");
+    const atelierDescElement = document.getElementById("atelier-desc");
+
+    // Image Section Elements
+    const imageSection = document.getElementById("image-section");
+    const imageLink = document.getElementById("image-link");
+    const randomImage = document.getElementById("random-image");
+    const articleTitle = document.getElementById("article-title");
+
+    // UI Text Update
+    if (messageElement) messageElement.textContent = t.message;
+    if (buttonElement) buttonElement.textContent = t.button;
+    if (clickHintElement) clickHintElement.textContent = t.clickHint;
+    if (atelierDescElement) {
+        atelierDescElement.textContent = t.atelierDesc;
+        if (lang === "zh") {
+            atelierDescElement.style.fontFamily = '"Noto Sans SC", sans-serif';
+        } else {
+            atelierDescElement.style.fontFamily = '"LINE Seed JP", sans-serif';
+        }
+    }
+
+    // Image Selection
+    const targetImages =
+        clientImages[lang] && clientImages[lang].length > 0
+            ? clientImages[lang]
+            : clientImages.en.length > 0
+              ? clientImages.en
+              : clientImages.fallback;
+
+    if (targetImages && targetImages.length > 0) {
+        const selectedImage =
+            targetImages[Math.floor(Math.random() * targetImages.length)];
+
+        if (imageSection && imageLink && randomImage && articleTitle) {
+            imageLink.href = selectedImage.articleUrl;
+            randomImage.src = selectedImage.imageSrc;
+            randomImage.alt = selectedImage.imageAlt;
+            articleTitle.textContent = selectedImage.articleTitle;
+
+            // Show section
+            imageSection.style.display = "block";
+        }
+    }
+
+    // Footer Localization
+    if (lang !== "en") {
+        const footerUi = ui[dataLang].footer;
+        const sitemapTitle = document.getElementById("footer-sitemap");
+        const linksTitle = document.getElementById("footer-links");
+        const footerDesc = document.getElementById("footer-description");
+        const footerPowered = document.getElementById("footer-powered");
+        const footerRights = document.getElementById("footer-rights");
+
+        if (sitemapTitle) sitemapTitle.textContent = footerUi.sitemap;
+        if (linksTitle) linksTitle.textContent = footerUi.links;
+        if (footerDesc) footerDesc.textContent = footerUi.description;
+        if (footerPowered) footerPowered.innerHTML = footerUi.poweredby;
+        if (footerRights) footerRights.textContent = footerUi.rights;
+
+        // Update Links
+        const convertLink = (href) => {
+            // Replace /en/ with /jp/ or /zh/
+            return href.replace(/^\/en\//, `/${dataLang}/`);
+        };
+
+        const footerLinks = document.querySelectorAll(
+            ".footer-content a:not(.external-link)",
+        );
+        footerLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (href) {
+                // Update href
+                const newHref = convertLink(href);
+                link.setAttribute("href", newHref);
+
+                // Update Text
+                // Top Page
+                if (href === "/en/") {
+                    link.textContent = categoryNames.top[dataLang];
+                }
+                // Category Pages
+                else if (href === "/en/blog") {
+                    link.textContent = categoryNames.blog[dataLang];
+                } else if (href === "/en/newsrelease") {
+                    link.textContent = categoryNames.newsrelease[dataLang];
+                } else if (href === "/en/notes") {
+                    link.textContent = categoryNames.notes[dataLang];
+                }
+                // Article Pages (slug match)
+                else {
+                    const matchBlog = href.match(/^\/en\/blog\/(.+)/);
+                    if (matchBlog) {
+                        const page = blogPages.find(
+                            (p) => p.slug === matchBlog[1],
+                        );
+                        if (page) link.textContent = page.title[dataLang];
+                    }
+                    const matchNews = href.match(/^\/en\/newsrelease\/(.+)/);
+                    if (matchNews) {
+                        const page = newsreleasePages.find(
+                            (p) => p.slug === matchNews[1],
+                        );
+                        if (page) link.textContent = page.title[dataLang];
+                    }
+                    const matchNotes = href.match(/^\/en\/notes\/(.+)/);
+                    if (matchNotes) {
+                        const page = notesPages.find(
+                            (p) => p.slug === matchNotes[1],
+                        );
+                        if (page) link.textContent = page.title[dataLang];
+                    }
+                }
+            }
+        });
+
+        // Update External Links (Labels)
+        // External links are a specific list in externalLinks
+        // We can find them by href and update label
+        const externalLinkElements = document.querySelectorAll(
+            ".footer-section .external-link",
+        );
+        externalLinkElements.forEach((link) => {
+            const href = link.getAttribute("href");
+            const labelSpan = link.querySelector(".link-label");
+            if (href && labelSpan) {
+                // Find matching link in data
+                const linkDataObj = externalLinks[dataLang];
+                const match = Object.values(linkDataObj).find(
+                    (l) => l.href === href,
+                );
+                if (match) {
+                    labelSpan.textContent = match.label;
+                }
+            }
+        });
+    }
+</script>
+
+<style>
+    .not-found-container {
+        max-width: 800px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+        text-align: center;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .message-section {
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: var(--color-primary); /* Apply Primary */
+        font-family: "LINE Seed JP", sans-serif;
+    }
+
+    .message-section p {
+        font-size: 1.2rem;
+        color: var(--color-text);
+        margin-bottom: 2rem;
+        font-family: "LINE Seed JP", sans-serif;
+        font-weight: 700;
+        min-height: 1.5em; /* Prevent layout shift */
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background-color: var(--color-primary); /* Apply Primary */
+        color: var(--color-bg);
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-family: "LINE Seed JP", sans-serif;
+    }
+
+    .button:hover {
+        background-color: var(--color-accent); /* Apply Accent on hover */
+    }
+
+    /* Image Section Styles */
+    .image-section {
+        margin-top: 4rem;
+        animation: fadeIn 1s ease-out;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #888;
+        font-size: 0.9rem;
+    }
+
+    .divider::before,
+    .divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .divider::before {
+        margin-right: 1.5em;
+    }
+
+    .divider::after {
+        margin-left: 1.5em;
+    }
+
+    .divider-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .atelier-title {
+        font-family: "Playwrite US Modern", cursive;
+        font-size: 2rem;
+        color: var(--color-primary); /* Apply Primary */
+        font-weight: 400;
+    }
+
+    .atelier-desc {
+        font-family: "LINE Seed JP", sans-serif; /* Default for EN/JP */
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .image-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease;
+    }
+
+    .image-link:hover {
+        transform: translateY(-5px);
+    }
+
+    figure {
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        background-color: #f5f5f5;
+        aspect-ratio: 16 / 9;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    .image-link:hover img {
+        transform: scale(1.05);
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0)
+        );
+        color: white;
+        padding: 2rem 1rem 1rem;
+        text-align: left;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .image-link:hover figcaption {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .caption-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .article-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        font-family: "LINE Seed JP", sans-serif;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .click-hint {
+        font-size: 0.8rem;
+        color: var(--color-accent); /* Apply Accent */
+        font-weight: bold;
+        font-family: "JetBrains Mono", monospace;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .atelier-title {
+            font-size: 1.5rem;
+        }
+
+        .image-section {
+            margin-top: 2rem;
+        }
+
+        figure {
+            border-radius: 8px;
+        }
+
+        figcaption {
+            opacity: 1;
+            transform: translateY(0);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 1rem;
+        }
+    }
+</style>

@@ -5,6 +5,7 @@ import {
     blogPages,
     newsreleasePages,
     notesPages,
+    externalLinks,
 } from "../data/navigation";
 
 const { lang } = Astro.params;
@@ -22,63 +23,6 @@ const cats = {
     notes: categoryNames.notes[currentLang],
 };
 
-const externalLinks = {
-    jp: {
-        astro: {
-            href: "https://astro.build",
-            label: "Astro | 世界最速のWebフレームワーク",
-        },
-        cloudflare: {
-            href: "https://pages.cloudflare.com",
-            label: "Cloudflare Pages | 記録的な速さのサイトを構築しよう",
-        },
-        imgur: {
-            href: "https://imgur.com",
-            label: "Imgur | インターネットの魔法",
-        },
-        z4a: {
-            href: "https://img.z4a.net",
-            label: "Z4A図床 | 中国で最も誠実な画像ホスティング",
-        },
-    },
-    en: {
-        astro: {
-            href: "https://astro.build",
-            label: "Astro | World's Fastest Web Framework",
-        },
-        cloudflare: {
-            href: "https://pages.cloudflare.com",
-            label: "Cloudflare Pages | Build fast sites. In record time.",
-        },
-        imgur: {
-            href: "https://imgur.com",
-            label: "Imgur | The magic of the Internet",
-        },
-        z4a: {
-            href: "https://img.z4a.net",
-            label: "Z4A Picture Bed | The most honest image hosting in China",
-        },
-    },
-    zh: {
-        astro: {
-            href: "https://astro.build",
-            label: "Astro | 世界最快的Web框架",
-        },
-        cloudflare: {
-            href: "https://pages.cloudflare.com",
-            label: "Cloudflare Pages | 快速构建网站。创纪录的速度。",
-        },
-        imgur: {
-            href: "https://imgur.com",
-            label: "Imgur | 互联网的魔法",
-        },
-        z4a: {
-            href: "https://img.z4a.net",
-            label: "Z4A图床 | 做中国最良心的免费图床",
-        },
-    },
-};
-
 const getFaviconUrl = (url: string) => {
     const domain = new URL(url).hostname;
     return `https://www.google.com/s2/favicons?domain=${domain}`;
@@ -88,31 +32,17 @@ const getFaviconUrl = (url: string) => {
 <footer>
     <div class="footer-content">
         <div class="footer-section">
-            <h3>{t.sitemap}</h3>
+            <h3 id="footer-sitemap">{t.sitemap}</h3>
             <ul>
-                <li><a href={`/${lang}/`}>{cats.top}</a></li>
+                <li><a href={`/${currentLang}/`}>{cats.top}</a></li>
                 <li>
-                    <a href={`/${lang}/blog`}>{cats.blog}</a>
+                    <a href={`/${currentLang}/blog`}>{cats.blog}</a>
                     <ul class="sub-links">
                         {
                             blogPages.map((page) => (
                                 <li>
-                                    <a href={`/${lang}/blog/${page.slug}`}>
-                                        {page.title[currentLang]}
-                                    </a>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </li>
-                <li>
-                    <a href={`/${lang}/newsrelease`}>{cats.newsrelease}</a>
-                    <ul class="sub-links">
-                        {
-                            newsreleasePages.map((page) => (
-                                <li>
                                     <a
-                                        href={`/${lang}/newsrelease/${page.slug}`}
+                                        href={`/${currentLang}/blog/${page.slug}`}
                                     >
                                         {page.title[currentLang]}
                                     </a>
@@ -122,12 +52,32 @@ const getFaviconUrl = (url: string) => {
                     </ul>
                 </li>
                 <li>
-                    <a href={`/${lang}/notes`}>{cats.notes}</a>
+                    <a href={`/${currentLang}/newsrelease`}
+                        >{cats.newsrelease}</a
+                    >
+                    <ul class="sub-links">
+                        {
+                            newsreleasePages.map((page) => (
+                                <li>
+                                    <a
+                                        href={`/${currentLang}/newsrelease/${page.slug}`}
+                                    >
+                                        {page.title[currentLang]}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </li>
+                <li>
+                    <a href={`/${currentLang}/notes`}>{cats.notes}</a>
                     <ul class="sub-links">
                         {
                             notesPages.map((page) => (
                                 <li>
-                                    <a href={`/${lang}/notes/${page.slug}`}>
+                                    <a
+                                        href={`/${currentLang}/notes/${page.slug}`}
+                                    >
                                         {page.title[currentLang]}
                                     </a>
                                 </li>
@@ -139,7 +89,7 @@ const getFaviconUrl = (url: string) => {
         </div>
 
         <div class="footer-section">
-            <h3>{t.links}</h3>
+            <h3 id="footer-links">{t.links}</h3>
             <ul>
                 {
                     Object.values(externalLinks[currentLang]).map(
@@ -158,7 +108,7 @@ const getFaviconUrl = (url: string) => {
                                         height="16"
                                         class="favicon"
                                     />
-                                    {link.label}
+                                    <span class="link-label">{link.label}</span>
                                 </a>
                             </li>
                         ),
@@ -168,13 +118,14 @@ const getFaviconUrl = (url: string) => {
             </ul>
             <div class="footer-description">
                 <h3>Lantern-TECH Blog</h3>
-                <p>{t.description}</p>
+                <p id="footer-description">{t.description}</p>
             </div>
         </div>
     </div>
 
     <div class="copyright">
-        <span set:html={t.poweredby} /> &copy; Lantern-TECH 2025 {t.rights}
+        <span id="footer-powered" set:html={t.poweredby} /> &copy; Lantern-TECH 2025
+        <span id="footer-rights">{t.rights}</span>
     </div>
 </footer>
 
