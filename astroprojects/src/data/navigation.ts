@@ -66,7 +66,7 @@ export const newsreleasePages: PageDefinition[] = [
         title: {
             jp: "中間報告",
             en: "Interim Report",
-            zh: "中期报告"
+            zh: "中期汇报"
         },
     },
     {
