@@ -35,7 +35,7 @@ body {
 code,
 pre {
   font-family: var(--font-code);
-  background-color: #000;
+  background-color: #000000 !important;
   color: #fff;
 }
 
