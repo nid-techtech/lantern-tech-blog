@@ -2,7 +2,7 @@
 title: 匹配演示
 description: 自我推介，以确定团队组成和项目计划
 author: 鹈饲康平 / 菅原纺宜 / 大渕凛
-twoColumn: false
+twoColumn: true
 
 ogImage: https://img.z4a.net/images/2026/02/14/pr_ukai.png
 ---
