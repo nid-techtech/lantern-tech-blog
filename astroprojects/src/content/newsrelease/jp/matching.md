@@ -3,7 +3,7 @@ title: マッチングプレゼン
 description: チーム編成と作品計画の決定を目的とする自己PRプレゼン
 twoColumn: false
 
-ogImage: https://i.imgur.com/xi1SRFB.png
+ogImage: https://i.imgur.com/giUBqXL.png
 ---
 
 [2025　デザイン基礎演習Ⅱ自己アピール](https://docs.google.com/presentation/d/1Ic7GKgv6XnGM4t0iRNYgu4PkREby0UE-AIuyjjO0CGA/)
@@ -28,7 +28,7 @@ ogImage: https://i.imgur.com/xi1SRFB.png
 - 接続
 - USB -->
 
-![鵜飼のマッチングプレゼンスライド](https://i.imgur.com/xi1SRFB.png)
+![鵜飼のマッチングプレゼンスライド](https://i.imgur.com/giUBqXL.png)
 
 ---
 
@@ -51,7 +51,7 @@ ogImage: https://i.imgur.com/xi1SRFB.png
 - 不可視なものを直接可視化するのではなく、鑑賞者の想像を掻き立てることで表現する
 - 思考実験の要素を盛り込む（シュレーディンガーの猫など） -->
 
-![菅原のマッチングプレゼンスライド](https://i.imgur.com/Tz2VbUe.png)
+![菅原のマッチングプレゼンスライド](https://i.imgur.com/8xKrPqE.png)
 
 ---
 
@@ -76,6 +76,6 @@ ogImage: https://i.imgur.com/xi1SRFB.png
 - 天候、気温を表現
 - 視界には入っているが意識していないもの -->
 
-![大渕のマッチングプレゼンスライド](https://i.imgur.com/5PuEgVo.png)
+![大渕のマッチングプレゼンスライド](https://i.imgur.com/bsW8ik7.png)
 
 ---

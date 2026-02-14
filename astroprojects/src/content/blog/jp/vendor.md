@@ -3,7 +3,7 @@ title: 文字ベンダー
 description: 担当:菅原
 twoColumn: true
 
-ogImage: https://i.imgur.com/sXFhoCJ.png
+ogImage: https://i.imgur.com/Swn0ONT.png
 ---
 
 # ピストンアームの設計
@@ -18,9 +18,9 @@ ogImage: https://i.imgur.com/sXFhoCJ.png
 
 アーム同士の干渉や、はめ込みが硬すぎて動きがぎこちないなどの問題が発覚。
 
-![CADスクリーンショット](https://i.imgur.com/ix0KcQJ.png)
+![CADスクリーンショット](https://i.imgur.com/BVzy4jB.png)
 
-![スケッチ](https://i.imgur.com/UWWqAF6.jpg)
+![スケッチ](https://i.imgur.com/AjCZtsl.jpeg)
 
 ---
 
@@ -34,7 +34,7 @@ ogImage: https://i.imgur.com/sXFhoCJ.png
 
 しかし完成版まで基本設計は受け継がれており、シンプルな構造ゆえかなり扱いやすい機構となっている。
 
-![試作品](https://i.imgur.com/UrDOh30.jpg)
+![試作品](https://i.imgur.com/UkP1SP7.jpeg)
 
 ---
 
@@ -48,7 +48,7 @@ ogImage: https://i.imgur.com/sXFhoCJ.png
 
 しかし、アームの付け根が折れやすくなってしまった。
 
-![スケッチ](https://i.imgur.com/6Peppth.jpg)
+![スケッチ](https://i.imgur.com/NNZrNEN.jpeg)
 
 ---
 
@@ -62,9 +62,9 @@ ogImage: https://i.imgur.com/sXFhoCJ.png
 
 これを採用し、これに合わせた本体を設計する。
 
-![CADスクリーンショット](https://i.imgur.com/LeKWhDm.png)
+![CADスクリーンショット](https://i.imgur.com/BW4iGEq.png)
 
-![スケッチ](https://i.imgur.com/jV5JcD9.jpg)
+![スケッチ](https://i.imgur.com/GgVFKNi.jpeg)
 
 ---
 
@@ -84,9 +84,9 @@ PistonArmを基準に押し出し機構設計。
 
 特に重要な問題点として、それぞれのパーツの印刷成功確率がかなり低いことが挙げられた。これは背の高いオブジェトを半ば無理矢理印刷しているためであり、これらの問題はプレ展示以降のベンダー開発においての方針に大きく影響した。
 
-![スケッチ](https://i.imgur.com/xQelf6g.jpg)
+![スケッチ](https://i.imgur.com/tx6IyuP.jpeg)
 
-![CADスクリーンショット](https://i.imgur.com/EydZsoa.png)
+![CADスクリーンショット](https://i.imgur.com/4C6nnmo.png)
 
 ---
 
@@ -98,7 +98,7 @@ PistonArmを基準に押し出し機構設計。
 
 カートリッジの代わりに紙で塞いでいる。
 
-![試作品の動作](https://i.imgur.com/p0JydER.gif)
+![試作品の動作]()
 
 ---
 
@@ -108,7 +108,7 @@ PistonArmを基準に押し出し機構設計。
 
 プレ展示で使うため、Vendor-1を大量に制作する。
 
-![組立中の様子](https://i.imgur.com/v4lSj4q.jpg)
+![組立中の様子](https://i.imgur.com/5WRGWXc.jpeg)
 
 ---
 
@@ -124,7 +124,7 @@ PistonArmを基準に押し出し機構設計。
 
 アーム部分の丸棒と文字用の筒の固定方法はどちらも4mm規格となっており、筒はジョイントを使うことで理論上無限に高くすることができる。
 
-![CADスクリーンショット](https://i.imgur.com/gBPH4lk.png)
+![CADスクリーンショット](https://i.imgur.com/Swn0ONT.png)
 
 ---
 
@@ -136,9 +136,9 @@ PistonArmを基準に押し出し機構設計。
 
 パーツをきちんと規格化していたため無駄になるパーツを最小限にできた。
 
-![設計修正中](https://i.imgur.com/B4noeos.jpg)
+![設計修正中](https://i.imgur.com/78sRP5Q.jpeg)
 
-![印刷キューを送信](https://i.imgur.com/P8Zpm5w.jpg)
+![印刷キューを送信](https://i.imgur.com/1CNNgbA.jpeg)
 
 ---
 
@@ -152,7 +152,7 @@ PistonArmを基準に押し出し機構設計。
 
 アクリル絵の具でカートリッジの外側を黒く塗装する。
 
-![塗装作業中の菅原](https://i.imgur.com/ihPVfGw.jpg)
+![塗装作業中の菅原](https://i.imgur.com/4J09Kux.jpeg)
 
 ---
 
@@ -166,11 +166,11 @@ PistonArmを基準に押し出し機構設計。
 
 同時進行で作っているのはアルファベットのみを押せるキーボード。自宅になぜかISO配列キーボードが転がっていたので捧げることに。
 
-![はんだ付け大渕](https://i.imgur.com/tCdxrze.jpeg)
+![はんだ付け大渕](https://i.imgur.com/SIeCoXC.jpeg)
 
-![鵜飼はキーボードを作っている](https://i.imgur.com/7Eb3B96.jpg)
+![鵜飼はキーボードを作っている](https://i.imgur.com/zMniAZG.jpeg)
 
-![アルファベットとReturnキー以外黒くしたキーボード](https://i.imgur.com/38GUXxW.jpeg)
+![アルファベット以外黒くしたキーボード](https://i.imgur.com/PWKysuo.jpeg)
 
 ---
 
@@ -182,7 +182,7 @@ PistonArmを基準に押し出し機構設計。
 
 鵜飼は何をしている、、、？
 
-![楽しそうですね](https://i.imgur.com/m21g2aE.jpg)
+![楽しそうですね](https://i.imgur.com/gyCPrLz.jpeg)
 
 ---
 
@@ -196,7 +196,7 @@ PistonArmを基準に押し出し機構設計。
 
 気が遠くなりそう〜〜
 
-![がんばれ鵜飼](https://i.imgur.com/WMHU5bA.jpg)
+![がんばれ鵜飼](https://i.imgur.com/NhqT1SG.jpeg)
 
 ---
 
@@ -208,6 +208,6 @@ PistonArmを基準に押し出し機構設計。
 
 それにしてもBambu Lab A1 miniの印刷は爆速で頼りになる。
 
-![がんばれ菅原](https://i.imgur.com/WjP1OW1.jpg)
+![がんばれ菅原](https://i.imgur.com/B7df89Y.jpeg)
 
 ---

@@ -3,7 +3,7 @@ title: コンベア
 description: 担当:大渕
 twoColumn: true
 
-ogImage: https://i.imgur.com/GaRDmoo.jpg
+ogImage: https://i.imgur.com/CtgtfPT.jpeg
 ---
 
 # コンベアv1
@@ -18,7 +18,7 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 そして大まかな設計方針を決定し、ベアリングとゴムシートを購入する。
 
-![スケッチ](https://i.imgur.com/jX72VLK.jpg)
+![スケッチ](https://i.imgur.com/DsX4nJf.jpeg)
 
 ----
 
@@ -30,7 +30,7 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 木材売り場にてヒバ丸棒φ10x1820mmを発見したのでこれを使うことにする。
 
-![ヒバ丸棒](https://i.imgur.com/PklbcsU.jpg)
+![ヒバ丸棒](https://i.imgur.com/smggcB0.jpeg)
 
 ---
 
@@ -42,7 +42,7 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 一つ印刷するのに5時間以上かかる。大学閉庁後に複数台で印刷をかけることで時間を有効活用する。
 
-![CADスクリーンショット](https://i.imgur.com/XeLjusi.png)
+![CADスクリーンショット](https://i.imgur.com/qSd3xRQ.png)
 
 ---
 
@@ -56,9 +56,9 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 電源は単2電池2本で3Vを供給。
 
-![動力軸の動作](https://i.imgur.com/dSrd4qo.gif)
+![動力軸の動作](https://i.imgur.com/L9LQaY9.gif)
 
-![軸の配置イメージ](https://i.imgur.com/s1Q8xMp.jpg)
+![軸の配置イメージ](https://i.imgur.com/KiZ0t7G.jpeg)
 
 ---
 
@@ -86,11 +86,11 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 6/17の中間発表では、ギアがうるさいこと以外には特に問題を言及されなかった。
 
-![大量のステープルでベルトを固定](https://i.imgur.com/g5XKI47.jpg)
+![大量のステープルでベルトを固定](https://i.imgur.com/06IEkn2.jpeg)
 
-![v1全体](https://i.imgur.com/Psw4MCO.jpg)
+![v1全体](https://i.imgur.com/L3nHrVi.jpeg)
 
-![動作状況](https://i.imgur.com/rHXkHQ0.gif)
+![動作状況]()
 
 ---
 
@@ -106,7 +106,7 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 その他、新しいモーターとしてNema17ステッピングモーターを使う、ベルト逸脱を防ぐために太鼓状のシャフトにするなど、新設計を検討。
 
-![こういった構造にしたい](https://i.imgur.com/JwxSA1o.jpg)
+![こういった構造にしたい](https://i.imgur.com/BSM28Cg.jpeg)
 
 ---
 
@@ -130,9 +130,9 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 またシャフトの間隔が狭まる関係で、軸受も新しく設計する。今までは軸1本に対して固定用ビス4本使っていたが、軸が大幅に増えるというのにビスの割合もそのままでは無駄なので、ビス8本で軸5本固定できるようにする。単純に2.5倍の効率化になる。
 
-![新型シャフト印刷中](https://i.imgur.com/st5aCQ6.gif)
+![新型シャフト印刷中](https://i.imgur.com/N834RUM.gif)
 
-![CADスクリーンショット](https://i.imgur.com/ViIyK0G.png)
+![CADスクリーンショット](https://i.imgur.com/b1gElvH.png)
 
 ---
 
@@ -146,9 +146,9 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 再び夜間の大学で大量印刷をかける。毎度のことではあるが、途中でトラブルが起きて止まっていないことを願うばかりである。
 
-![パーツたくさん](https://i.imgur.com/UYYQWjy.jpg)
+![パーツたくさん](https://i.imgur.com/mXNfM4r.jpeg)
 
-![印刷中](https://i.imgur.com/2FjsJPk.gif)
+![印刷中]()
 
 ---
 
@@ -166,9 +166,9 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 掲載画像は、負傷中の大渕に代わって渡邉（TECH☆TECHメンバー）がベアリングと軸をシャフトに打ち込んでいる様子。
 
-![たくさんのシャフト](https://i.imgur.com/NGgFSNU.jpg)
+![たくさんのシャフト](https://i.imgur.com/bX3xp21.jpeg)
 
-![軸を打ち込む](https://i.imgur.com/Phqf8GG.gif)
+![軸を打ち込む]()
 
 ---
 
@@ -190,9 +190,9 @@ ogImage: https://i.imgur.com/GaRDmoo.jpg
 
 基本設計は引き継ぎつつ、各所の設計を大幅に変更したver.2.1を作ることにする。
 
-![トルク不足のモーター](https://i.imgur.com/L05N5I4.gif)
+![トルク不足のモーター]()
 
-![新型パーツ印刷](https://i.imgur.com/ZBxxfiW.jpg)
+![新型パーツ印刷](https://i.imgur.com/6U5Lkw5.jpeg)
 
 ---
 
@@ -218,9 +218,9 @@ ver.2からの変更点としては：
 
 私用ゴミ袋には、もう使わないバージョンが古い3Dプリントパーツがおびただしい数放り込まれている。もったいないとは思うものの仕方がない、、、
 
-![CADスクリーンショット](https://i.imgur.com/OGznC1E.png)
+![CADスクリーンショット](https://i.imgur.com/mDOomrH.png)
 
-![NEMA17モーター](https://i.imgur.com/W1o1eYe.gif)
+![NEMA17モーター]()
 
 ---
 
@@ -242,9 +242,9 @@ ver.2からの変更点としては：
 
 この画像は東京行きのバス出発1時間前にうまく動かなくて困っている私達。
 
-![バス出発前](https://i.imgur.com/sIcuiO5.jpg)
+![バス出発前](https://i.imgur.com/4Vv5Vj9.jpeg)
 
-![困った](https://i.imgur.com/uznOmkt.jpg)
+![困った](https://i.imgur.com/FMHRakR.jpeg)
 
 ---
 
@@ -256,11 +256,11 @@ ver.2からの変更点としては：
 
 また制御系統にタクトスイッチ2個をつなぎ、手動で双方向運転できるようにした。これは単純に動作確認用に付けただけだったが、なんか展示に使えそうな流れになって笑った（詳しくは[全体の状況](/jp/blog/integrate)参照）。
 
-![コンベア動作状況](https://i.imgur.com/mX7YinK.gif)
+![コンベアv2.2](https://i.imgur.com/HBsTL7Q.png)
 
-![動画プレゼン用動画収録](https://i.imgur.com/hhC3Efm.gif)
+![動画プレゼン用動画収録]()
 
-![双方向運転](https://i.imgur.com/WNIfqmj.gif)
+![双方向運転]()
 
 ---
 
@@ -276,9 +276,9 @@ ver.2からの変更点としては：
 
 プロトルームで無料で使えるフィラメントは白色のみ。Bambu Lab純正のPLA Basic フィラメント（黒色）を2kg注文し、これでローラーシャフトを印刷する。いつものように複数台並列で回せないので時間はかかるが。
 
-![ありがとうPrimeDay](https://i.imgur.com/6qUJkKj.png)
+![ありがとうPrimeDay](https://i.imgur.com/kUJJXLt.png)
 
-![黒いパーツを印刷開始](https://i.imgur.com/TJZ4en6.jpg)
+![黒いパーツを印刷開始](https://i.imgur.com/B0BrA7j.jpeg)
 
 ---
 
@@ -292,9 +292,9 @@ ver.2からの変更点としては：
 
 （印刷完了の音が鳴る）
 
-![軸受け印刷中](https://i.imgur.com/jv2ZRO1.jpg)
+![軸受け印刷中](https://i.imgur.com/FgnTBBl.jpeg)
 
-![印刷完了](https://i.imgur.com/wDRtEoe.gif)
+![印刷完了]()
 
 ---
 
@@ -308,6 +308,6 @@ ver.2からの変更点としては：
 
 実際にコンベアを駆動するArduinoのコーディングは鵜飼に引き継ぐ。よろしく！
 
-![完成した黒いコンベア](https://i.imgur.com/GaRDmoo.jpg)
+![完成した黒いコンベア](https://i.imgur.com/CtgtfPT.jpeg)
 
 ---

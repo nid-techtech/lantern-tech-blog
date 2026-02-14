@@ -3,7 +3,7 @@ title: ソフトウェア
 description: 担当:鵜飼
 twoColumn: true
 
-ogImage: https://i.imgur.com/SFdXcWU.jpg
+ogImage: https://i.imgur.com/rvXl2u3.png
 ---
 
 ## ArduinoとUnityを連携
@@ -14,7 +14,7 @@ ogImage: https://i.imgur.com/SFdXcWU.jpg
 
 シリアルポートで接続しているため、大量の情報通信はできない。
 
-![Arduinoスケッチ](https://i.imgur.com/EyBMVhP.png)
+![Arduinoスケッチ](https://i.imgur.com/vV35c4C.png)
 
 ---
 
@@ -26,7 +26,7 @@ ogImage: https://i.imgur.com/SFdXcWU.jpg
 
 テキストボックスが下線の上に配置されている。
 
-![Unityスクリーンショット](https://i.imgur.com/OvJQjVY.png)
+![Unityスクリーンショット](https://i.imgur.com/lvc3Ecq.png)
 
 ---
 
@@ -38,7 +38,7 @@ Unityから送信した文字によってステッピングモーターを左右
 
 未だ正常な動きは期待できない
 
-![作業中の鵜飼](https://i.imgur.com/I4j9bzs.jpg)
+![作業中の鵜飼](https://i.imgur.com/rIb9Kbb.jpeg)
 
 ---
 
@@ -50,7 +50,7 @@ UIをシンプルにした。
 
 真っ黒な画面に文字が打たれるように。
 
-![Unityスクリーンショット](https://i.imgur.com/o0P4fEy.png)
+![Unityスクリーンショット](https://i.imgur.com/kj29eXa.png)
 
 ---
 
@@ -62,7 +62,7 @@ UIをシンプルにした。
 
 100ステップで6cmほど移動できるようだ。
 
-![コンベア動作状況](https://i.imgur.com/oqdSIcL.gif)
+![コンベア動作状況]()
 
 ---
 
@@ -76,7 +76,7 @@ Unityが上流であり、Arduinoが下流にあるイメージ。
 
 Arduino側からはデータを送信できないが、Unity側から送信できる。
 
-![Arduinoスケッチ](https://i.imgur.com/RKnvI4t.png)
+![Arduinoスケッチ](https://i.imgur.com/sATuDKX.png)
 
 ---
 
@@ -99,7 +99,7 @@ Unityからは決まって10秒間隔で送られるため、文字を入力し�
 
 機能としては実装できているのだが、待ち時間が非常に冗長であり体験展示としては改善すべき点である。
 
-![Arduinoスケッチ](https://i.imgur.com/hKsqs1S.png)
+![Arduinoスケッチ](https://i.imgur.com/rvXl2u3.png)
 
 ---
 
@@ -113,6 +113,6 @@ Unityから文字の距離に応じてn秒間隔で文字を送信
 
 としたことで、各文字間の移動時間に最適な間隔を開けることが可能となり、かなり快適な動作を実現した。理論上の最速ではないが安定動作の範囲内でかなり最適化された動きをすることが可能となった。
 
-![オープンキャンパスでの動作の様子](https://i.imgur.com/knztp2f.gif)
+![オープンキャンパスでの動作の様子]()
 
 ---

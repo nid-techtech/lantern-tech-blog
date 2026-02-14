@@ -3,7 +3,7 @@ title: 参考作品リサーチ
 description: コンセプト決定直後に、関連する・取り入れたいと思う・参考になる過去作品を4つまとめたレポート
 twoColumn: true
 
-ogImage: https://i.imgur.com/RnHDr23.png
+ogImage: https://i.imgur.com/AiKLNwk.png
 ---
 
 # ピタゴラ装置No.58 コンベア
@@ -61,8 +61,8 @@ Point 4 コンベア
 
 ピタゴラ装置作品の制作・著作は佐藤研究室またはユーフラテス有限会社ですが、それを撮影した映像の制作はNHKエデュケーショナル、著作はNHKです。
 
-![ピタゴラ装置No.58_1](https://i.imgur.com/RnHDr23.png)
-![ピタゴラ装置No.58_2](https://i.imgur.com/AM1gd9u.gif)
+![ピタゴラ装置No.58_1](https://i.imgur.com/sm9W8u2.png)
+![ピタゴラ装置No.58_2]()
 ![ピタゴラ装置No.58_3](https://www.youtube.com/watch?v=o154pXKKji4?rel=0)
 
 ## コメント
@@ -117,9 +117,9 @@ Twitterなどのネットから文字を持ってくる。
 
 [Illuminate Productions(イギリスで活動する現代アート組織)におけるBit.Fallの記事](https://www.illuminateproductions.co.uk/bitfall)
 
-![Bit.Fall1](https://i.imgur.com/zrhbBnp.png)
+![Bit.Fall1](https://i.imgur.com/AiKLNwk.png)
 
-![Bit.Fall2](https://i.imgur.com/BjkpD3A.gif)
+![Bit.Fall2]()
 
 ![Bit.Fall3](https://vimeo.com/239852811?fl=pl&fe=sh)
 
@@ -173,9 +173,9 @@ touchdesignerなどを応用すれば作れると考える。
 
 他関連サイト
 
-![Text Rain1](https://i.imgur.com/2YoP8Dq.jpeg)
+![Text Rain1](https://i.imgur.com/WL1tM0t.jpeg)
 
-![Text Rain2](https://i.imgur.com/cPkoUma.gif)
+![Text Rain2]()
 
 ![Text Rain3](https://www.youtube.com/watch?v=f_u3sSffS78?rel=0)
 
@@ -225,9 +225,9 @@ touchdesignerなどを応用すれば作れると考える。
 
 [作者の公式サイト](https://ksawerykomputery.com/works/digital-analog-mirror)
 
-![Digital/Analog Mirror1](https://i.imgur.com/y4M9ZxH.png)
+![Digital/Analog Mirror1](https://i.imgur.com/f40kFUP.png)
 
-![Digital/Analog Mirror2](https://i.imgur.com/ZAhV5rU.gif)
+![Digital/Analog Mirror2]()
 
 ## コメント
 

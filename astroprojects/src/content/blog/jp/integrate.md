@@ -3,7 +3,7 @@ title: 全体の状況
 description: コンセプトと、プロジェクト全体の進捗を記述します
 twoColumn: true
 
-ogImage: https://imgur.com/g0dtlDo.jpeg
+ogImage: https://i.imgur.com/OxuLcUy.jpeg
 ---
 
 # 第1期
@@ -33,9 +33,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 ```
 
-![鵜飼のマッチングプレゼンスライド](https://imgur.com/xi1SRFB.png)
+![鵜飼のマッチングプレゼンスライド](https://i.imgur.com/giUBqXL.png)
 
-![菅原のスケッチ](https://i.imgur.com/uM4a8jB.jpeg)
+![菅原のスケッチ](https://i.imgur.com/wq4xlFJ.jpeg)
 
 **関連項目**
 
@@ -58,9 +58,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 - 日本科学未来館に以前あった[インターネット物理モデル](/jp/notes/pickup)を彷彿とさせる
 
-![菅原の中間発表スライド](https://imgur.com/ps1Y7wZ.png)
+![菅原の中間発表スライド](https://i.imgur.com/6ZJvuAH.png)
 
-![ただの往復運動をするベンダー](https://i.imgur.com/QHSBi29.gif)
+![ただの往復運動をするベンダー]()
 
 **関連項目**
 
@@ -110,9 +110,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 - 「情報の流れ」から「コンピュータの入出力のはたらき」へとコンセプトを変更することは「見えないもの」に対して忠実か。
 
-![板書1](https://imgur.com/ksQcQbb.jpeg)
+![板書1](https://i.imgur.com/HOsyAzR.jpeg)
 
-![板書2](https://imgur.com/e5INVEo.jpeg)
+![板書2](https://i.imgur.com/rbOCGjU.jpeg)
 
 ---
 
@@ -132,13 +132,13 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 ところで、山本先生から指摘というか提案された、「電子データを物理媒体に還元する」というテーマは結構我々の心に引っかかった。
 
-![準備中1](https://imgur.com/vo0wXvU.jpeg)
+![準備中1](https://i.imgur.com/MLyukif.jpeg)
 
-![準備中2](https://imgur.com/I6pgqvS.jpeg)
+![準備中2](https://i.imgur.com/aZDpniQ.jpeg)
 
-![発表1](https://i.imgur.com/SJELXLx.gif)
+![発表1]()
 
-![発表2](https://imgur.com/MoB3hvQ.jpeg)
+![発表2](https://i.imgur.com/EX4V5L7.jpeg)
 
 ---
 
@@ -152,9 +152,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 コンベアの正転と逆転を直接制御できるようにタクトスイッチを2つ付けたのだが、自動制御できないので一旦このボタンを使って人力でコンベアを制御することに。しかしケーブルの関係でブレッドボードを机の下に隠すことができなかったので、菅原が机の下に隠れて、手を伸ばして操作することにした。なのでできた動画をよく見ると袖口が映り込んでいる。
 
-![ブリーフィング](https://imgur.com/z9RGTHO.jpeg)
+![ブリーフィング](https://i.imgur.com/ccFmggS.jpeg)
 
-![ベンダーが崩れる](https://i.imgur.com/Bv6D8GF.gif)
+![ベンダーが崩れる]()
 
 **関連項目**
 
@@ -192,7 +192,7 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 鑑賞者が（最終的に出力したい）文字をキーボードで入力し、その後鑑賞者が自分でコンベアを操作して文字列を完成させる、というフローを想定すると、それはもうただの道具。鑑賞者にさせる操作は（キーボード入力/コンベア操作のうち）どちらかでよくて、そうなると今回の展示としてよりしっくり来るのは前者かと思う。
 
-![メモ](https://i.imgur.com/1KuIuvT.jpg)
+![メモ](https://i.imgur.com/OWiZH65.jpeg)
 
 ---
 
@@ -206,7 +206,7 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 `2025/07/22`
 
-相変わらずギリギリまでの作業で、いやになっちゃうよ～🐟
+相変わらずギリギリまでの作業で、いやになっちゃうよ～!
 
 前回からの変更点としては
 
@@ -222,9 +222,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 キャプションボードも作成し、いよいよ本番を迎える。
 
-![キャプション印刷中](https://i.imgur.com/PzDE7zx.jpg)
+![キャプション印刷中](https://i.imgur.com/489VRCx.jpeg)
 
-![準備中](https://i.imgur.com/xSNn6PE.jpg)
+![準備中](https://i.imgur.com/gYtPbcF.jpeg)
 
 **関連項目**
 
@@ -262,11 +262,11 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 - シンプルに設営が面倒すぎる。特に配線。
 
-![展示状態](https://i.imgur.com/xMykOxt.jpg)
+![展示状態](https://i.imgur.com/v4dtSIf.jpeg)
 
-![講評2](https://i.imgur.com/Vw3iZmX.jpg)
+![講評1](https://i.imgur.com/Tr79ruQ.jpeg)
 
-![講評1](https://i.imgur.com/htf9lqu.jpg)
+![講評2](https://i.imgur.com/O3Vmnmj.jpeg)
 
 ---
 
@@ -282,9 +282,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 皆はちゃんと睡眠を取ろう！！
 
-![入力画面](https://i.imgur.com/xAPj50d.png)
+![入力画面](https://i.imgur.com/B9138d4.png)
 
-![限界の撮影](https://i.imgur.com/rHXsXkH.gif)
+![限界の撮影]()
 
 ---
 
@@ -298,9 +298,9 @@ ogImage: https://imgur.com/g0dtlDo.jpeg
 
 GENESIS-4の「ハコ」は、半透明の（ように見える）箱の中から手が透けて見えるという、ホラーテイストと斬新なアイデアの作品だった。
 
-![展示作品が決まった旨](https://i.imgur.com/PPnpjiI.png)
+![展示作品が決まった旨](https://i.imgur.com/EKVSauI.png)
 
-![GENESIS-4の「ハコ」](https://i.imgur.com/101qEqm.png)
+![GENESIS-4の「ハコ」](https://i.imgur.com/808njXT.png)
 
 ---
 
@@ -312,9 +312,9 @@ GENESIS-4の「ハコ」は、半透明の（ように見える）箱の中か�
 
 GENESIS-4の竹澤さんがキービジュを作ってくれたりもした。
 
-![菅原編集中](https://i.imgur.com/k35oXbZ.jpeg)
+![菅原編集中](https://i.imgur.com/YpskaBV.jpeg)
 
-![展示キービジュアル](https://i.imgur.com/et55k2w.png)
+![展示キービジュアル](https://i.imgur.com/ufwmLBz.png)
 
 **関連項目**
 
@@ -341,9 +341,9 @@ GENESIS-4の竹澤さんがキービジュを作ってくれたりもした。
 
 ズレについては摩擦の関係で、理論上の移動距離と実測値が日々変わってしまうことが原因のようで、明日また係数を調節することになった。
 
-![展示風景1](https://i.imgur.com/pBwjvFQ.jpeg)
+![展示風景1](https://i.imgur.com/iZFAs98.jpeg)
 
-![展示風景2](https://i.imgur.com/zAAnzvo.jpeg )
+![展示風景2](https://i.imgur.com/3z98hDP.jpeg)
 
 ---
 
@@ -357,8 +357,8 @@ GENESIS-4の竹澤さんがキービジュを作ってくれたりもした。
 
 その他、PR動画の誤植が発覚したのでそれを修正したverをiMacに保存したりした。
 
-![展示風景3](https://i.imgur.com/ww9SDpV.png)
+![展示風景3](https://i.imgur.com/8ad7vgA.png)
 
-![カートリッジ](https://i.imgur.com/OsHfxrA.jpg)
+![カートリッジ](https://i.imgur.com/79VG8CQ.jpeg)
 
 ---

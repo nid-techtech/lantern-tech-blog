@@ -3,7 +3,7 @@ title: 気になった記事や作品
 description: レポートに盛り込まなかった参考になりそうな作品や技術に関する記事を雑多に貯める
 twoColumn: true
 
-ogImage: https://i.imgur.com/R12xLUZ.png
+ogImage: https://i.imgur.com/IfMqQvC.jpeg
 ---
 
 # Comtype
@@ -18,9 +18,9 @@ ogImage: https://i.imgur.com/R12xLUZ.png
 
 [Comtype | Makoto Hirahara](https://makotohirahara.com/portfolio/comtype/)
 
-![Comtype1](https://i.imgur.com/R12xLUZ.png)
+![Comtype1](https://i.imgur.com/tpfJ9MG.png)
 
-![Comtype2](https://i.imgur.com/dfYKysm.gif)
+![Comtype2]()
 
 ![Comtype3](https://www.youtube.com/watch?v=e5fIFitjEcw?rel=0)
 
@@ -38,9 +38,9 @@ ogImage: https://i.imgur.com/R12xLUZ.png
 
 [インターネット物理モデル | 日本科学未来館 (Miraikan)](https://www.miraikan.jst.go.jp/exhibitions/future/internet/)
 
-![インターネット物理モデル1](https://i.imgur.com/VMDGYKz.png)
+![インターネット物理モデル1](https://i.imgur.com/XKn7fgN.png)
 
-![インターネット物理モデル2](https://i.imgur.com/9hBr04W.gif)
+![インターネット物理モデル2]()
 
 ![インターネット物理モデル3](https://www.youtube.com/watch?v=XNLmjl98qQ8?rel=0)
 
@@ -62,7 +62,7 @@ ogImage: https://i.imgur.com/R12xLUZ.png
 
 [新型コペンのガワは、もしかしたら帝人でCMをやってる樹脂素材なのだろうか | MOVE ABOUT](https://web.archive.org/web/20250719045656/https://used-move.com/2012/11/2628/)
 
-![クルマジャーントパンダCM1](https://i.imgur.com/Gv9lKuq.gif)
+![クルマジャーントパンダCM1]()
 
 ![クルマジャーントパンダCM2](https://www.youtube.com/watch?v=cfKQdUMkSF4?rel=0)
 
@@ -86,7 +86,7 @@ ogImage: https://i.imgur.com/R12xLUZ.png
 
 [四角が行く——「ルール？展」出品作品ができるまで | ヒルズライフ HILLS LIFE](https://hillslife.jp/series/seeing-creates-something/the-square-makes-it-through/)
 
-![四角が行く1](https://i.imgur.com/Woja2ug.gif)
+![四角が行く1](https://i.imgur.com/seFem1J.jpeg)
 
 ![四角が行く2](https://vimeo.com/596116131/089edf293f?fl=pl&fe=sh)
 
@@ -108,9 +108,9 @@ ogImage: https://i.imgur.com/R12xLUZ.png
 
 [イデアの工場 | Factory of Idea - EUPHRATES | ユーフラテス](https://euphrates.jp/Factory-of-Idea)
 
-![イデアの工場1](https://i.imgur.com/GbHTMYY.jpeg)
+![イデアの工場1](https://i.imgur.com/IfMqQvC.jpeg)
 
-![イデアの工場2](https://i.imgur.com/PTLg2A8.gif)
+![イデアの工場2]()
 
 ![イデアの工場3](https://www.youtube.com/watch?v=9aeeg5Eyxt4)
 
@@ -130,9 +130,9 @@ BREAKFASTはニューヨークを拠点に活動するカイネティックア�
 
 [Billion Dollar Arcade | BREAKFAST](https://theartistbreakfast.com/works/billion-dollar-arcade-series)
 
-![Billion Dollar Arcade1](https://i.imgur.com/4GbAxwK.jpeg)
+![Billion Dollar Arcade1](https://i.imgur.com/bhU2YtG.jpeg)
 
-![Billion Dollar Arcade2](https://i.imgur.com/6SIKes7.gif)
+![Billion Dollar Arcade2]()
 
 ![Billion Dollar Arcade3](https://www.youtube.com/watch?v=LJu7F0SzJ6Q?rel=0)
 
@@ -152,9 +152,9 @@ BREAKFASTはニューヨークを拠点に活動するカイネティックア�
 
 [KAZAMI-map : JP | 研究成果一覧 | 長岡造形大学](https://sotsuten.nagaoka-id.ac.jp/artwork/49934/)
 
-![KAZAMI-map : JP1](https://i.imgur.com/oZdbASj.jpg)
+![KAZAMI-map : JP1](https://i.imgur.com/E1lwlNc.jpeg)
 
-![KAZAMI-map : JP2](https://i.imgur.com/RKHv8At.gif)
+![KAZAMI-map : JP2]()
 
 ![KAZAMI-map : JP3](https://www.youtube.com/watch?v=5COcGj1_N1o?rel=0)
 

@@ -3,7 +3,7 @@ title: 文字
 description: 担当:鵜飼、大渕
 twoColumn: true
 
-ogImage: https://i.imgur.com/ehQL7H2.jpg
+ogImage: https://i.imgur.com/Ws7ltg5.jpeg
 ---
 
 ## 文字のパスデータ設計
@@ -14,7 +14,7 @@ ogImage: https://i.imgur.com/ehQL7H2.jpg
 
 当初はIllustratorで設計したベクターをFusionに持ち込む予定だったが、それだと寸法に狂いが生じてしまうことがわかったので、Fusionで設計したベクターをIllustratorにエクスポートする（逆）ことにした。
 
-![Fusionで設計した文字](https://i.imgur.com/8nmicn8.png)
+![Fusionで設計した文字](https://i.imgur.com/3zBzyVI.png)
 
 ---
 
@@ -26,9 +26,9 @@ ogImage: https://i.imgur.com/ehQL7H2.jpg
 
 26種類あるので何台もの3Dプリンターを並走させる。
 
-![3DプリンターでBを造形中](https://i.imgur.com/yP4L4L7.jpg)
+![3DプリンターでBを造形中](https://i.imgur.com/cGZMxzj.jpeg)
 
-![マルチスレッド](https://i.imgur.com/Fd4TNVI.jpg)
+![マルチスレッド](https://i.imgur.com/84xdiQz.jpeg)
 
 ---
 
@@ -38,7 +38,7 @@ ogImage: https://i.imgur.com/ehQL7H2.jpg
 
 Yがうまく押し出せなかったために、新しく作り直した。
 
-![Yを再設計](https://i.imgur.com/FEkyqda.png)
+![Yを再設計](https://i.imgur.com/rOjWslG.png)
 
 ---
 
@@ -50,6 +50,6 @@ Yがうまく押し出せなかったために、新しく作り直した。
 
 フォントファイル作成には[Calligraphr](https://www.calligraphr.com/en)を使用した。
 
-![Calligraphrでフォントを作成](https://i.imgur.com/ncNjtB2.png)
+![Calligraphrでフォントを作成](https://i.imgur.com/hQtAF0V.png)
 
 ---
